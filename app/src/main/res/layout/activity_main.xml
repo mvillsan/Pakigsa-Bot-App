@@ -9,9 +9,10 @@
 
     <Button
         android:id="@+id/signInBtn"
-        android:layout_width="119dp"
-        android:layout_height="51dp"
+        android:layout_width="103dp"
+        android:layout_height="54dp"
         android:background="@color/peach"
+        android:drawableRight="@drawable/signin"
         android:fontFamily="@font/comforta"
         android:text="@string/signin"
         android:textAlignment="center"
@@ -26,9 +27,10 @@
 
     <Button
         android:id="@+id/signUpBtn"
-        android:layout_width="119dp"
-        android:layout_height="51dp"
+        android:layout_width="105dp"
+        android:layout_height="48dp"
         android:background="@color/peach"
+        android:drawableRight="@drawable/signup"
         android:fontFamily="@font/comforta"
         android:text="@string/signup"
         android:textColor="@color/black"
