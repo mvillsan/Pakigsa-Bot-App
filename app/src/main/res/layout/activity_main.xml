@@ -9,8 +9,8 @@
 
     <Button
         android:id="@+id/signInBtn"
-        android:layout_width="103dp"
-        android:layout_height="54dp"
+        android:layout_width="115dp"
+        android:layout_height="38dp"
         android:background="@color/peach"
         android:drawableRight="@drawable/signin"
         android:fontFamily="@font/comforta"
@@ -21,14 +21,15 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.716" />
+        app:layout_constraintTop_toBottomOf="@+id/tagTxt"
+        app:layout_constraintVertical_bias="0.128" />
 
     <Button
         android:id="@+id/signUpBtn"
-        android:layout_width="105dp"
-        android:layout_height="48dp"
+        android:layout_width="116dp"
+        android:layout_height="37dp"
         android:background="@color/peach"
         android:drawableRight="@drawable/signup"
         android:fontFamily="@font/comforta"
@@ -38,7 +39,39 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/signInBtn"
-        app:layout_constraintVertical_bias="0.27" />
+        app:layout_constraintVertical_bias="0.182" />
+
+    <TextView
+        android:id="@+id/tagTxt"
+        android:layout_width="349dp"
+        android:layout_height="37dp"
+        android:fontFamily="@font/poppins_light"
+        android:text="@string/tagline"
+        android:textAlignment="center"
+        android:textColor="@color/lightpurple"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pakigsaBotTxt"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/pakigsaBotTxt"
+        android:layout_width="329dp"
+        android:layout_height="75dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/pakigsabot"
+        android:textAlignment="center"
+        android:textColor="@color/lightpurple"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.528" />
 </androidx.constraintlayout.widget.ConstraintLayout>

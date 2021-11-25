@@ -5,13 +5,13 @@
       <map>
         <entry key="..\:/PakigsaBot/app/src/main/res/font/fonts.xml" value="0.17604166666666668" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_main.xml" value="0.33" />
-        <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_signin.xml" value="0.18" />
+        <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_signin.xml" value="0.33" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_signup.xml" value="0.278125" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_splash_screen.xml" value="0.278125" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_15_PREVIEW" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_15" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
