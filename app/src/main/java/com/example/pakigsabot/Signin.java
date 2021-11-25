@@ -28,7 +28,7 @@ public class Signin extends AppCompatActivity {
     }
 
     public void refs(){
-        prev = findViewById(R.id.backBtn);
+        prev = findViewById(R.id.backBtnSignIn);
     }
 
     public void welcomeScreen(){
