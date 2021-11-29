@@ -24,6 +24,7 @@ public class Signup extends AppCompatActivity {
                 welcomeScreen();
             }
         });
+
     }
 
     public void refs(){
@@ -34,4 +35,5 @@ public class Signup extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
         startActivity(intent);
     }
+
 }

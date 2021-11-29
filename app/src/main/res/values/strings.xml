@@ -12,4 +12,5 @@
     <string name="lastN">Last Name</string>
     <string name="mobile">Mobile Number</string>
     <string name="create">Create Account</string>
+    <string name="donthaveaccount">Don\'t have an account?</string>
 </resources>
