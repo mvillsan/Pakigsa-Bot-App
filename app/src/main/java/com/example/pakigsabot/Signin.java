@@ -5,12 +5,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 
 
 public class Signin extends AppCompatActivity {
 
     ImageButton prev;
+    Button signup;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,14 +27,27 @@ public class Signin extends AppCompatActivity {
                 welcomeScreen();
             }
         });
+
+        signup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                signUpScreen();
+            }
+        });
     }
 
     public void refs(){
         prev = findViewById(R.id.backBtnSignIn);
+        signup = findViewById(R.id.signupBtnSIS);
     }
 
     public void welcomeScreen(){
         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(intent);
+    }
+
+    public void signUpScreen(){
+        Intent intent = new Intent(getApplicationContext(), Signup.class);
         startActivity(intent);
     }
 }
