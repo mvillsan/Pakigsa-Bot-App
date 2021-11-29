@@ -7,6 +7,35 @@
     tools:context=".Signup">
 
     <Button
+        android:id="@+id/signinBtnSUS"
+        android:layout_width="60dp"
+        android:layout_height="21dp"
+        android:background="@color/white"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/signin"
+        android:textColor="@color/darkbluegreen"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.089"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/createAccBtn"
+        app:layout_constraintVertical_bias="0.182" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_light"
+        android:text="@string/haveaccount"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.352"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/createAccBtn"
+        app:layout_constraintVertical_bias="0.189" />
+
+    <Button
         android:id="@+id/createAccBtn"
         android:layout_width="186dp"
         android:layout_height="41dp"
