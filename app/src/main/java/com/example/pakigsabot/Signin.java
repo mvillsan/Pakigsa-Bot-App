@@ -4,19 +4,26 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.method.HideReturnsTransformationMethod;
-import android.text.method.PasswordTransformationMethod;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
-import android.widget.EditText;
+import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
 
 
 public class Signin extends AppCompatActivity {
 
-    ImageView show_password,prev;
-    EditText password;
+    ImageView prev;
     TextView signup;
+    TextInputEditText emailAddEditTxt,passEditTxt;
+    TextInputLayout emailTxtInputL, passTxtInputL;
+    Button signInBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,19 +46,25 @@ public class Signin extends AppCompatActivity {
             }
         });
 
-        password.setOnClickListener(new View.OnClickListener() {
+        signInBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ShowHidePass(view);
+                signInCustomer();
             }
         });
+
+        passEditTxt.addTextChangedListener(new ValidationTextWatcher(passEditTxt));
+        emailAddEditTxt.addTextChangedListener(new ValidationTextWatcher(emailAddEditTxt));
     }
 
     public void refs(){
         prev = findViewById(R.id.backBtnSignIn);
         signup = findViewById(R.id.signUpTxtView);
-        show_password = findViewById(R.id.show_passImageView);
-        password = findViewById(R.id.passwordEditTxtSI);
+        signInBtn = findViewById(R.id.signInBtnn);
+        emailAddEditTxt = findViewById(R.id.emailAddEditTxtSI);
+        passEditTxt = findViewById(R.id.passwordEditTxtSI);
+        emailTxtInputL = findViewById(R.id.emailTxtInputLayout);
+        passTxtInputL = findViewById(R.id.passwordTextInputLayout);
     }
 
     public void welcomeScreen(){
@@ -64,21 +77,88 @@ public class Signin extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void ShowHidePass(View view){
+    public void signInCustomer(){
+        boolean isValid = true;
 
-        if(view.getId()==R.id.show_passImageView){
+        if(emailAddEditTxt.getText().toString().isEmpty()){
+            emailTxtInputL.setError(getString(R.string.email_req));
+            isValid = false;
+        } else{
+            emailTxtInputL.setEnabled(false);
+            emailTxtInputL.setError("");
+        }
 
-            if(password.getTransformationMethod().equals(PasswordTransformationMethod.getInstance())){
-                ((ImageView)(view)).setImageResource(R.drawable.hide_passwordicon);
+        if(passEditTxt.getText().toString().isEmpty()){
+            passTxtInputL.setError(getString(R.string.pass_req));
+            isValid = false;
+        } else{
+            passTxtInputL.setEnabled(false);
+            passTxtInputL.setError("");
+        }
 
-                //Show Password
-                password.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+        if(isValid){
+            Toast.makeText(Signin.this, R.string.signIn_success, Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    private void requestFocus(View view) {
+        if (view.requestFocus()) {
+            getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE);
+        }
+    }
+
+    private boolean validateEmail() {
+        if (emailAddEditTxt.getText().toString().trim().isEmpty()) {
+            emailTxtInputL.setError(getString(R.string.email_req));
+        } else {
+            String emailId = emailAddEditTxt.getText().toString();
+            Boolean  isValid = android.util.Patterns.EMAIL_ADDRESS.matcher(emailId).matches();
+            if (!isValid) {
+                emailTxtInputL.setError("Invalid Email Address, ex: abc@example.com");
+                requestFocus(emailAddEditTxt);
+                return false;
+            } else {
+                emailTxtInputL.setErrorEnabled(false);
+                emailTxtInputL.setError("");
             }
-            else{
-                ((ImageView)(view)).setImageResource(R.drawable.show_passwordicon);
+        }
+        return true;
+    }
 
-                //Hide Password
-                password.setTransformationMethod(PasswordTransformationMethod.getInstance());
+    private boolean validatePassword() {
+        if (passEditTxt.getText().toString().trim().isEmpty()) {
+            passTxtInputL.setError(getString(R.string.pass_req));
+            requestFocus(passEditTxt);
+            return false;
+        }else if(passEditTxt.getText().toString().length() < 8){
+            passTxtInputL.setError(getString(R.string.pass_min));
+            requestFocus(passEditTxt);
+            return false;
+        }
+        else {
+            passTxtInputL.setErrorEnabled(false);
+            passTxtInputL.setError("");
+        }
+        return true;
+    }
+
+    private class ValidationTextWatcher implements TextWatcher {
+        private View view;
+        private ValidationTextWatcher(View view) {
+            this.view = view;
+        }
+        public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+        }
+        public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+        }
+        public void afterTextChanged(Editable editable) {
+            switch (view.getId()) {
+                case R.id.emailAddEditTxtSI:
+                    validateEmail();
+                    break;
+                case R.id.passwordEditTxtSI:
+                    validatePassword();
+                    break;
             }
         }
     }

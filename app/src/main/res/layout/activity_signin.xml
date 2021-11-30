@@ -20,24 +20,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.164" />
 
-    <EditText
-        android:id="@+id/emailAddEditTxt"
-        android:layout_width="305dp"
-        android:layout_height="44dp"
-        android:ems="10"
-        android:fontFamily="@font/poppins_light"
-        android:hint="example@gmail.com"
-        android:drawableStart="@drawable/email_icon"
-        android:drawablePadding="5dp"
-        android:inputType="textEmailAddress"
-        android:textColor="@color/black"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emailTxt"
-        app:layout_constraintVertical_bias="0.04" />
-
     <TextView
         android:id="@+id/emailTxt"
         android:layout_width="wrap_content"
@@ -45,12 +27,13 @@
         android:fontFamily="@font/poppins_light"
         android:text="@string/email"
         android:textColor="@color/black"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.171"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/signInTxt"
-        app:layout_constraintVertical_bias="0.143" />
+        app:layout_constraintVertical_bias="0.098" />
 
     <TextView
         android:id="@+id/passTxt"
@@ -59,12 +42,13 @@
         android:fontFamily="@font/poppins_light"
         android:text="@string/pass"
         android:textColor="@color/black"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.156"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emailAddEditTxt"
-        app:layout_constraintVertical_bias="0.122" />
+        app:layout_constraintTop_toBottomOf="@+id/emailTxtInputLayout"
+        app:layout_constraintVertical_bias="0.094" />
 
     <Button
         android:id="@+id/signInBtnn"
@@ -80,8 +64,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passwordEditTxtSI"
-        app:layout_constraintVertical_bias="0.181" />
+        app:layout_constraintTop_toBottomOf="@+id/passwordTextInputLayout"
+        app:layout_constraintVertical_bias="0.127" />
 
     <TextView
         android:id="@+id/textView"
@@ -95,39 +79,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/signInBtnn"
         app:layout_constraintVertical_bias="0.093" />
-
-    <EditText
-        android:id="@+id/passwordEditTxtSI"
-        android:layout_width="306dp"
-        android:layout_height="46dp"
-        android:ems="10"
-        android:fontFamily="@font/poppins_light"
-        android:inputType="textPassword"
-        android:textColor="@color/black"
-        android:textSize="14sp"
-        android:drawableStart="@drawable/password"
-        android:drawablePadding="5dp"
-        android:maxLength="25"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passTxt"
-        app:layout_constraintVertical_bias="0.074" />
-
-    <ImageView
-        android:id="@+id/show_passImageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="ShowHidePass"
-        android:alpha=".5"
-        app:layout_constraintBottom_toBottomOf="@+id/passwordEditTxtSI"
-        app:layout_constraintEnd_toEndOf="@+id/passwordEditTxtSI"
-        app:layout_constraintHorizontal_bias="0.954"
-        app:layout_constraintStart_toStartOf="@+id/passwordEditTxtSI"
-        app:layout_constraintTop_toTopOf="@+id/passwordEditTxtSI"
-        app:layout_constraintVertical_bias="0.423"
-        app:srcCompat="@drawable/show_passwordicon" />
 
     <TextView
         android:id="@+id/signUpTxtView"
@@ -167,6 +118,63 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.055"
         app:srcCompat="@drawable/back_arrow" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/emailTxtInputLayout"
+        android:layout_width="306dp"
+        android:layout_height="wrap_content"
+        app:errorEnabled="true"
+        app:endIconMode="clear_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailTxt"
+        app:layout_constraintVertical_bias="0.028"
+        app:startIconDrawable="@drawable/email_icon">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/emailAddEditTxtSI"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_light"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:maxLength="30"
+            android:singleLine="true"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passwordTextInputLayout"
+        android:layout_width="306dp"
+        android:layout_height="wrap_content"
+        app:endIconMode="password_toggle"
+        app:endIconTint="@color/gray"
+        app:counterEnabled="true"
+        app:counterMaxLength="30"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.514"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passTxt"
+        app:layout_constraintVertical_bias="0.046"
+        app:startIconDrawable="@drawable/password">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/passwordEditTxtSI"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_light"
+            android:textColor="@color/black"
+            android:inputType="textPassword"
+            android:textSize="14sp"
+            android:maxLines="1"
+            android:maxLength="31"
+            android:singleLine="true"/>
+    </com.google.android.material.textfield.TextInputLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
