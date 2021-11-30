@@ -7,14 +7,12 @@ import android.os.Bundle;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 public class Signup extends AppCompatActivity {
 
     ImageView prev, show_password, show_confirmPass;
-    EditText password, confirmPass;
     TextView signin;
 
     @Override
@@ -37,28 +35,11 @@ public class Signup extends AppCompatActivity {
                 signInScreen();
             }
         });
-
-        password.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ShowHidePass(view);
-            }
-        });
-
-        confirmPass.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ShowHideConfirmPass(view);
-            }
-        });
-
     }
 
     public void refs(){
         prev = findViewById(R.id.backBtnSU);
         signin = findViewById(R.id.signinBtnSUS);
-        password = findViewById(R.id.passwordEditTxtSU);
-        confirmPass = findViewById(R.id.confirmPassEditTxt);
     }
 
     public void welcomeScreen(){
@@ -70,44 +51,4 @@ public class Signup extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(), Signin.class);
         startActivity(intent);
     }
-
-    public void ShowHidePass(View view){
-
-        if(view.getId()==R.id.show_passImageView){
-
-            if(password.getTransformationMethod().equals(PasswordTransformationMethod.getInstance())){
-                ((ImageView)(view)).setImageResource(R.drawable.hide_passwordicon);
-
-                //Show Password
-                password.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
-            }
-            else{
-                ((ImageView)(view)).setImageResource(R.drawable.show_passwordicon);
-
-                //Hide Password
-                password.setTransformationMethod(PasswordTransformationMethod.getInstance());
-            }
-        }
-    }
-
-    public void ShowHideConfirmPass(View view){
-
-        if(view.getId()==R.id.show_confirmPassImageView){
-
-            if(confirmPass.getTransformationMethod().equals(PasswordTransformationMethod.getInstance())){
-                ((ImageView)(view)).setImageResource(R.drawable.hide_passwordicon);
-
-                //Show Password
-                confirmPass.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
-            }
-            else{
-                ((ImageView)(view)).setImageResource(R.drawable.show_passwordicon);
-
-                //Hide Password
-                confirmPass.setTransformationMethod(PasswordTransformationMethod.getInstance());
-            }
-        }
-    }
-
-    //
 }
