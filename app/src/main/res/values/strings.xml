@@ -11,6 +11,10 @@
     <string name="firstN">First Name</string>
     <string name="lastN">Last Name</string>
     <string name="mobile">Mobile Number</string>
+    <string name="gender">Gender</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="birthdate">Birthdate</string>
     <string name="create">Create Account</string>
     <string name="donthaveaccount">Don\'t have an account?</string>
     <string name="haveaccount">Already have an account?</string>
