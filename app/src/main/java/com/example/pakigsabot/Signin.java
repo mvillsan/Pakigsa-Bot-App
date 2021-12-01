@@ -77,36 +77,55 @@ public class Signin extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void signInCustomer(){
+    //Validations for Signing In on the Application
+    public boolean signInCustomer(){
         boolean isValid = true;
 
         if(emailAddEditTxt.getText().toString().isEmpty()){
             emailTxtInputL.setError(getString(R.string.email_req));
             isValid = false;
         } else{
-            emailTxtInputL.setEnabled(false);
-            emailTxtInputL.setError("");
+            String emailId = emailAddEditTxt.getText().toString();
+            boolean validEmail = android.util.Patterns.EMAIL_ADDRESS.matcher(emailId).matches();
+            if (!validEmail) {
+                emailTxtInputL.setError("Invalid Email Address, ex: abc@example.com");
+                requestFocus(emailAddEditTxt);
+                return false;
+            } else {
+                emailTxtInputL.setErrorEnabled(false);
+                emailTxtInputL.setError("");
+            }
         }
 
         if(passEditTxt.getText().toString().isEmpty()){
             passTxtInputL.setError(getString(R.string.pass_req));
             isValid = false;
         } else{
-            passTxtInputL.setEnabled(false);
-            passTxtInputL.setError("");
+            if(passEditTxt.getText().toString().length() < 8) {
+                passTxtInputL.setError(getString(R.string.pass_min));
+                requestFocus(passEditTxt);
+                return false;
+            }else{
+                passTxtInputL.setEnabled(false);
+                passTxtInputL.setError("");
+            }
         }
 
         if(isValid){
             Toast.makeText(Signin.this, R.string.signIn_success, Toast.LENGTH_SHORT).show();
         }
+
+        return true;
     }
 
+    //Setting FOCUS
     private void requestFocus(View view) {
         if (view.requestFocus()) {
             getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE);
         }
     }
 
+    //Email address Validations
     private boolean validateEmail() {
         if (emailAddEditTxt.getText().toString().trim().isEmpty()) {
             emailTxtInputL.setError(getString(R.string.email_req));
@@ -125,6 +144,7 @@ public class Signin extends AppCompatActivity {
         return true;
     }
 
+    //Password Validations
     private boolean validatePassword() {
         if (passEditTxt.getText().toString().trim().isEmpty()) {
             passTxtInputL.setError(getString(R.string.pass_req));
@@ -142,6 +162,7 @@ public class Signin extends AppCompatActivity {
         return true;
     }
 
+    //ValidationTextWatcher
     private class ValidationTextWatcher implements TextWatcher {
         private View view;
         private ValidationTextWatcher(View view) {
