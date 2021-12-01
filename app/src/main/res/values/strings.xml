@@ -23,4 +23,10 @@
     <string name="email_req">Email Address is REQUIRED.</string>
     <string name="pass_req">Password is REQUIRED.</string>
     <string name="pass_min">Password must have at least 8 characters</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="home_fragment">HOME</string>
+    <string name="reservation_fragment">RESERVATIONS</string>
+    <string name="nearby_fragment">NEARBY</string>
+    <string name="favorites_fragment">FAVORITES</string>
+    <string name="chatbot_fragment">CHATBOT</string>
 </resources>

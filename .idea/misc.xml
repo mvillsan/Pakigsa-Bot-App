@@ -3,12 +3,22 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/PakigsaBot/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.29010416666666666" />
+        <entry key="..\:/PakigsaBot/app/src/main/res/drawable/ic_favorites.xml" value="0.29010416666666666" />
+        <entry key="..\:/PakigsaBot/app/src/main/res/drawable/ic_nearby.xml" value="0.29010416666666666" />
+        <entry key="..\:/PakigsaBot/app/src/main/res/drawable/ic_reserve.xml" value="0.29010416666666666" />
         <entry key="..\:/PakigsaBot/app/src/main/res/font/fonts.xml" value="0.17604166666666668" />
+        <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_bottom_navigation.xml" value="0.25" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_create_account.xml" value="0.27395833333333336" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_main.xml" value="0.5" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_signin.xml" value="0.33" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_signup.xml" value="0.33" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_splash_screen.xml" value="0.278125" />
+        <entry key="..\:/PakigsaBot/app/src/main/res/layout/fragment_chatbot.xml" value="0.27395833333333336" />
+        <entry key="..\:/PakigsaBot/app/src/main/res/layout/fragment_favorites.xml" value="0.27395833333333336" />
+        <entry key="..\:/PakigsaBot/app/src/main/res/layout/fragment_home.xml" value="0.27395833333333336" />
+        <entry key="..\:/PakigsaBot/app/src/main/res/layout/fragment_nearby.xml" value="0.27395833333333336" />
+        <entry key="..\:/PakigsaBot/app/src/main/res/layout/fragment_reservations.xml" value="0.2598958333333333" />
       </map>
     </option>
   </component>
