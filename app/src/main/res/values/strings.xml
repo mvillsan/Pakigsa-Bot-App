@@ -24,9 +24,18 @@
     <string name="pass_req">Password is REQUIRED.</string>
     <string name="pass_min">Password must have at least 8 characters</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="home_fragment">HOME</string>
     <string name="reservation_fragment">RESERVATIONS</string>
     <string name="nearby_fragment">NEARBY</string>
     <string name="favorites_fragment">FAVORITES</string>
     <string name="chatbot_fragment">CHATBOT</string>
+    <string name="welcomeTxt">Welcome, User!</string>
+    <string name="whatareulooking">What are you looking for?</string>
+    <string name="resto">Restaurant</string>
+    <string name="resort">Resort</string>
+    <string name="dentalc">Dental Clinic</string>
+    <string name="ic">Internet Cafe</string>
+    <string name="spaSalon">Spa \&amp; Salon</string>
+    <string name="upcomingR">Upcoming Reservations</string>
+    <string name="donthaversrv">You don\'t have any reservation</string>
+    <string name="selectRsrv">Select and Reserve a Slot to any establishment you want first.</string>
 </resources>
