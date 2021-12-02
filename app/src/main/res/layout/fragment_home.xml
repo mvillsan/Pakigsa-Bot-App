@@ -1,23 +1,302 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:id="@+id/frame_layoutdesign"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center"
     android:background="@drawable/homebg_customer"
+    android:measureAllChildren="true"
     tools:context=".HomeFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/home_fragment"
-            android:textSize="48sp"
-            android:gravity="center"/>
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
-</FrameLayout>
+    <ImageButton
+        android:id="@+id/profileBtn"
+        android:layout_width="49dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:background="@color/darkgreen"
+        android:src="@drawable/ic_profile"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
+
+    <TextView
+        android:id="@+id/welcomeUserTxt"
+        android:layout_width="204dp"
+        android:layout_height="42dp"
+        android:fontFamily="@font/poppins_light"
+        android:text="@string/welcomeTxt"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/profileBtn"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
+
+    <TextView
+        android:id="@+id/whatAreULookingTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_light"
+        android:text="@string/whatareulooking"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.317"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcomeUserTxt"
+        app:layout_constraintVertical_bias="0.012" />
+
+    <ImageButton
+        android:id="@+id/shareBtn"
+        android:layout_width="28dp"
+        android:layout_height="44dp"
+        android:background="@color/darkgreen"
+        android:src="@drawable/ic_share"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.263"
+        app:layout_constraintStart_toEndOf="@+id/welcomeUserTxt"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.013" />
+
+    <ImageButton
+        android:id="@+id/rateBtn"
+        android:layout_width="24dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="5dp"
+        android:background="@color/darkgreen"
+        android:src="@drawable/ic_rate"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/shareBtn"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.008" />
+
+    <ImageButton
+        android:id="@+id/signoutBtn"
+        android:layout_width="29dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="5dp"
+        android:background="@color/darkgreen"
+        android:src="@drawable/sign_out"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/rateBtn"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageButton
+        android:id="@+id/restoBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/darkgreen"
+        android:src="@drawable/restuarant"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.194"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/whatAreULookingTxt"
+        app:layout_constraintVertical_bias="0.025" />
+
+    <TextView
+        android:id="@+id/restoTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_light"
+        android:text="@string/resto"
+        android:textColor="@color/lightpurple"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.181"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/restoBtn"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageButton
+        android:id="@+id/resortBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/darkgreen"
+        android:src="@drawable/resort_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.133"
+        app:layout_constraintStart_toEndOf="@+id/restoBtn"
+        app:layout_constraintTop_toBottomOf="@+id/whatAreULookingTxt"
+        app:layout_constraintVertical_bias="0.025" />
+
+    <TextView
+        android:id="@+id/resortTxt"
+        android:layout_width="32dp"
+        android:layout_height="13dp"
+        android:fontFamily="@font/poppins_light"
+        android:text="@string/resort"
+        android:textAlignment="center"
+        android:textColor="@color/lightpurple"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.113"
+        app:layout_constraintStart_toEndOf="@+id/restoTxt"
+        app:layout_constraintTop_toBottomOf="@+id/resortBtn"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageButton
+        android:id="@+id/dentalClinicBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/darkgreen"
+        android:src="@drawable/dentalclinics"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.161"
+        app:layout_constraintStart_toEndOf="@+id/resortBtn"
+        app:layout_constraintTop_toBottomOf="@+id/whatAreULookingTxt"
+        app:layout_constraintVertical_bias="0.025" />
+
+    <TextView
+        android:id="@+id/dentalClinicTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_light"
+        android:text="@string/dentalc"
+        android:textColor="@color/lightpurple"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.126"
+        app:layout_constraintStart_toEndOf="@+id/resortTxt"
+        app:layout_constraintTop_toBottomOf="@+id/dentalClinicBtn"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageButton
+        android:id="@+id/internetCafeBtn"
+        android:layout_width="38dp"
+        android:layout_height="29dp"
+        android:background="@color/darkgreen"
+        android:src="@drawable/internetcafe"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.246"
+        app:layout_constraintStart_toEndOf="@+id/dentalClinicBtn"
+        app:layout_constraintTop_toBottomOf="@+id/whatAreULookingTxt"
+        app:layout_constraintVertical_bias="0.026" />
+
+    <TextView
+        android:id="@+id/icTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_light"
+        android:text="@string/ic"
+        android:textColor="@color/lightpurple"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.147"
+        app:layout_constraintStart_toEndOf="@+id/dentalClinicTxt"
+        app:layout_constraintTop_toBottomOf="@+id/internetCafeBtn"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/spaSalonTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_light"
+        android:text="@string/spaSalon"
+        android:textColor="@color/lightpurple"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.318"
+        app:layout_constraintStart_toEndOf="@+id/icTxt"
+        app:layout_constraintTop_toBottomOf="@+id/spaSalonBtn"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageButton
+        android:id="@+id/spaSalonBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/darkgreen"
+        android:src="@drawable/spasalon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.418"
+        app:layout_constraintStart_toEndOf="@+id/internetCafeBtn"
+        app:layout_constraintTop_toBottomOf="@+id/whatAreULookingTxt"
+        app:layout_constraintVertical_bias="0.025" />
+
+    <TextView
+        android:id="@+id/upcomingReservesTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_light"
+        android:text="@string/upcomingR"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.145"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profileBtn"
+        app:layout_constraintVertical_bias="0.226" />
+
+    <ImageButton
+        android:id="@+id/noUpcomingRsrvBtn"
+        android:layout_width="362dp"
+        android:layout_height="194dp"
+        android:background="@color/peach"
+        android:src="@drawable/no_upcoming"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.612"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/upcomingReservesTxt"
+        app:layout_constraintVertical_bias="0.032" />
+
+    <TextView
+        android:id="@+id/donthaveRsrvTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_light"
+        android:text="@string/donthaversrv"
+        android:textColor="@color/black"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/noUpcomingRsrvBtn"
+        app:layout_constraintEnd_toEndOf="@+id/noUpcomingRsrvBtn"
+        app:layout_constraintHorizontal_bias="0.564"
+        app:layout_constraintStart_toStartOf="@+id/noUpcomingRsrvBtn"
+        app:layout_constraintTop_toTopOf="@+id/noUpcomingRsrvBtn"
+        app:layout_constraintVertical_bias="0.757" />
+
+    <TextView
+        android:id="@+id/selectRsrvTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_light"
+        android:text="@string/selectRsrv"
+        android:textColor="@color/black"
+        android:textSize="9sp"
+        app:layout_constraintBottom_toBottomOf="@+id/noUpcomingRsrvBtn"
+        app:layout_constraintEnd_toEndOf="@+id/noUpcomingRsrvBtn"
+        app:layout_constraintHorizontal_bias="0.556"
+        app:layout_constraintStart_toStartOf="@+id/noUpcomingRsrvBtn"
+        app:layout_constraintTop_toBottomOf="@+id/donthaveRsrvTxt"
+        app:layout_constraintVertical_bias="0.32" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

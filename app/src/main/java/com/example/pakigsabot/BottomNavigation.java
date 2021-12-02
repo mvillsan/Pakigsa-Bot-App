@@ -61,24 +61,20 @@ public class BottomNavigation extends AppCompatActivity {
             }
         });
 
-        //Set notification count
-        bottomNavigation.setCount(3,"10");
+        /*//Set notification count
+        bottomNavigation.setCount(3,"10");*/
         //Set home fragment initially selected
         bottomNavigation.show(3,true);
 
         bottomNavigation.setOnClickMenuListener(new MeowBottomNavigation.ClickListener() {
             @Override
             public void onClickItem(MeowBottomNavigation.Model item) {
-                //Display toast
-                Toast.makeText(getApplicationContext(), "You clicked " + item.getId(), Toast.LENGTH_SHORT).show();
             }
         });
 
         bottomNavigation.setOnReselectListener(new MeowBottomNavigation.ReselectListener() {
             @Override
             public void onReselectItem(MeowBottomNavigation.Model item) {
-                //Display toast
-                Toast.makeText(getApplicationContext(),"You reselected " + item.getId(),Toast.LENGTH_SHORT).show();
             }
         });
     }
