@@ -38,4 +38,6 @@
     <string name="upcomingR">Upcoming Reservations</string>
     <string name="donthaversrv">You don\'t have any reservation</string>
     <string name="selectRsrv">Select and Reserve a Slot to any establishment you want first.</string>
+    <string name="prof">Profile</string>
+    <string name="changePass">Change Password</string>
 </resources>

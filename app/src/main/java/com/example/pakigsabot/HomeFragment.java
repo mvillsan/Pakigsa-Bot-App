@@ -1,20 +1,24 @@
 package com.example.pakigsabot;
 
+import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link HomeFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class HomeFragment extends Fragment {
-
+public class HomeFragment extends Fragment{
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -23,6 +27,8 @@ public class HomeFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    ImageButton signoutBtn, profileBtn;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -58,7 +64,70 @@ public class HomeFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false);
+        View view = inflater.inflate(R.layout.fragment_home, container, false);
+
+        //References:
+        ImageButton profileBtn = (ImageButton) view.findViewById(R.id.profileBtn);
+        ImageButton shareBtn = (ImageButton) view.findViewById(R.id.shareBtn);
+        ImageButton rateBtn = (ImageButton) view.findViewById(R.id.rateBtn);
+        ImageButton signOutBtn = (ImageButton) view.findViewById(R.id.signoutHomeBtn);
+
+        profileBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                profileScreen();
+            }
+        });
+
+        shareBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                shareScreen();
+            }
+        });
+
+        rateBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                rateScreen();
+            }
+        });
+
+        signOutBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                signOutApp();
+            }
+        });
+        return view;
     }
+
+    public void profileScreen(){
+        Intent in = new Intent(getActivity(), Profile.class);
+        in.putExtra("profile", "profile");
+        startActivity(in);
+    }
+
+    public void shareScreen(){
+        Intent in = new Intent(getActivity(), Share.class);
+        in.putExtra("share", "share");
+        startActivity(in);
+    }
+
+    public void rateScreen(){
+        Intent in = new Intent(getActivity(), Rate.class);
+        in.putExtra("rate", "rate");
+        startActivity(in);
+    }
+
+    public void signOutApp(){
+        Intent in = new Intent(getActivity(), Signin.class);
+        in.putExtra("signin", "signin");
+        startActivity(in);
+    }
+
+
 }
