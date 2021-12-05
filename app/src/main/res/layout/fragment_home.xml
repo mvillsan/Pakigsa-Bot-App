@@ -84,7 +84,7 @@
         app:layout_constraintVertical_bias="0.008" />
 
     <ImageButton
-        android:id="@+id/signoutBtn"
+        android:id="@+id/signoutHomeBtn"
         android:layout_width="29dp"
         android:layout_height="59dp"
         android:layout_marginStart="5dp"
