@@ -2,7 +2,6 @@ package com.example.pakigsabot;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -42,10 +41,5 @@ public class Profile extends AppCompatActivity {
 
     public void refs(){
         prevBtn = findViewById(R.id.backBtnProfile);
-    }
-
-    public void homeScreen(){
-        Intent in = new Intent(getApplicationContext(), HomeFragment.class);
-        startActivity(in);
     }
 }
