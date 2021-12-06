@@ -35,7 +35,7 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/passInputLayoutSU"
-        app:layout_constraintVertical_bias="0.125" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/backBtnSU"
@@ -102,10 +102,10 @@
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.594"
+        app:layout_constraintHorizontal_bias="0.862"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/genderTxt"
-        app:layout_constraintVertical_bias="0.028">
+        app:layout_constraintVertical_bias="0.0">
 
 
         <RadioButton
@@ -137,11 +137,12 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/firstNameInputLayout"
         android:layout_width="296dp"
-        android:layout_height="75dp"
-        android:layout_marginTop="5dp"
+        android:layout_height="80dp"
         android:hint="First Name"
         app:endIconMode="clear_text"
         app:errorEnabled="true"
+        app:counterEnabled="true"
+        app:counterMaxLength="30"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
@@ -166,11 +167,12 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/lastNameInputLayout"
         android:layout_width="296dp"
-        android:layout_height="75dp"
-        android:layout_marginTop="2dp"
+        android:layout_height="80dp"
         android:hint="Last Name"
         app:endIconMode="clear_text"
         app:errorEnabled="true"
+        app:counterEnabled="true"
+        app:counterMaxLength="30"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
@@ -195,8 +197,7 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/mobileInputLayout"
         android:layout_width="296dp"
-        android:layout_height="75dp"
-        android:layout_marginTop="2dp"
+        android:layout_height="80dp"
         android:hint="Phone"
         app:counterEnabled="true"
         app:counterMaxLength="11"
@@ -226,8 +227,7 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/bdayInputLayout"
         android:layout_width="296dp"
-        android:layout_height="75dp"
-        android:layout_marginTop="2dp"
+        android:layout_height="80dp"
         android:hint="Birth Date"
         app:endIconMode="clear_text"
         app:errorEnabled="true"
@@ -256,8 +256,7 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/emailAddInputLayoutSU"
         android:layout_width="296dp"
-        android:layout_height="75dp"
-        android:layout_marginTop="2dp"
+        android:layout_height="80dp"
         android:hint="Email Address"
         app:endIconMode="clear_text"
         app:errorEnabled="true"
@@ -286,8 +285,7 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/passInputLayoutSU"
         android:layout_width="296dp"
-        android:layout_height="75dp"
-        android:layout_marginTop="2dp"
+        android:layout_height="80dp"
         android:hint="Password"
         app:counterEnabled="true"
         app:counterMaxLength="30"

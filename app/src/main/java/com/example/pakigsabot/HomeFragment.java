@@ -28,8 +28,6 @@ public class HomeFragment extends Fragment{
     private String mParam1;
     private String mParam2;
 
-    ImageButton signoutBtn, profileBtn;
-
     public HomeFragment() {
         // Required empty public constructor
     }
@@ -102,6 +100,7 @@ public class HomeFragment extends Fragment{
                 signOutApp();
             }
         });
+
         return view;
     }
 
