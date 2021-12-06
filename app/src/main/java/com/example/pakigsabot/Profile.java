@@ -17,14 +17,7 @@ public class Profile extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
-        /*prevBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), "clicked",
-                        Toast.LENGTH_SHORT).show();
-                //nBackPressed();
-            }
-        });*/
+        refs();
 
         Bundle bundle = getIntent().getExtras();
         if(bundle != null){
@@ -33,18 +26,26 @@ public class Profile extends AppCompatActivity {
                         Toast.LENGTH_SHORT).show();
             }
         }
+
+        prevBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
     }
+
 
     public void onBackPressed(){
         super.onBackPressed();
     }
 
-   /* public void refs(){
+    public void refs(){
         prevBtn = findViewById(R.id.backBtnProfile);
     }
 
     public void homeScreen(){
-        Intent in = new Intent(this, HomeFragment.class);
+        Intent in = new Intent(getApplicationContext(), HomeFragment.class);
         startActivity(in);
-    }*/
+    }
 }

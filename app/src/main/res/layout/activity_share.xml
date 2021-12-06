@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/darkgreen"
+    android:background="@drawable/homebg_customer"
     tools:context=".Share">
 
     <ImageView
-        android:id="@+id/backBtnProfile2"
+        android:id="@+id/backBtnShare"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -16,20 +16,19 @@
         app:layout_constraintHorizontal_bias="0.091"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.056"
+        app:layout_constraintVertical_bias="0.092"
         app:srcCompat="@drawable/ic_arrow_back" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="344dp"
-        android:layout_height="473dp"
+        android:layout_width="317dp"
+        android:layout_height="447dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/shareTxt"
-        app:layout_constraintVertical_bias="0.141"
-        app:srcCompat="@drawable/share_with_friends" />
+        app:layout_constraintVertical_bias="0.219"
+        app:srcCompat="@drawable/share_socialmedia" />
 
     <TextView
         android:id="@+id/shareTxt"
@@ -37,37 +36,37 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/comforta"
         android:text="@string/share"
-        android:textColor="@color/lightpurple"
+        android:textColor="@color/white"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.102"
-        app:layout_constraintStart_toEndOf="@+id/backBtnProfile2"
+        app:layout_constraintHorizontal_bias="0.328"
+        app:layout_constraintStart_toEndOf="@+id/backBtnShare"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.056" />
+        app:layout_constraintVertical_bias="0.093" />
 
     <ImageView
         android:id="@+id/imageView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="370dp"
+        android:layout_marginTop="280dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imageView"
         app:layout_constraintVertical_bias="0.105"
-        app:srcCompat="@drawable/peach" />
+        app:srcCompat="@drawable/darkgreen_rect" />
 
     <Button
         android:id="@+id/shareToFriendsBtn"
-        android:layout_width="186dp"
-        android:layout_height="41dp"
-        android:background="@color/darkbluegreen"
+        android:layout_width="178dp"
+        android:layout_height="65dp"
+        android:background="@color/lemongreen"
         android:fontFamily="@font/poppins_medium"
         android:text="@string/shareNow"
-        android:textColor="@color/lemongreen"
+        android:textColor="@color/white"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -75,6 +74,6 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imageView6"
-        app:layout_constraintVertical_bias="0.759" />
+        app:layout_constraintVertical_bias="0.812" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
