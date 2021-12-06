@@ -53,6 +53,7 @@ public class Signin extends AppCompatActivity {
             }
         });
 
+        //Validations
         passEditTxt.addTextChangedListener(new ValidationTextWatcher(passEditTxt));
         emailAddEditTxt.addTextChangedListener(new ValidationTextWatcher(emailAddEditTxt));
 
