@@ -20,6 +20,7 @@
         <entry key="..\:/PakigsaBot/app/src/main/res/font/fonts.xml" value="0.17604166666666668" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_bottom_navigation.xml" value="0.25" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_create_account.xml" value="0.27395833333333336" />
+        <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_feedback.xml" value="0.278125" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_main.xml" value="0.5" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_profile.xml" value="0.33" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_rate.xml" value="0.2640625" />
@@ -29,7 +30,7 @@
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_signup.xml" value="0.33" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_splash_screen.xml" value="0.278125" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/fragment_chatbot.xml" value="0.27395833333333336" />
-        <entry key="..\:/PakigsaBot/app/src/main/res/layout/fragment_estfavorites.xml" value="0.278125" />
+        <entry key="..\:/PakigsaBot/app/src/main/res/layout/fragment_estfavorites.xml" value="0.33" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/fragment_favorites.xml" value="0.27395833333333336" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/fragment_home.xml" value="0.33" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/fragment_nearby.xml" value="0.27395833333333336" />

@@ -10,10 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PakigsaBot">
         <activity
-            android:name=".ServicesFavorites"
+            android:name=".Feedback"
             android:exported="false" />
         <activity
-            android:name=".Rate"
+            android:name=".ServicesFavorites"
             android:exported="false" />
         <activity
             android:name=".Share"

@@ -65,7 +65,7 @@ public class HomeFragment extends Fragment{
         //References:
         ImageButton profileBtn = (ImageButton) view.findViewById(R.id.profileBtn);
         ImageButton shareBtn = (ImageButton) view.findViewById(R.id.shareBtn);
-        ImageButton rateBtn = (ImageButton) view.findViewById(R.id.rateBtn);
+        ImageButton feedBackBtn = (ImageButton) view.findViewById(R.id.feedBackBtn);
         ImageButton signOutBtn = (ImageButton) view.findViewById(R.id.signoutHomeBtn);
 
         profileBtn.setOnClickListener(new View.OnClickListener() {
@@ -82,10 +82,10 @@ public class HomeFragment extends Fragment{
             }
         });
 
-        rateBtn.setOnClickListener(new View.OnClickListener() {
+        feedBackBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                rateScreen();
+                feedbackScreen();
             }
         });
 
@@ -111,9 +111,9 @@ public class HomeFragment extends Fragment{
         startActivity(in);
     }
 
-    public void rateScreen(){
-        Intent in = new Intent(getActivity(), Rate.class);
-        in.putExtra("rate", "rate");
+    public void feedbackScreen(){
+        Intent in = new Intent(getActivity(), Feedback.class);
+        in.putExtra("fb", "fb");
         startActivity(in);
     }
 
