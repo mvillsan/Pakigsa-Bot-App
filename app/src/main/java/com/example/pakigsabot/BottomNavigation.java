@@ -48,7 +48,7 @@ public class BottomNavigation extends AppCompatActivity {
                         break;
 
                     case 4: //When id is 4, initialize favorites fragment
-                        fragment = new FavoritesFragment();
+                        fragment = new EstFavoritesFragment();
                         break;
 
                     case 5: //When id is 5, initialize chatbot fragment
