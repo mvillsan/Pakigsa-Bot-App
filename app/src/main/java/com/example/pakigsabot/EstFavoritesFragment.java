@@ -1,12 +1,15 @@
 package com.example.pakigsabot;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -59,6 +62,37 @@ public class EstFavoritesFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_estfavorites, container, false);
+        View view = inflater.inflate(R.layout.fragment_estfavorites, container, false);
+
+        //References:
+        ImageView estFav = (ImageView) view.findViewById(R.id.estFavImageView);
+        ImageView servFav = (ImageView) view.findViewById(R.id.servicesFavImageView);
+
+        estFav.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                estFavScreen();
+            }
+        });
+
+        servFav.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                services();
+            }
+        });
+
+        return view;
+    }
+
+    public void estFavScreen(){
+        FragmentTransaction ft = getFragmentManager().beginTransaction();
+        ft.detach(EstFavoritesFragment.this).attach(EstFavoritesFragment.this).commit();
+    }
+
+    public void services(){
+         Intent intent = new Intent(getActivity(), ServicesFavorites.class);
+         intent.putExtra("servFav", "servFav");
+         startActivity(intent);
     }
 }
