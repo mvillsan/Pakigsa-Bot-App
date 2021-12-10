@@ -3,14 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/PakigsaBot/app/src/main/res/drawable/banner.xml" value="0.2942708333333333" />
         <entry key="..\:/PakigsaBot/app/src/main/res/drawable/ic_add_photo.xml" value="0.2942708333333333" />
         <entry key="..\:/PakigsaBot/app/src/main/res/drawable/ic_arrow_back.xml" value="0.2942708333333333" />
+        <entry key="..\:/PakigsaBot/app/src/main/res/drawable/ic_banner.xml" value="0.2942708333333333" />
         <entry key="..\:/PakigsaBot/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.29010416666666666" />
+        <entry key="..\:/PakigsaBot/app/src/main/res/drawable/ic_est.xml" value="0.2942708333333333" />
         <entry key="..\:/PakigsaBot/app/src/main/res/drawable/ic_favorites.xml" value="0.29010416666666666" />
         <entry key="..\:/PakigsaBot/app/src/main/res/drawable/ic_nearby.xml" value="0.29010416666666666" />
         <entry key="..\:/PakigsaBot/app/src/main/res/drawable/ic_profile.xml" value="0.29010416666666666" />
         <entry key="..\:/PakigsaBot/app/src/main/res/drawable/ic_rate.xml" value="0.2942708333333333" />
         <entry key="..\:/PakigsaBot/app/src/main/res/drawable/ic_reserve.xml" value="0.29010416666666666" />
+        <entry key="..\:/PakigsaBot/app/src/main/res/drawable/ic_services.xml" value="0.2942708333333333" />
         <entry key="..\:/PakigsaBot/app/src/main/res/drawable/ic_share.xml" value="0.29010416666666666" />
         <entry key="..\:/PakigsaBot/app/src/main/res/drawable/profile_banner.xml" value="0.2942708333333333" />
         <entry key="..\:/PakigsaBot/app/src/main/res/font/fonts.xml" value="0.17604166666666668" />
