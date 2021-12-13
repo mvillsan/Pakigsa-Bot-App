@@ -1,4 +1,4 @@
-package com.example.pakigsabot;
+package com.example.pakigsabot.NavigationFragments;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,6 +9,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+
+import com.example.pakigsabot.Feedback.Feedback;
+import com.example.pakigsabot.Profile;
+import com.example.pakigsabot.R;
+import com.example.pakigsabot.Share;
+import com.example.pakigsabot.Signin;
 
 /**
  * A simple {@link Fragment} subclass.

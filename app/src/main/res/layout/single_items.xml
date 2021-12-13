@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/main_container">
+
+    <ImageView
+        android:id="@+id/restoIconItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:srcCompat="@drawable/resto_icon_item" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/estTxtResto"
+            android:text="sample resto"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:fontFamily="@font/poppins_light"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_weight="1"
+            android:textStyle="bold">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/estTxtAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppins_light"
+            android:text="address"
+            android:textColor="@color/black"
+            android:textSize="11sp"
+            android:textStyle="italic">
+
+        </TextView>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
