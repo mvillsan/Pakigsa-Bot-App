@@ -6,6 +6,11 @@ import androidx.fragment.app.Fragment;
 import android.os.Bundle;
 
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
+import com.example.pakigsabot.NavigationFragments.ChatbotFragment;
+import com.example.pakigsabot.NavigationFragments.EstFavoritesFragment;
+import com.example.pakigsabot.NavigationFragments.HomeFragment;
+import com.example.pakigsabot.NavigationFragments.NearbyFragment;
+import com.example.pakigsabot.NavigationFragments.ReservationsFragment;
 
 public class BottomNavigation extends AppCompatActivity {
 

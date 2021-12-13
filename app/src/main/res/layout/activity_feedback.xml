@@ -5,10 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/homebg_customer2"
-    tools:context=".Feedback">
+    tools:context=".Feedback.Feedback">
 
     <ImageView
-        android:id="@+id/imageView7"
+        android:id="@+id/prevBtnFeedBackS"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -51,40 +51,65 @@
 
     <ImageView
         android:id="@+id/imageView8"
-        android:layout_width="59dp"
-        android:layout_height="36dp"
+        android:layout_width="62dp"
+        android:layout_height="38dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.389"
-        app:layout_constraintStart_toEndOf="@+id/imageView7"
+        app:layout_constraintStart_toEndOf="@+id/prevBtnFeedBackS"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.037"
         app:srcCompat="@drawable/ic_rate" />
 
-    <EditText
-        android:id="@+id/estEditTxtFB"
-        android:layout_width="302dp"
-        android:layout_height="53dp"
-        android:layout_margin="16dp"
-        android:fontFamily="@font/poppins_light"
-        android:textColor="@color/black"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView13"
-        app:layout_constraintVertical_bias="0.061" />
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/estRecyclerView"
-        android:layout_width="303dp"
-        android:layout_height="365dp"
-        android:padding="4dp"
+        android:layout_width="306dp"
+        android:layout_height="343dp"
         android:background="@color/white"
+        android:padding="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/estEditTxtFB"
+        app:layout_constraintTop_toBottomOf="@+id/estLayout"
+        app:layout_constraintVertical_bias="0.112" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/estLayout"
+        android:layout_width="309dp"
+        android:layout_height="56dp"
+        app:endIconMode="clear_text"
+        app:errorEnabled="true"
+        app:startIconDrawable="@drawable/ic_est"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView13"
+        app:layout_constraintVertical_bias="0.05">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/estEditTxtFBS"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_light"
+            android:hint="Search by Establishment Name"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/nextFBBtn"
+        android:layout_width="198dp"
+        android:layout_height="42dp"
+        android:background="@color/darkbluegreen"
+        android:fontFamily="@font/poppins_medium"
+        android:text="NEXT"
+        android:textColor="@color/lemongreen"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/estRecyclerView"
         app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>

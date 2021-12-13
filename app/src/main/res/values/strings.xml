@@ -46,4 +46,5 @@
     <string name="changePass">Change Password</string>
     <string name="share">Share It With Friends</string>
     <string name="shareNow">Share Now !</string>
+    <string name="submitFB">Submit Feedback</string>
 </resources>
