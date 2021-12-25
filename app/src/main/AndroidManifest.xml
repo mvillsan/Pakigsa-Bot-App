@@ -14,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PakigsaBot">
         <activity
-            android:name=".Resorts.resort_reservation"
+            android:name=".Resorts.ResortReservation"
             android:exported="false" />
 
         <meta-data

@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/screens_bg"
-    tools:context=".Resorts.resort_reservation">
+    android:background="@drawable/topbar_bg"
+    tools:context=".Resorts.ResortReservation">
 
     <Button
         android:id="@+id/selectSerenityBtn2"
@@ -118,6 +118,7 @@
         app:layout_constraintStart_toEndOf="@+id/resortIcon"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/searchByResortsBar"
         android:layout_width="354dp"
@@ -129,7 +130,7 @@
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lblResort"
-        app:layout_constraintVertical_bias="0.049"
+        app:layout_constraintVertical_bias="0.024"
         app:startIconDrawable="@drawable/ic_search">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -141,7 +142,6 @@
             android:textColor="@color/black"
             android:textSize="14sp" />
     </com.google.android.material.textfield.TextInputLayout>
-
 
     <TextView
         android:id="@+id/txtHukad"
@@ -212,10 +212,12 @@
         android:backgroundTint="#325863"
         android:text="@string/select"
         android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.636"
         app:layout_constraintStart_toEndOf="@+id/txtHukad"
-        app:layout_constraintTop_toBottomOf="@+id/searchByResortsBar" />
+        app:layout_constraintTop_toBottomOf="@+id/searchByResortsBar"
+        app:layout_constraintVertical_bias="0.001" />
 
     <TextView
         android:id="@+id/westTownLabel"
@@ -277,14 +279,13 @@
         android:id="@+id/westTownImage"
         android:layout_width="82dp"
         android:layout_height="85dp"
-        android:layout_marginBottom="356dp"
         android:src="@drawable/westown_icon_item"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.112"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/asmaraImage"
-        app:layout_constraintVertical_bias="0.53" />
+        app:layout_constraintVertical_bias="0.059" />
 
     <Button
         android:id="@+id/selectWestTownBtn"
@@ -298,7 +299,7 @@
         app:layout_constraintHorizontal_bias="0.821"
         app:layout_constraintStart_toEndOf="@+id/westTownStars"
         app:layout_constraintTop_toBottomOf="@+id/selectAsmaraBtn"
-        app:layout_constraintVertical_bias="0.133" />
+        app:layout_constraintVertical_bias="0.124" />
 
     <TextView
         android:id="@+id/serenityLabel"
