@@ -34,11 +34,11 @@
     <string name="chatbot_fragment">CHATBOT</string>
     <string name="welcomeTxt">Welcome, User!</string>
     <string name="whatareulooking">What are you looking for?</string>
-    <string name="resto">Restaurant</string>
-    <string name="resort">Resort</string>
-    <string name="dentalc">Dental Clinic</string>
-    <string name="ic">Internet Cafe</string>
-    <string name="spaSalon">Spa \&amp; Salon</string>
+    <string name="resto">Restaurants</string>
+    <string name="resort">Resorts</string>
+    <string name="dentalc">Dental Clinics</string>
+    <string name="ic">Internet Cafes</string>
+    <string name="spaSalon">Spa \&amp; Salons</string>
     <string name="upcomingR">Upcoming Reservations</string>
     <string name="donthaversrv">You don\'t have any reservation</string>
     <string name="selectRsrv">Select and Reserve a Slot to any establishment you want first.</string>
@@ -47,4 +47,7 @@
     <string name="share">Share It With Friends</string>
     <string name="shareNow">Share Now !</string>
     <string name="submitFB">Submit Feedback</string>
+    <string name="asmaraResort">Asmara Urban Resort and Lifestyle Village Inc.</string>
+    <string name="serenityResort">Serenity Farm and Resort Busay</string>
+    <string name="select">Select</string>
 </resources>

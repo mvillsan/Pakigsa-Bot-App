@@ -25,6 +25,7 @@
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_main.xml" value="0.5" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_profile.xml" value="0.33" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_rate.xml" value="0.33" />
+        <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_resort_reservation.xml" value="0.33" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_services_favorites.xml" value="0.278125" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_share.xml" value="0.278125" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_signin.xml" value="0.33" />
@@ -35,7 +36,7 @@
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/fragment_estfavorites.xml" value="0.33" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/fragment_favorites.xml" value="0.27395833333333336" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/fragment_home.xml" value="0.33" />
-        <entry key="..\:/PakigsaBot/app/src/main/res/layout/fragment_nearby.xml" value="0.27395833333333336" />
+        <entry key="..\:/PakigsaBot/app/src/main/res/layout/fragment_nearby.xml" value="0.25" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/fragment_reservations.xml" value="0.2598958333333333" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/single_item.xml" value="0.278125" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/single_items.xml" value="0.278125" />
