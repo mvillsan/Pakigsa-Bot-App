@@ -13,6 +13,7 @@ import android.widget.ImageButton;
 import com.example.pakigsabot.Feedback.Feedback;
 import com.example.pakigsabot.Profile;
 import com.example.pakigsabot.R;
+import com.example.pakigsabot.Resorts.ResortReservation;
 import com.example.pakigsabot.Share;
 import com.example.pakigsabot.Signin;
 
@@ -73,6 +74,7 @@ public class HomeFragment extends Fragment{
         ImageButton shareBtn = (ImageButton) view.findViewById(R.id.shareBtn);
         ImageButton feedBackBtn = (ImageButton) view.findViewById(R.id.feedBackBtn);
         ImageButton signOutBtn = (ImageButton) view.findViewById(R.id.signoutHomeBtn);
+        ImageButton resortBtn = (ImageButton) view.findViewById(R.id.resortBtn);
 
         profileBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -102,6 +104,13 @@ public class HomeFragment extends Fragment{
             }
         });
 
+        resortBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                resortsReservation();
+            }
+        });
+
         return view;
     }
 
@@ -126,6 +135,12 @@ public class HomeFragment extends Fragment{
     public void signOutApp(){
         Intent in = new Intent(getActivity(), Signin.class);
         in.putExtra("signin", "signin");
+        startActivity(in);
+    }
+
+    public void resortsReservation(){
+        Intent in = new Intent(getActivity(), ResortReservation.class);
+        in.putExtra("resortsReserve", "resortsReserve");
         startActivity(in);
     }
 }
