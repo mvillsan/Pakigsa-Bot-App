@@ -25,6 +25,7 @@
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_main.xml" value="0.5" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_profile.xml" value="0.33" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_rate.xml" value="0.33" />
+        <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_resort_details_rcalendar.xml" value="0.33" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_resort_reservation.xml" value="0.33" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_services_favorites.xml" value="0.278125" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_share.xml" value="0.278125" />
@@ -43,7 +44,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_15" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_15_PREVIEW" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
