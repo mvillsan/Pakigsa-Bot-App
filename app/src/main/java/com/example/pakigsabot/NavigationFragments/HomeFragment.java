@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 
+import com.example.pakigsabot.DentalClinics.DentalClinicReservation;
 import com.example.pakigsabot.Feedback.Feedback;
 import com.example.pakigsabot.Profile;
 import com.example.pakigsabot.R;
@@ -75,6 +76,7 @@ public class HomeFragment extends Fragment{
         ImageButton feedBackBtn = (ImageButton) view.findViewById(R.id.feedBackBtn);
         ImageButton signOutBtn = (ImageButton) view.findViewById(R.id.signoutHomeBtn);
         ImageButton resortBtn = (ImageButton) view.findViewById(R.id.resortBtn);
+        ImageButton dentalClinicBtn = (ImageButton) view.findViewById(R.id.dentalClinicBtn);
 
         profileBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -111,6 +113,13 @@ public class HomeFragment extends Fragment{
             }
         });
 
+        dentalClinicBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dentalClinicsReservation();
+            }
+        });
+
         return view;
     }
 
@@ -141,6 +150,12 @@ public class HomeFragment extends Fragment{
     public void resortsReservation(){
         Intent in = new Intent(getActivity(), ResortReservation.class);
         in.putExtra("resortsReserve", "resortsReserve");
+        startActivity(in);
+    }
+
+    public void dentalClinicsReservation(){
+        Intent in = new Intent(getActivity(), DentalClinicReservation.class);
+        in.putExtra("dentalClinicReserve", "dentalClinicReserve");
         startActivity(in);
     }
 }

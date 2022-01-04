@@ -1,4 +1,4 @@
-package com.example.pakigsabot.Resorts;
+package com.example.pakigsabot.DentalClinics;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,31 +9,31 @@ import android.widget.Button;
 
 import com.example.pakigsabot.R;
 
-public class CheckInTimeReserve2 extends AppCompatActivity {
+public class DentalDetailsRCalendar extends AppCompatActivity {
 
-    Button okBtnCheckInTime;
+    Button reserveBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_check_in_time_reserve2);
+        setContentView(R.layout.activity_dental_details_rcalendar);
 
         refs();
 
-        okBtnCheckInTime.setOnClickListener(new View.OnClickListener() {
+        reserveBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                reservationDetails();
+                selectTime();
             }
         });
     }
 
     public void refs(){
-        okBtnCheckInTime = findViewById(R.id.okBtnCheckInTime);
+        reserveBtn = findViewById(R.id.reserveBtnRDDC);
     }
 
-    private void reservationDetails(){
-        Intent intent = new Intent(getApplicationContext(), ResortReservationDetails.class);
+    private void selectTime(){
+        Intent intent = new Intent(getApplicationContext(), CheckInTimeReserveDC.class);
         startActivity(intent);
     }
 }
