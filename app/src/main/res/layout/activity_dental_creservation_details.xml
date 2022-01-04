@@ -37,25 +37,25 @@
 
     <TextView
         android:id="@+id/lblSerenityAddress"
-        android:layout_width="173dp"
-        android:layout_height="15dp"
+        android:layout_width="262dp"
+        android:layout_height="13dp"
         android:fontFamily="@font/poppins_light"
-        android:text="Cebu IT Park, Cebu City"
+        android:text="I1 Building,Jose Maria del Mar St., Lahug, Cebu City"
         android:textColor="@color/gray"
         android:textSize="10sp"
         android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/resortIcon"
+        app:layout_constraintStart_toEndOf="@+id/smileImage"
         app:layout_constraintTop_toTopOf="@+id/lblDentalClinic"
-        app:layout_constraintVertical_bias="0.036" />
+        app:layout_constraintVertical_bias="0.038" />
 
     <ImageView
-        android:id="@+id/resortIcon"
+        android:id="@+id/smileImage"
         android:layout_width="53dp"
         android:layout_height="40dp"
-        android:src="@drawable/cebu_wetland_icon_item"
+        android:src="@drawable/smiledental_logo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -74,7 +74,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/resortIcon"
+        app:layout_constraintStart_toEndOf="@+id/smileImage"
         app:layout_constraintTop_toBottomOf="@+id/imageView13"
         app:layout_constraintVertical_bias="0.052" />
 
@@ -90,7 +90,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.269"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/resortIcon"
+        app:layout_constraintTop_toBottomOf="@+id/smileImage"
         app:layout_constraintVertical_bias="0.018" />
 
 
@@ -137,7 +137,7 @@
         app:layout_constraintHorizontal_bias="0.007"
         app:layout_constraintStart_toEndOf="@+id/timeTxt"
         app:layout_constraintTop_toBottomOf="@+id/dateTxtValue"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.001" />
 
     <ImageView
         android:id="@+id/imageView18"

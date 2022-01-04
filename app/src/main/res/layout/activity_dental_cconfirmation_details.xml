@@ -184,92 +184,32 @@
         app:layout_constraintTop_toBottomOf="@+id/confirmBtnRConfirmation"
         app:layout_constraintVertical_bias="0.029" />
 
+
     <ImageView
         android:id="@+id/imageView17"
-        android:layout_width="342dp"
-        android:layout_height="416dp"
-        android:layout_marginTop="96dp"
+        android:layout_width="262dp"
+        android:layout_height="299dp"
+        android:layout_marginTop="124dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.768"
+        app:layout_constraintHorizontal_bias="0.624"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/reservationFeeTxt"
         app:srcCompat="@drawable/white_rect3" />
 
     <TextView
-        android:id="@+id/chooseTxt"
-        android:layout_width="323dp"
-        android:layout_height="46dp"
-        android:layout_marginTop="30dp"
-        android:fontFamily="@font/poppins_light"
-        android:text="• Choose How to Pay:"
-        android:textColor="@color/gray"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.818"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/notePaymentTxt"
-        app:layout_constraintVertical_bias="0.039" />
-
-    <RadioGroup
-        android:id="@+id/paymentRadioGroup"
-        android:layout_width="287dp"
-        android:layout_height="58dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.774"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/chooseTxt"
-        app:layout_constraintVertical_bias="0.091">
-
-        <RadioButton
-            android:id="@+id/fullPaymentBtn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/poppins_light"
-            android:text="Pay in Full"
-            android:textColor="@color/gray"
-            android:textSize="12sp" />
-
-        <RadioButton
-            android:id="@+id/halfPaymentBtn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/poppins_light"
-            android:text="Pay 50% now, 50% later"
-            android:textColor="@color/gray"
-            android:textSize="12sp" />
-    </RadioGroup>
-
-    <TextView
-        android:id="@+id/PaymentTxt"
-        android:layout_width="263dp"
-        android:layout_height="59dp"
-        android:fontFamily="@font/poppins_light"
-        android:text="(Pay the total amount (P1850.00) now and you're all set or Pay (P925.00) now and the rest (P925.00) will be charged at the resort."
-        android:textColor="@color/gray"
-        android:textSize="11sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.682"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/paymentRadioGroup"
-        app:layout_constraintVertical_bias="0.047" />
-
-    <TextView
         android:id="@+id/selectPaymentTxt"
-        android:layout_width="323dp"
-        android:layout_height="46dp"
+        android:layout_width="233dp"
+        android:layout_height="33dp"
         android:fontFamily="@font/poppins_light"
         android:text="• Select Payment Method:"
         android:textColor="@color/gray"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintHorizontal_bias="0.685"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/PaymentTxt"
-        app:layout_constraintVertical_bias="0.196" />
+        app:layout_constraintTop_toBottomOf="@+id/notePaymentTxt"
+        app:layout_constraintVertical_bias="0.171" />
 
     <Button
         android:id="@+id/paypalBtnRConfirmationDC"
@@ -281,12 +221,12 @@
         android:textColor="@color/white"
         android:textSize="14sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView17"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.365"
+        app:layout_constraintHorizontal_bias="0.565"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/selectPaymentTxt"
-        app:layout_constraintVertical_bias="0.336" />
+        app:layout_constraintVertical_bias="0.187" />
 
     <Button
         android:id="@+id/dragonPayBtnRConfirmationDC"
@@ -298,11 +238,11 @@
         android:textColor="@color/white"
         android:textSize="14sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView17"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.25"
-        app:layout_constraintStart_toEndOf="@+id/paypalBtnRConfirmationDC"
-        app:layout_constraintTop_toTopOf="@+id/selectPaymentTxt"
-        app:layout_constraintVertical_bias="0.336" />
+        app:layout_constraintHorizontal_bias="0.374"
+        app:layout_constraintStart_toStartOf="@+id/imageView17"
+        app:layout_constraintTop_toBottomOf="@+id/paypalBtnRConfirmationDC"
+        app:layout_constraintVertical_bias="0.191" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

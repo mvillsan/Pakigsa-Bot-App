@@ -64,7 +64,7 @@
         app:layout_constraintHorizontal_bias="0.206"
         app:layout_constraintStart_toStartOf="@+id/imageView16"
         app:layout_constraintTop_toBottomOf="@+id/cebuWetlandResortTxt"
-        app:layout_constraintVertical_bias="0.091" />
+        app:layout_constraintVertical_bias="0.028" />
 
     <Button
         android:id="@+id/am910Btn"
@@ -81,7 +81,7 @@
         app:layout_constraintHorizontal_bias="0.206"
         app:layout_constraintStart_toStartOf="@+id/imageView16"
         app:layout_constraintTop_toBottomOf="@+id/am89Btn"
-        app:layout_constraintVertical_bias="0.075" />
+        app:layout_constraintVertical_bias="0.006" />
 
     <Button
         android:id="@+id/am1011Btn"
@@ -98,7 +98,7 @@
         app:layout_constraintHorizontal_bias="0.206"
         app:layout_constraintStart_toStartOf="@+id/imageView16"
         app:layout_constraintTop_toBottomOf="@+id/am910Btn"
-        app:layout_constraintVertical_bias="0.151" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/am1112Btn"
@@ -115,7 +115,7 @@
         app:layout_constraintHorizontal_bias="0.206"
         app:layout_constraintStart_toStartOf="@+id/imageView16"
         app:layout_constraintTop_toBottomOf="@+id/am1011Btn"
-        app:layout_constraintVertical_bias="0.275" />
+        app:layout_constraintVertical_bias="0.012" />
 
     <Button
         android:id="@+id/pm12Btn"
@@ -132,7 +132,7 @@
         app:layout_constraintHorizontal_bias="0.368"
         app:layout_constraintStart_toEndOf="@+id/am89Btn"
         app:layout_constraintTop_toBottomOf="@+id/closeIcon"
-        app:layout_constraintVertical_bias="0.073" />
+        app:layout_constraintVertical_bias="0.009" />
 
     <Button
         android:id="@+id/pm23Btn"
@@ -149,7 +149,7 @@
         app:layout_constraintHorizontal_bias="0.368"
         app:layout_constraintStart_toEndOf="@+id/am910Btn"
         app:layout_constraintTop_toBottomOf="@+id/pm12Btn"
-        app:layout_constraintVertical_bias="0.075" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/pm34Btn"
@@ -166,7 +166,7 @@
         app:layout_constraintHorizontal_bias="0.368"
         app:layout_constraintStart_toEndOf="@+id/am1011Btn"
         app:layout_constraintTop_toBottomOf="@+id/pm23Btn"
-        app:layout_constraintVertical_bias="0.15" />
+        app:layout_constraintVertical_bias="0.008" />
 
     <Button
         android:id="@+id/pm45Btn"
@@ -183,7 +183,22 @@
         app:layout_constraintHorizontal_bias="0.368"
         app:layout_constraintStart_toEndOf="@+id/am1112Btn"
         app:layout_constraintTop_toBottomOf="@+id/pm34Btn"
-        app:layout_constraintVertical_bias="0.27" />
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/policiesTxt"
+        android:layout_width="263dp"
+        android:layout_height="34dp"
+        android:fontFamily="@font/poppins_light"
+        android:text="Policies / House Rules    V "
+        android:textColor="@color/gray"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageView16"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/imageView16"
+        app:layout_constraintTop_toBottomOf="@+id/am1112Btn"
+        app:layout_constraintVertical_bias="0.074" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
