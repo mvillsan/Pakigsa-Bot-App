@@ -27,7 +27,8 @@ public class ResortDetailsRCalendar extends AppCompatActivity {
             public void onClick(View view) {
                 checkInDialog();
             }
-        });
+        });Intent intent = new Intent(getApplicationContext(), CheckInTimeReserve2.class);
+        startActivity(intent);
 
         roomsDetails.setOnClickListener(new View.OnClickListener() {
             @Override

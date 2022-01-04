@@ -29,7 +29,7 @@ public class ConfirmandPay extends AppCompatActivity {
     }
 
     public void refs(){
-        confirmandPayBtn = findViewById(R.id.confirmandPayBtn);
+        confirmandPayBtn = findViewById(R.id.confirmandPayBtnResortCD);
     }
 
     private void success(){
