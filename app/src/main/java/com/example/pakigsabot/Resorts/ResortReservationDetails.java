@@ -9,31 +9,31 @@ import android.widget.Button;
 
 import com.example.pakigsabot.R;
 
-public class CheckInTimeReserve2 extends AppCompatActivity {
+public class ResortReservationDetails extends AppCompatActivity {
 
-    Button okBtnCheckInTime;
+    Button submitBtnRDetails;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_check_in_time_reserve2);
+        setContentView(R.layout.activity_resort_reservation_details);
 
         refs();
 
-        okBtnCheckInTime.setOnClickListener(new View.OnClickListener() {
+        submitBtnRDetails.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                reservationDetails();
+                resortConfirmation();
             }
         });
     }
 
     public void refs(){
-        okBtnCheckInTime = findViewById(R.id.okBtnCheckInTime);
+        submitBtnRDetails = findViewById(R.id.submitBtnRDetails);
     }
 
-    private void reservationDetails(){
-        Intent intent = new Intent(getApplicationContext(), ResortReservationDetails.class);
+    private void resortConfirmation(){
+        Intent intent = new Intent(getApplicationContext(), ResortConfirmationDetails.class);
         startActivity(intent);
     }
 }

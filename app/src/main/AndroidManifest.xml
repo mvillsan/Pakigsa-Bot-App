@@ -14,6 +14,39 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PakigsaBot">
         <activity
+            android:name=".DentalClinics.DentalClinicReservationSuccess"
+            android:exported="false" />
+        <activity
+            android:name=".DentalClinics.ConfirmandPayDC"
+            android:exported="false" />
+        <activity
+            android:name=".DentalClinics.DentalCConfirmationDetails"
+            android:exported="false" />
+        <activity
+            android:name=".DentalClinics.DentalCReservationDetails"
+            android:exported="false" />
+        <activity
+            android:name=".DentalClinics.CheckInTimeReserveDC"
+            android:exported="false" />
+        <activity
+            android:name=".DentalClinics.DentalDetailsRCalendar"
+            android:exported="false" />
+        <activity
+            android:name=".DentalClinics.DentalClinicReservation"
+            android:exported="false" />
+        <activity
+            android:name=".Resorts.ResortReservationSuccess"
+            android:exported="false" />
+        <activity
+            android:name=".Resorts.ConfirmandPay"
+            android:exported="false" />
+        <activity
+            android:name=".Resorts.ResortConfirmationDetails"
+            android:exported="false" />
+        <activity
+            android:name=".Resorts.ResortReservationDetails"
+            android:exported="false" />
+        <activity
             android:name=".Resorts.ResortSpecificDetails"
             android:exported="false" />
         <activity
