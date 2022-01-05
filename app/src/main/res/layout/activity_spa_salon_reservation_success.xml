@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/topbar_bg"
-    tools:context=".DentalClinics.DentalClinicReservationSuccess">
+    tools:context=".SpaSalon.SpaSalonReservationSuccess">
 
     <ImageView
         android:id="@+id/imageView16"
@@ -21,10 +21,10 @@
         app:srcCompat="@drawable/white_rect" />
 
     <ImageView
-        android:id="@+id/smileLogo"
+        android:id="@+id/laEsparanzaLogo"
         android:layout_width="53dp"
         android:layout_height="40dp"
-        android:src="@drawable/smiledental_logo"
+        android:src="@drawable/laesperanza_logo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.145"
@@ -37,24 +37,24 @@
         android:layout_width="265dp"
         android:layout_height="37dp"
         android:fontFamily="@font/poppins_light"
-        android:text="Smile Specialist Dental Center"
+        android:text="La Esperanza Spa"
         android:textColor="#FFFFFF"
-        android:textSize="18sp"
+        android:textSize="21sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/smileLogo"
+        app:layout_constraintStart_toEndOf="@+id/laEsparanzaLogo"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.023" />
 
     <TextView
         android:id="@+id/lblSerenityAddress"
-        android:layout_width="259dp"
-        android:layout_height="14dp"
+        android:layout_width="258dp"
+        android:layout_height="21dp"
         android:fontFamily="@font/poppins_light"
-        android:text="I1 Building,Jose Maria del Mar St., Lahug, Cebu City"
+        android:text="Juana Osmeña Street, Cebu City"
         android:textColor="@color/lemongreen"
-        android:textSize="10sp"
+        android:textSize="14sp"
         android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

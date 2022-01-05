@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:fillViewport="true"
-    tools:layout_editor_absoluteX="1dp"
-    tools:layout_editor_absoluteY="1dp">
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:fillViewport="true"
+tools:layout_editor_absoluteX="1dp"
+tools:layout_editor_absoluteY="1dp">
 
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@drawable/topbar_bg"
-    tools:context=".DentalClinics.DentalDetailsRCalendar">
+    tools:context=".SpaSalon.SpaSalonDetailsRCalendar">
 
     <ImageView
-        android:id="@+id/smileLogo"
+        android:id="@+id/laEsperanzaLogo"
         android:layout_width="44dp"
         android:layout_height="41dp"
-        android:src="@drawable/smiledental_logo"
+        android:src="@drawable/laesperanza_logo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.155"
@@ -40,35 +40,35 @@
         app:layout_constraintVertical_bias="0.023" />
 
     <TextView
-        android:id="@+id/lblDental"
-        android:layout_width="265dp"
-        android:layout_height="37dp"
+        android:id="@+id/lblSpaSalon"
+        android:layout_width="214dp"
+        android:layout_height="39dp"
         android:fontFamily="@font/poppins_light"
-        android:text="Smile Specialist Dental Center"
+        android:text="La Esperanza Spa"
         android:textColor="#FFFFFF"
-        android:textSize="15sp"
+        android:textSize="21sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.2"
-        app:layout_constraintStart_toEndOf="@+id/smileLogo"
+        app:layout_constraintHorizontal_bias="0.072"
+        app:layout_constraintStart_toEndOf="@+id/laEsperanzaLogo"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.022" />
+        app:layout_constraintVertical_bias="0.023" />
 
     <TextView
         android:id="@+id/lblSerenityAddress"
-        android:layout_width="248dp"
-        android:layout_height="21dp"
+        android:layout_width="190dp"
+        android:layout_height="14dp"
         android:fontFamily="@font/poppins_light"
-        android:text="I1 Building,Jose Maria del Mar St., Lahug, Cebu City"
+        android:text="Juana Osmeña Street, Cebu City"
         android:textColor="@color/lemongreen"
-        android:textSize="10sp"
+        android:textSize="12sp"
         android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/lblDental"
-        app:layout_constraintTop_toTopOf="@+id/lblDental"
-        app:layout_constraintVertical_bias="0.03" />
+        app:layout_constraintStart_toStartOf="@+id/lblSpaSalon"
+        app:layout_constraintTop_toTopOf="@+id/lblSpaSalon"
+        app:layout_constraintVertical_bias="0.035" />
 
     <ImageView
         android:id="@+id/cebuWetlandHeart"
@@ -76,10 +76,10 @@
         android:layout_height="38dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.937"
-        app:layout_constraintStart_toEndOf="@+id/smileLogo"
+        app:layout_constraintHorizontal_bias="0.207"
+        app:layout_constraintStart_toEndOf="@+id/lblSpaSalon"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.022"
+        app:layout_constraintVertical_bias="0.026"
         app:srcCompat="@drawable/ic_heart" />
 
     <TextView
@@ -93,10 +93,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/imageView14"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.519"
+        app:layout_constraintHorizontal_bias="0.365"
         app:layout_constraintStart_toEndOf="@+id/noteTxt"
         app:layout_constraintTop_toBottomOf="@+id/lblSerenityAddress"
-        app:layout_constraintVertical_bias="0.363" />
+        app:layout_constraintVertical_bias="0.364" />
 
     <ImageView
         android:id="@+id/imageView14"
@@ -104,11 +104,11 @@
         android:layout_height="87dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.294"
+        app:layout_constraintHorizontal_bias="0.176"
         app:layout_constraintStart_toEndOf="@+id/noteTxt"
         app:layout_constraintTop_toBottomOf="@+id/lblSerenityAddress"
-        app:layout_constraintVertical_bias="0.111"
-        app:srcCompat="@drawable/smiledental_map" />
+        app:layout_constraintVertical_bias="0.114"
+        app:srcCompat="@drawable/laesperanza_map" />
 
     <TextView
         android:id="@+id/noteTxt"
@@ -122,7 +122,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.39"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lblSerenityAddress"
+        app:layout_constraintTop_toBottomOf="@+id/laEsperanzaLogo"
         app:layout_constraintVertical_bias="0.075" />
 
     <ImageView
@@ -133,7 +133,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.173"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/smileLogo"
+        app:layout_constraintTop_toBottomOf="@+id/laEsperanzaLogo"
         app:layout_constraintVertical_bias="0.061"
         app:srcCompat="@drawable/idea_icon" />
 
@@ -143,10 +143,10 @@
         android:layout_height="261dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.125"
+        app:layout_constraintHorizontal_bias="0.25"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/noteTxt"
-        app:layout_constraintVertical_bias="0.151"
+        app:layout_constraintVertical_bias="0.167"
         app:srcCompat="@drawable/reservation_calendar" />
 
     <TextView
@@ -178,12 +178,12 @@
 
 
     <TextView
-        android:id="@+id/proceduresTxt"
+        android:id="@+id/servicesTxt"
         android:layout_width="85dp"
         android:layout_height="16dp"
         android:layout_marginTop="10dp"
         android:fontFamily="@font/poppins_medium"
-        android:text="Procedures"
+        android:text="Services"
         android:textColor="@color/darkgreen"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -205,7 +205,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.355"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/proceduresTxt"
+        app:layout_constraintTop_toTopOf="@+id/servicesTxt"
         app:layout_constraintVertical_bias="0.158" />
 
     <TextView
@@ -238,7 +238,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/proceduresTxt"
+        app:layout_constraintStart_toEndOf="@+id/servicesTxt"
         app:layout_constraintTop_toBottomOf="@+id/imageView18"
         app:layout_constraintVertical_bias="0.0" />
 
@@ -276,7 +276,7 @@
         app:layout_constraintVertical_bias="0.059" />
 
     <Button
-        android:id="@+id/reserveBtnRDDC"
+        android:id="@+id/reserveBtnRDSS"
         android:layout_width="118dp"
         android:layout_height="56dp"
         android:layout_marginTop="40dp"

@@ -17,6 +17,7 @@ import com.example.pakigsabot.R;
 import com.example.pakigsabot.Resorts.ResortReservation;
 import com.example.pakigsabot.Share;
 import com.example.pakigsabot.Signin;
+import com.example.pakigsabot.SpaSalon.SpaSalonReservation;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -77,6 +78,7 @@ public class HomeFragment extends Fragment{
         ImageButton signOutBtn = (ImageButton) view.findViewById(R.id.signoutHomeBtn);
         ImageButton resortBtn = (ImageButton) view.findViewById(R.id.resortBtn);
         ImageButton dentalClinicBtn = (ImageButton) view.findViewById(R.id.dentalClinicBtn);
+        ImageButton spaSalonBtn = (ImageButton) view.findViewById(R.id.spaSalonBtn);
 
         profileBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -120,6 +122,13 @@ public class HomeFragment extends Fragment{
             }
         });
 
+        spaSalonBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                spaSalonReservation();
+            }
+        });
+
         return view;
     }
 
@@ -156,6 +165,12 @@ public class HomeFragment extends Fragment{
     public void dentalClinicsReservation(){
         Intent in = new Intent(getActivity(), DentalClinicReservation.class);
         in.putExtra("dentalClinicReserve", "dentalClinicReserve");
+        startActivity(in);
+    }
+
+    public void spaSalonReservation(){
+        Intent in = new Intent(getActivity(), SpaSalonReservation.class);
+        in.putExtra("spaSalonReserve", "spaSalonReserve");
         startActivity(in);
     }
 }
