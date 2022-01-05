@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/topbar_bg"
-    tools:context=".SpaSalon.SpaSalonReservationSuccess">
+    tools:context=".InternetCafe.InternetCafeReservationSuccess">
 
     <ImageView
         android:id="@+id/imageView16"
@@ -24,7 +24,7 @@
         android:id="@+id/laEsparanzaLogo"
         android:layout_width="53dp"
         android:layout_height="40dp"
-        android:src="@drawable/laesperanza_logo"
+        android:src="@drawable/titus_logo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.145"
@@ -37,9 +37,9 @@
         android:layout_width="265dp"
         android:layout_height="37dp"
         android:fontFamily="@font/poppins_light"
-        android:text="La Esperanza Spa"
+        android:text="Titus Cafe and Coworking Space"
         android:textColor="#FFFFFF"
-        android:textSize="21sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -52,7 +52,7 @@
         android:layout_width="258dp"
         android:layout_height="21dp"
         android:fontFamily="@font/poppins_light"
-        android:text="Juana Osmeña Street, Cebu City"
+        android:text="R Aboitiz St, Cebu City"
         android:textColor="@color/lemongreen"
         android:textSize="14sp"
         android:textStyle="italic"
@@ -186,18 +186,17 @@
 
     <TextView
         android:id="@+id/emailTxt"
-        android:layout_width="294dp"
-        android:layout_height="44dp"
+        android:layout_width="327dp"
+        android:layout_height="41dp"
         android:fontFamily="@font/poppins_light"
-        android:text="• Email or contact the spa and salon here ..."
+        android:text="• Email or contact the internet cafe here ..."
         android:textAlignment="center"
         android:textColor="@color/gray"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.521"
+        app:layout_constraintHorizontal_bias="0.726"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/chatbotTxt"
-        app:layout_constraintVertical_bias="0.241" />
-
+        app:layout_constraintVertical_bias="0.236" />
 </androidx.constraintlayout.widget.ConstraintLayout>

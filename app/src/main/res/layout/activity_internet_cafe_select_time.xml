@@ -50,7 +50,7 @@
         app:layout_constraintVertical_bias="0.042" />
 
     <Button
-        android:id="@+id/am89BtnSpaSalon"
+        android:id="@+id/am89BtnICafe"
         android:layout_width="101dp"
         android:layout_height="42dp"
         android:backgroundTint="@color/darkgreen"
@@ -80,7 +80,7 @@
         app:layout_constraintEnd_toEndOf="@+id/imageView16"
         app:layout_constraintHorizontal_bias="0.206"
         app:layout_constraintStart_toStartOf="@+id/imageView16"
-        app:layout_constraintTop_toBottomOf="@+id/am89BtnSpaSalon"
+        app:layout_constraintTop_toBottomOf="@+id/am89BtnICafe"
         app:layout_constraintVertical_bias="0.006" />
 
     <Button
@@ -130,7 +130,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/imageView16"
         app:layout_constraintEnd_toEndOf="@+id/imageView16"
         app:layout_constraintHorizontal_bias="0.368"
-        app:layout_constraintStart_toEndOf="@+id/am89BtnSpaSalon"
+        app:layout_constraintStart_toEndOf="@+id/am89BtnICafe"
         app:layout_constraintTop_toBottomOf="@+id/closeIcon"
         app:layout_constraintVertical_bias="0.009" />
 
