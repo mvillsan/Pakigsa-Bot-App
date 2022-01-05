@@ -39,7 +39,10 @@
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_dental_creservation_details.xml" value="0.33" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_dental_details_rcalendar.xml" value="0.33" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_feedback.xml" value="0.278125" />
-        <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_internet_cafe_reservation.xml" value="0.271286231884058" />
+        <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_internet_cafe_details_rcalendar.xml" value="0.25" />
+        <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_internet_cafe_rdetails.xml" value="0.26721014492753625" />
+        <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_internet_cafe_reservation.xml" value="0.25" />
+        <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_internet_cafe_select_time.xml" value="0.26721014492753625" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_main.xml" value="0.5" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_profile.xml" value="0.33" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_rate.xml" value="0.33" />
@@ -73,7 +76,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_15" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_15_PREVIEW" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
