@@ -9,31 +9,32 @@ import android.widget.Button;
 
 import com.example.pakigsabot.R;
 
-public class InternetCafeSelectTime extends AppCompatActivity {
+public class InternetCafeConfirmAndPay extends AppCompatActivity {
 
-    Button am89BtnICafe;
+    Button confirmandPayBtnIC;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_internet_cafe_select_time);
+        setContentView(R.layout.activity_internet_cafe_confirm_and_pay);
 
         refs();
 
-        am89BtnICafe.setOnClickListener(new View.OnClickListener() {
+        confirmandPayBtnIC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                internetCafeReservationDetails();
+                iCafeSubmittedReservationSuccessfully();
             }
         });
     }
 
     public void refs(){
-        am89BtnICafe = findViewById(R.id.am89BtnICafe);
+        confirmandPayBtnIC = findViewById(R.id.confirmandPayBtnIC);
     }
 
-    private void internetCafeReservationDetails(){
-        Intent intent = new Intent(getApplicationContext(), InternetCafeRDetails.class);
+    private void iCafeSubmittedReservationSuccessfully(){
+        Intent intent = new Intent(getApplicationContext(), InternetCafeReservationSuccess.class);
         startActivity(intent);
     }
+
 }
