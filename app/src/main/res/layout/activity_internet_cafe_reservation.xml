@@ -8,7 +8,7 @@
     tools:context=".InternetCafe.InternetCafeReservation">
 
     <Button
-        android:id="@+id/laEsparanzaSpaSelectBtn"
+        android:id="@+id/titusSelectBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#325863"
@@ -132,19 +132,19 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
-        android:id="@+id/spaSalon1Txt"
+        android:id="@+id/cafe1Txt"
         android:layout_width="119dp"
         android:layout_height="18dp"
         android:layout_marginTop="25dp"
         android:layout_marginEnd="132dp"
         android:fontFamily="@font/poppins_medium"
-        android:text="Andy Studio and Spa"
+        android:text="3AT Internet Cafe"
         android:textColor="#000000"
-        android:textSize="10sp"
+        android:textSize="11sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.341"
-        app:layout_constraintStart_toEndOf="@+id/andyImage"
+        app:layout_constraintStart_toEndOf="@+id/at3Image"
         app:layout_constraintTop_toBottomOf="@+id/searchByInternetCafe"
         app:layout_constraintVertical_bias="0.007" />
 
@@ -158,7 +158,7 @@
         app:layout_constraintHorizontal_bias="0.417"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lblSerenityAddress"
-        app:layout_constraintVertical_bias="0.004" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/reviewsAsmara"
@@ -178,10 +178,10 @@
 
     <TextView
         android:id="@+id/lblSerenityAddress"
-        android:layout_width="146dp"
-        android:layout_height="33dp"
+        android:layout_width="143dp"
+        android:layout_height="12dp"
         android:fontFamily="@font/poppins_light"
-        android:text="PH, P Sy, 57G Gorordo Ave, Cebu City"
+        android:text="Gorordo Ave, Cebu City"
         android:textColor="#000000"
         android:textSize="10sp"
         android:textStyle="italic"
@@ -189,7 +189,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spaSalon1Txt"
+        app:layout_constraintTop_toBottomOf="@+id/cafe1Txt"
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
@@ -203,24 +203,24 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.76"
-        app:layout_constraintStart_toEndOf="@+id/spaSalon1Txt"
+        app:layout_constraintStart_toEndOf="@+id/cafe1Txt"
         app:layout_constraintTop_toBottomOf="@+id/searchByInternetCafe"
         app:layout_constraintVertical_bias="0.003" />
 
     <TextView
-        android:id="@+id/spaSalon2Txt"
+        android:id="@+id/cafe2Txt"
         android:layout_width="190dp"
         android:layout_height="38dp"
         android:fontFamily="@font/poppins_medium"
-        android:text="Fe and Nicole Salon And Spa"
+        android:text="Mineski Internet Cafe"
         android:textColor="#000000"
-        android:textSize="10sp"
+        android:textSize="11sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.597"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/asmaraStars"
-        app:layout_constraintVertical_bias="0.075" />
+        app:layout_constraintVertical_bias="0.118" />
 
     <ImageView
         android:id="@+id/westTownStars"
@@ -239,7 +239,7 @@
         android:layout_width="157dp"
         android:layout_height="16dp"
         android:fontFamily="@font/poppins_light"
-        android:text="Gorordo Ave, Cebu City"
+        android:text="Gov. M. Cuenco Ave, Cebu City"
         android:textColor="#000000"
         android:textSize="9sp"
         android:textStyle="italic"
@@ -247,15 +247,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.523"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/spaSalon2Txt"
+        app:layout_constraintTop_toTopOf="@+id/cafe2Txt"
         app:layout_constraintVertical_bias="0.036" />
 
     <ImageView
-        android:id="@+id/andyImage"
+        android:id="@+id/at3Image"
         android:layout_width="82dp"
         android:layout_height="85dp"
         android:layout_marginBottom="364dp"
-        android:src="@drawable/andy_salon_icon"
+        android:src="@drawable/at3_image"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.112"
@@ -264,15 +264,15 @@
         app:layout_constraintVertical_bias="0.163" />
 
     <ImageView
-        android:id="@+id/feSalonImage"
+        android:id="@+id/mineskiImage"
         android:layout_width="82dp"
         android:layout_height="85dp"
-        android:src="@drawable/feandnicole_salon_icon"
+        android:src="@drawable/mineski_image"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.112"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/andyImage"
+        app:layout_constraintTop_toBottomOf="@+id/at3Image"
         app:layout_constraintVertical_bias="0.059" />
 
     <Button
@@ -290,13 +290,13 @@
         app:layout_constraintVertical_bias="0.124" />
 
     <TextView
-        android:id="@+id/spaSalon3Txt"
+        android:id="@+id/cafe3Txt"
         android:layout_width="190dp"
         android:layout_height="38dp"
         android:fontFamily="@font/poppins_medium"
-        android:text="Jeeb's Salon And Spa"
+        android:text="Ironics Internet Cafe"
         android:textColor="#000000"
-        android:textSize="10sp"
+        android:textSize="11sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.597"
@@ -305,11 +305,11 @@
         app:layout_constraintVertical_bias="0.172" />
 
     <TextView
-        android:id="@+id/spaSalon4Txt"
+        android:id="@+id/cafe4Txt"
         android:layout_width="190dp"
         android:layout_height="38dp"
         android:fontFamily="@font/poppins_medium"
-        android:text="La Esperanza Spa"
+        android:text="Titus Cafe and Coworking Space"
         android:textColor="#000000"
         android:textSize="10sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -348,7 +348,7 @@
         android:layout_width="166dp"
         android:layout_height="15dp"
         android:fontFamily="@font/poppins_light"
-        android:text="F. Ramos St, Cebu City"
+        android:text="Colon St, Cebu City"
         android:textColor="#000000"
         android:textSize="9sp"
         android:textStyle="italic"
@@ -356,7 +356,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.538"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/spaSalon3Txt"
+        app:layout_constraintTop_toTopOf="@+id/cafe3Txt"
         app:layout_constraintVertical_bias="0.05" />
 
     <TextView
@@ -364,7 +364,7 @@
         android:layout_width="148dp"
         android:layout_height="14dp"
         android:fontFamily="@font/poppins_light"
-        android:text="Juana Osmeña Street, Cebu City"
+        android:text="R Aboitiz St, Cebu City"
         android:textColor="#000000"
         android:textSize="9sp"
         android:textStyle="italic"
@@ -372,7 +372,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/spaSalon4Txt"
+        app:layout_constraintTop_toTopOf="@+id/cafe4Txt"
         app:layout_constraintVertical_bias="0.081" />
 
     <Button
@@ -390,27 +390,27 @@
         app:layout_constraintVertical_bias="0.165" />
 
     <ImageView
-        android:id="@+id/jeebsImage"
+        android:id="@+id/ironicsImage"
         android:layout_width="82dp"
         android:layout_height="85dp"
-        android:src="@drawable/jeebs_salon_icon"
+        android:src="@drawable/ironics_image"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.112"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/feSalonImage"
+        app:layout_constraintTop_toBottomOf="@+id/mineskiImage"
         app:layout_constraintVertical_bias="0.093" />
 
     <ImageView
-        android:id="@+id/laEsperanzaImage"
+        android:id="@+id/titusImage"
         android:layout_width="82dp"
         android:layout_height="85dp"
-        android:src="@drawable/laesperanza_icon"
+        android:src="@drawable/titus_image"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.112"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/jeebsImage"
+        app:layout_constraintTop_toBottomOf="@+id/ironicsImage"
         app:layout_constraintVertical_bias="0.151" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
