@@ -14,6 +14,30 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PakigsaBot">
         <activity
+            android:name=".InternetCafe.InternetCafeReservation"
+            android:exported="false" />
+        <activity
+            android:name=".SpaSalon.SpaSalonReservationSuccess"
+            android:exported="false" />
+        <activity
+            android:name=".SpaSalon.SpaSalonConfirmationDetails"
+            android:exported="false" />
+        <activity
+            android:name=".SpaSalon.SpaSalonConfirmAndPay"
+            android:exported="false" />
+        <activity
+            android:name=".SpaSalon.SpaSalonReservationDetails"
+            android:exported="false" />
+        <activity
+            android:name=".SpaSalon.SpaSalonSelectTime"
+            android:exported="false" />
+        <activity
+            android:name=".SpaSalon.SpaSalonDetailsRCalendar"
+            android:exported="false" />
+        <activity
+            android:name=".SpaSalon.SpaSalonReservation"
+            android:exported="false" />
+        <activity
             android:name=".DentalClinics.DentalClinicReservationSuccess"
             android:exported="false" />
         <activity

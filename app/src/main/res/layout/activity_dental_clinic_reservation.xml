@@ -108,7 +108,7 @@
 
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/searchByResortsBar"
+        android:id="@+id/searchByDentalClinic"
         android:layout_width="354dp"
         android:layout_height="55dp"
         app:endIconMode="clear_text"
@@ -144,8 +144,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/asmaraImage"
-        app:layout_constraintTop_toBottomOf="@+id/searchByResortsBar"
+        app:layout_constraintStart_toEndOf="@+id/affinityImage"
+        app:layout_constraintTop_toBottomOf="@+id/searchByDentalClinic"
         app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
@@ -204,7 +204,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.636"
         app:layout_constraintStart_toEndOf="@+id/dental1Txt"
-        app:layout_constraintTop_toBottomOf="@+id/searchByResortsBar"
+        app:layout_constraintTop_toBottomOf="@+id/searchByDentalClinic"
         app:layout_constraintVertical_bias="0.001" />
 
     <TextView
@@ -260,7 +260,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.112"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/searchByResortsBar"
+        app:layout_constraintTop_toBottomOf="@+id/searchByDentalClinic"
         app:layout_constraintVertical_bias="0.163" />
 
     <ImageView

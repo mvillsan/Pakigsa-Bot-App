@@ -5,10 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/topbar_bg"
-    tools:context=".Resorts.ResortReservation">
+    tools:context=".SpaSalon.SpaSalonReservation">
 
     <Button
-        android:id="@+id/selectCebuWetland"
+        android:id="@+id/laEsparanzaSpaSelectBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#325863"
@@ -16,10 +16,10 @@
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.291"
-        app:layout_constraintStart_toEndOf="@+id/reviewsAsmara3"
-        app:layout_constraintTop_toBottomOf="@+id/selectSerenityBtn"
-        app:layout_constraintVertical_bias="0.262" />
+        app:layout_constraintHorizontal_bias="0.619"
+        app:layout_constraintStart_toEndOf="@+id/serenityAdd2"
+        app:layout_constraintTop_toBottomOf="@+id/selectRoyalBtn"
+        app:layout_constraintVertical_bias="0.279" />
 
     <TextView
         android:id="@+id/reviewsAsmara3"
@@ -34,8 +34,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.058"
         app:layout_constraintStart_toEndOf="@+id/serenityStars"
-        app:layout_constraintTop_toBottomOf="@+id/lblSerenityAddress"
-        app:layout_constraintVertical_bias="0.411" />
+        app:layout_constraintTop_toBottomOf="@+id/serenityAdd"
+        app:layout_constraintVertical_bias="0.013" />
 
     <TextView
         android:id="@+id/reviewsAsmara4"
@@ -48,27 +48,15 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.058"
+        app:layout_constraintHorizontal_bias="0.05"
         app:layout_constraintStart_toEndOf="@+id/serenityStars2"
-        app:layout_constraintTop_toTopOf="@+id/serenityAdd2"
-        app:layout_constraintVertical_bias="0.098" />
-
-    <ImageView
-        android:id="@+id/serenityStars3"
-        android:layout_width="95dp"
-        android:layout_height="17dp"
-        android:src="@drawable/stars_icon"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.42"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/serenityLabel"
-        app:layout_constraintVertical_bias="0.1" />
+        app:layout_constraintTop_toBottomOf="@+id/serenityAdd2"
+        app:layout_constraintVertical_bias="0.027" />
 
     <TextView
         android:id="@+id/reviewsAsmara2"
-        android:layout_width="64dp"
-        android:layout_height="13dp"
+        android:layout_width="52dp"
+        android:layout_height="16dp"
         android:fontFamily="@font/poppins_light"
         android:text="5 Reviews"
         android:textColor="#000000"
@@ -76,16 +64,16 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.058"
+        app:layout_constraintHorizontal_bias="0.045"
         app:layout_constraintStart_toEndOf="@+id/westTownStars"
-        app:layout_constraintTop_toBottomOf="@+id/lblSerenityAddress"
-        app:layout_constraintVertical_bias="0.194" />
+        app:layout_constraintTop_toBottomOf="@+id/westTownAdd"
+        app:layout_constraintVertical_bias="0.007" />
 
     <ImageView
-        android:id="@+id/resortIcon"
+        android:id="@+id/spaSalonImage"
         android:layout_width="53dp"
         android:layout_height="40dp"
-        android:src="@drawable/resort_icon"
+        android:src="@drawable/spasalon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -104,23 +92,23 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <TextView
-        android:id="@+id/lblResort"
-        android:layout_width="100dp"
-        android:layout_height="47dp"
+        android:id="@+id/spaSalonTxt"
+        android:layout_width="174dp"
+        android:layout_height="43dp"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/poppins_light"
-        android:text="@string/resort"
+        android:text="@string/spaSalon"
         android:textColor="#FFFFFF"
         android:textSize="26sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/resortIcon"
+        app:layout_constraintHorizontal_bias="0.11"
+        app:layout_constraintStart_toEndOf="@+id/spaSalonImage"
         app:layout_constraintTop_toTopOf="parent" />
 
-
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/searchByResortsBar"
+        android:id="@+id/searchBySpaSalon"
         android:layout_width="354dp"
         android:layout_height="55dp"
         app:endIconMode="clear_text"
@@ -129,7 +117,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lblResort"
+        app:layout_constraintTop_toBottomOf="@+id/spaSalonTxt"
         app:layout_constraintVertical_bias="0.024"
         app:startIconDrawable="@drawable/ic_search">
 
@@ -138,27 +126,27 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins_light"
-            android:hint="Search by Resort's Name"
+            android:hint="Search by Spa or Salon's Name"
             android:textColor="@color/black"
             android:textSize="14sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
-        android:id="@+id/txtHukad"
-        android:layout_width="147dp"
-        android:layout_height="32dp"
+        android:id="@+id/spaSalon1Txt"
+        android:layout_width="119dp"
+        android:layout_height="18dp"
         android:layout_marginTop="25dp"
         android:layout_marginEnd="132dp"
         android:fontFamily="@font/poppins_medium"
-        android:text="@string/asmaraResort"
+        android:text="Andy Studio and Spa"
         android:textColor="#000000"
         android:textSize="10sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/asmaraImage"
-        app:layout_constraintTop_toBottomOf="@+id/searchByResortsBar"
-        app:layout_constraintVertical_bias="0.018" />
+        app:layout_constraintHorizontal_bias="0.341"
+        app:layout_constraintStart_toEndOf="@+id/andyImage"
+        app:layout_constraintTop_toBottomOf="@+id/searchBySpaSalon"
+        app:layout_constraintVertical_bias="0.007" />
 
     <ImageView
         android:id="@+id/asmaraStars"
@@ -167,10 +155,10 @@
         android:src="@drawable/stars_icon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.42"
+        app:layout_constraintHorizontal_bias="0.417"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lblSerenityAddress"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.004" />
 
     <TextView
         android:id="@+id/reviewsAsmara"
@@ -183,29 +171,29 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.056"
+        app:layout_constraintHorizontal_bias="0.039"
         app:layout_constraintStart_toEndOf="@+id/asmaraStars"
         app:layout_constraintTop_toBottomOf="@+id/lblSerenityAddress"
-        app:layout_constraintVertical_bias="0.01" />
+        app:layout_constraintVertical_bias="0.006" />
 
     <TextView
         android:id="@+id/lblSerenityAddress"
-        android:layout_width="173dp"
-        android:layout_height="15dp"
+        android:layout_width="146dp"
+        android:layout_height="33dp"
         android:fontFamily="@font/poppins_light"
-        android:text="1 Paseo Saturnino, Cebu City"
+        android:text="PH, P Sy, 57G Gorordo Ave, Cebu City"
         android:textColor="#000000"
-        android:textSize="9sp"
+        android:textSize="10sp"
         android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.558"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtHukad"
+        app:layout_constraintTop_toBottomOf="@+id/spaSalon1Txt"
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/selectAsmaraBtn"
+        android:id="@+id/selectAffinityBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
@@ -214,25 +202,25 @@
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.636"
-        app:layout_constraintStart_toEndOf="@+id/txtHukad"
-        app:layout_constraintTop_toBottomOf="@+id/searchByResortsBar"
-        app:layout_constraintVertical_bias="0.013" />
+        app:layout_constraintHorizontal_bias="0.76"
+        app:layout_constraintStart_toEndOf="@+id/spaSalon1Txt"
+        app:layout_constraintTop_toBottomOf="@+id/searchBySpaSalon"
+        app:layout_constraintVertical_bias="0.003" />
 
     <TextView
-        android:id="@+id/westTownLabel"
+        android:id="@+id/spaSalon2Txt"
         android:layout_width="190dp"
         android:layout_height="38dp"
         android:fontFamily="@font/poppins_medium"
-        android:text="Cebu Westown Lagoon"
+        android:text="Fe and Nicole Salon And Spa"
         android:textColor="#000000"
         android:textSize="10sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.601"
+        app:layout_constraintHorizontal_bias="0.597"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/asmaraStars"
-        app:layout_constraintVertical_bias="0.095" />
+        app:layout_constraintVertical_bias="0.075" />
 
     <ImageView
         android:id="@+id/westTownStars"
@@ -248,47 +236,47 @@
 
     <TextView
         android:id="@+id/westTownAdd"
-        android:layout_width="173dp"
-        android:layout_height="15dp"
+        android:layout_width="157dp"
+        android:layout_height="16dp"
         android:fontFamily="@font/poppins_light"
-        android:text="MO2 Entertainment Complex"
+        android:text="Gorordo Ave, Cebu City"
         android:textColor="#000000"
         android:textSize="9sp"
         android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.558"
+        app:layout_constraintHorizontal_bias="0.523"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/westTownLabel"
-        app:layout_constraintVertical_bias="0.034" />
+        app:layout_constraintTop_toTopOf="@+id/spaSalon2Txt"
+        app:layout_constraintVertical_bias="0.036" />
 
     <ImageView
-        android:id="@+id/asmaraImage"
+        android:id="@+id/andyImage"
         android:layout_width="82dp"
         android:layout_height="85dp"
         android:layout_marginBottom="364dp"
-        android:src="@drawable/asmara_image"
+        android:src="@drawable/andy_salon_icon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.112"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/searchByResortsBar"
-        app:layout_constraintVertical_bias="0.177" />
+        app:layout_constraintTop_toBottomOf="@+id/searchBySpaSalon"
+        app:layout_constraintVertical_bias="0.163" />
 
     <ImageView
-        android:id="@+id/westTownImage"
+        android:id="@+id/feSalonImage"
         android:layout_width="82dp"
         android:layout_height="85dp"
-        android:src="@drawable/westown_image"
+        android:src="@drawable/feandnicole_salon_icon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.112"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/asmaraImage"
+        app:layout_constraintTop_toBottomOf="@+id/andyImage"
         app:layout_constraintVertical_bias="0.059" />
 
     <Button
-        android:id="@+id/selectWestTownBtn"
+        android:id="@+id/selectCebuDentBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#325863"
@@ -296,17 +284,17 @@
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.831"
+        app:layout_constraintHorizontal_bias="0.821"
         app:layout_constraintStart_toEndOf="@+id/westTownStars"
-        app:layout_constraintTop_toBottomOf="@+id/selectAsmaraBtn"
-        app:layout_constraintVertical_bias="0.134" />
+        app:layout_constraintTop_toBottomOf="@+id/selectAffinityBtn"
+        app:layout_constraintVertical_bias="0.124" />
 
     <TextView
-        android:id="@+id/serenityLabel"
+        android:id="@+id/spaSalon3Txt"
         android:layout_width="190dp"
         android:layout_height="38dp"
         android:fontFamily="@font/poppins_medium"
-        android:text="Serenity Farm and Resort Busay"
+        android:text="Jeeb's Salon And Spa"
         android:textColor="#000000"
         android:textSize="10sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -314,14 +302,14 @@
         app:layout_constraintHorizontal_bias="0.597"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/westTownStars"
-        app:layout_constraintVertical_bias="0.155" />
+        app:layout_constraintVertical_bias="0.172" />
 
     <TextView
-        android:id="@+id/serenityLabel3"
+        android:id="@+id/spaSalon4Txt"
         android:layout_width="190dp"
         android:layout_height="38dp"
         android:fontFamily="@font/poppins_medium"
-        android:text="Cebu Wetland Resort"
+        android:text="La Esperanza Spa"
         android:textColor="#000000"
         android:textSize="10sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -329,7 +317,7 @@
         app:layout_constraintHorizontal_bias="0.601"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/serenityStars"
-        app:layout_constraintVertical_bias="0.239" />
+        app:layout_constraintVertical_bias="0.247" />
 
     <ImageView
         android:id="@+id/serenityStars"
@@ -338,10 +326,10 @@
         android:src="@drawable/stars_icon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.42"
+        app:layout_constraintHorizontal_bias="0.417"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/serenityLabel"
-        app:layout_constraintVertical_bias="0.1" />
+        app:layout_constraintTop_toBottomOf="@+id/serenityAdd"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/serenityStars2"
@@ -353,42 +341,42 @@
         app:layout_constraintHorizontal_bias="0.42"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/serenityAdd2"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.005" />
 
     <TextView
         android:id="@+id/serenityAdd"
-        android:layout_width="173dp"
+        android:layout_width="166dp"
         android:layout_height="15dp"
         android:fontFamily="@font/poppins_light"
-        android:text="Sitio Tiguib, Brgy., Cebu City"
+        android:text="F. Ramos St, Cebu City"
         android:textColor="#000000"
         android:textSize="9sp"
         android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.554"
+        app:layout_constraintHorizontal_bias="0.538"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/serenityLabel"
-        app:layout_constraintVertical_bias="0.054" />
+        app:layout_constraintTop_toTopOf="@+id/spaSalon3Txt"
+        app:layout_constraintVertical_bias="0.05" />
 
     <TextView
         android:id="@+id/serenityAdd2"
-        android:layout_width="173dp"
-        android:layout_height="15dp"
+        android:layout_width="148dp"
+        android:layout_height="14dp"
         android:fontFamily="@font/poppins_light"
-        android:text="186 Natalio B. Bacalso Ave, Cebu City"
+        android:text="Juana Osmeña Street, Cebu City"
         android:textColor="#000000"
         android:textSize="9sp"
         android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.554"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/serenityLabel3"
-        app:layout_constraintVertical_bias="0.077" />
+        app:layout_constraintTop_toTopOf="@+id/spaSalon4Txt"
+        app:layout_constraintVertical_bias="0.081" />
 
     <Button
-        android:id="@+id/selectSerenityBtn"
+        android:id="@+id/selectRoyalBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#325863"
@@ -398,31 +386,31 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toEndOf="@+id/reviewsAsmara3"
-        app:layout_constraintTop_toBottomOf="@+id/selectWestTownBtn"
-        app:layout_constraintVertical_bias="0.162" />
+        app:layout_constraintTop_toBottomOf="@+id/selectCebuDentBtn"
+        app:layout_constraintVertical_bias="0.165" />
 
     <ImageView
-        android:id="@+id/serenityImage"
+        android:id="@+id/jeebsImage"
         android:layout_width="82dp"
         android:layout_height="85dp"
-        android:src="@drawable/serenity_image"
+        android:src="@drawable/jeebs_salon_icon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.112"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/westTownImage"
-        app:layout_constraintVertical_bias="0.085" />
+        app:layout_constraintTop_toBottomOf="@+id/feSalonImage"
+        app:layout_constraintVertical_bias="0.093" />
 
     <ImageView
-        android:id="@+id/serenityImage2"
+        android:id="@+id/laEsperanzaImage"
         android:layout_width="82dp"
         android:layout_height="85dp"
-        android:src="@drawable/cebu_wetland_image"
+        android:src="@drawable/laesperanza_icon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.112"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/serenityImage"
-        app:layout_constraintVertical_bias="0.125" />
+        app:layout_constraintTop_toBottomOf="@+id/jeebsImage"
+        app:layout_constraintVertical_bias="0.151" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
