@@ -14,6 +14,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PakigsaBot">
         <activity
+            android:name=".CancelReservation.CancelReservationSuccessful"
+            android:exported="false" />
+        <activity
+            android:name=".CancelReservation.CancelReservation3"
+            android:exported="false" />
+        <activity
+            android:name=".CancelReservation.CancelReservation2"
+            android:exported="false" />
+        <activity
             android:name=".CancelReservation.CancelReservation1"
             android:exported="false" />
         <activity
@@ -109,7 +118,7 @@
             android:value="AIzaSyD4KfDcLVjVPatpIKtrPXot024Z4UHVZQ8" />
 
         <activity
-            android:name=".CurrentLocation"
+            android:name=".Location.CurrentLocation"
             android:exported="false" />
         <activity
             android:name=".Feedback.Rate"
@@ -118,16 +127,16 @@
             android:name=".Feedback.Feedback"
             android:exported="false" />
         <activity
-            android:name=".ServicesFavorites"
+            android:name=".Favorites.ServicesFavorites"
             android:exported="false" />
         <activity
-            android:name=".Share"
+            android:name=".ShareApp.Share"
             android:exported="false" />
         <activity
-            android:name=".Profile"
+            android:name=".Profile.Profile"
             android:exported="false" />
         <activity
-            android:name=".BottomNavigation"
+            android:name=".NavBar.BottomNavigation"
             android:exported="false" />
         <activity
             android:name=".Signup"

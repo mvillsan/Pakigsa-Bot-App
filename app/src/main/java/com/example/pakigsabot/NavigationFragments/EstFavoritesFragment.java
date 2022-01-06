@@ -12,7 +12,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.example.pakigsabot.R;
-import com.example.pakigsabot.ServicesFavorites;
+import com.example.pakigsabot.Favorites.ServicesFavorites;
 
 /**
  * A simple {@link Fragment} subclass.

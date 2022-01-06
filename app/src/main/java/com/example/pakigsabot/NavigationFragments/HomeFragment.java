@@ -13,10 +13,10 @@ import android.widget.ImageButton;
 import com.example.pakigsabot.DentalClinics.DentalClinicReservation;
 import com.example.pakigsabot.Feedback.Feedback;
 import com.example.pakigsabot.InternetCafe.InternetCafeReservation;
-import com.example.pakigsabot.Profile;
+import com.example.pakigsabot.Profile.Profile;
 import com.example.pakigsabot.R;
 import com.example.pakigsabot.Resorts.ResortReservation;
-import com.example.pakigsabot.Share;
+import com.example.pakigsabot.ShareApp.Share;
 import com.example.pakigsabot.Signin;
 import com.example.pakigsabot.SpaSalon.SpaSalonReservation;
 

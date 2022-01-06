@@ -1,4 +1,4 @@
-package com.example.pakigsabot;
+package com.example.pakigsabot.NavBar;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
@@ -11,6 +11,7 @@ import com.example.pakigsabot.NavigationFragments.EstFavoritesFragment;
 import com.example.pakigsabot.NavigationFragments.HomeFragment;
 import com.example.pakigsabot.NavigationFragments.NearbyFragment;
 import com.example.pakigsabot.NavigationFragments.ReservationsFragment;
+import com.example.pakigsabot.R;
 
 public class BottomNavigation extends AppCompatActivity {
 
