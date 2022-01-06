@@ -27,6 +27,7 @@
         <entry key="..\:/PakigsaBot/app/src/main/res/drawable/profile_banner.xml" value="0.2942708333333333" />
         <entry key="..\:/PakigsaBot/app/src/main/res/font/fonts.xml" value="0.17604166666666668" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_bottom_navigation.xml" value="0.25" />
+        <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_cancel_reservation1.xml" value="0.33" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_check_in_time_reserve2.xml" value="0.278125" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_check_in_time_reserve_dc.xml" value="0.278125" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_confirmand_pay.xml" value="0.33" />
@@ -73,13 +74,13 @@
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/fragment_favorites.xml" value="0.27395833333333336" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/fragment_home.xml" value="0.33" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/fragment_nearby.xml" value="0.33" />
-        <entry key="..\:/PakigsaBot/app/src/main/res/layout/fragment_reservations.xml" value="0.5" />
+        <entry key="..\:/PakigsaBot/app/src/main/res/layout/fragment_reservations.xml" value="0.25" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/single_item.xml" value="0.278125" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/single_items.xml" value="0.278125" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_15" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_15_PREVIEW" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
