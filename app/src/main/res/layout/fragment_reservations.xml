@@ -1,17 +1,577 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout3"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/homebg_customer"
     tools:context=".NavigationFragments.ReservationsFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/reservation_fragment"
-        android:textSize="48sp"
-        android:gravity="center"/>
 
-</FrameLayout>
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="52dp"
+        android:layout_height="39dp"
+        android:background="@color/lemongreen"
+        android:src="@drawable/ic_reserve"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.532"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcomeUserTxt"
+        app:layout_constraintVertical_bias="0.018" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/comforta"
+        android:gravity="center"
+        android:text="Reservations"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.549"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView9"
+        app:layout_constraintVertical_bias="0.063" />
+
+    <ImageView
+        android:id="@+id/profileReservationsBtn"
+        android:layout_width="62dp"
+        android:layout_height="47dp"
+        android:src="@drawable/ic_profile"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.046"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.019" />
+
+    <TextView
+        android:id="@+id/welcomeUserTxt"
+        android:layout_width="204dp"
+        android:layout_height="42dp"
+        android:fontFamily="@font/poppins_light"
+        android:text="@string/welcomeTxt"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/profileReservationsBtn"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
+
+    <ImageButton
+        android:id="@+id/signoutReservationBtn"
+        android:layout_width="48dp"
+        android:layout_height="40dp"
+        android:background="@color/darkgreen"
+        android:src="@drawable/sign_out"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toEndOf="@+id/welcomeUserTxt"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.019" />
+
+    <ImageView
+        android:id="@+id/whiteRect"
+        android:layout_width="275dp"
+        android:layout_height="277dp"
+        android:background="@drawable/white_rect4png"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.573"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        app:layout_constraintVertical_bias="0.083" />
+
+    <ImageView
+        android:id="@+id/purple_round"
+        android:layout_width="124dp"
+        android:layout_height="43dp"
+        android:src="@drawable/dark_green_rounded_rect"
+        app:layout_constraintBottom_toBottomOf="@+id/whiteRect"
+        app:layout_constraintEnd_toEndOf="@+id/whiteRect"
+        app:layout_constraintHorizontal_bias="0.221"
+        app:layout_constraintStart_toStartOf="@+id/whiteRect"
+        app:layout_constraintTop_toTopOf="@+id/whiteRect"
+        app:layout_constraintVertical_bias="0.025" />
+
+    <TextView
+        android:id="@+id/welcomeUserTxtReservations9"
+        android:layout_width="103dp"
+        android:layout_height="28dp"
+        android:fontFamily="@font/poppins_light"
+        android:text="January 11, 2022"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/purple_round"
+        app:layout_constraintEnd_toEndOf="@+id/purple_round"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="@+id/purple_round"
+        app:layout_constraintTop_toTopOf="@+id/purple_round"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/welcomeUserTxtReservations3"
+        android:layout_width="48dp"
+        android:layout_height="16dp"
+        android:fontFamily="@font/poppins_light"
+        android:text="5:00 PM"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/whiteRect"
+        app:layout_constraintEnd_toEndOf="@+id/whiteRect"
+        app:layout_constraintHorizontal_bias="0.112"
+        app:layout_constraintStart_toEndOf="@+id/purple_round"
+        app:layout_constraintTop_toTopOf="@+id/whiteRect"
+        app:layout_constraintVertical_bias="0.062" />
+
+    <ImageView
+        android:id="@+id/infoJan11"
+        android:layout_width="26dp"
+        android:layout_height="29dp"
+        android:src="@drawable/ic_info"
+        app:layout_constraintBottom_toBottomOf="@+id/whiteRect"
+        app:layout_constraintEnd_toEndOf="@+id/whiteRect"
+        app:layout_constraintHorizontal_bias="0.557"
+        app:layout_constraintStart_toEndOf="@+id/welcomeUserTxtReservations3"
+        app:layout_constraintTop_toTopOf="@+id/whiteRect"
+        app:layout_constraintVertical_bias="0.05" />
+
+    <TextView
+        android:id="@+id/hukadTxt"
+        android:layout_width="91dp"
+        android:layout_height="16dp"
+        android:fontFamily="@font/poppins_light"
+        android:text="Hukad"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/whiteRect"
+        app:layout_constraintEnd_toEndOf="@+id/whiteRect"
+        app:layout_constraintHorizontal_bias="0.26"
+        app:layout_constraintStart_toStartOf="@+id/whiteRect"
+        app:layout_constraintTop_toTopOf="@+id/welcomeUserTxtReservations9"
+        app:layout_constraintVertical_bias="0.087" />
+
+    <TextView
+        android:id="@+id/welcomeUserTxtReservations4"
+        android:layout_width="91dp"
+        android:layout_height="16dp"
+        android:fontFamily="@font/poppins_light"
+        android:text="Terrace, Table 1"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/whiteRect"
+        app:layout_constraintEnd_toEndOf="@+id/whiteRect"
+        app:layout_constraintHorizontal_bias="0.258"
+        app:layout_constraintStart_toStartOf="@+id/whiteRect"
+        app:layout_constraintTop_toBottomOf="@+id/hukadTxt"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/welcomeUserTxtReservations5"
+        android:layout_width="91dp"
+        android:layout_height="16dp"
+        android:fontFamily="@font/poppins_light"
+        android:text="Mvil San"
+        android:textAlignment="center"
+        android:textColor="@color/gray"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/whiteRect"
+        app:layout_constraintEnd_toEndOf="@+id/whiteRect"
+        app:layout_constraintHorizontal_bias="0.258"
+        app:layout_constraintStart_toStartOf="@+id/whiteRect"
+        app:layout_constraintTop_toBottomOf="@+id/welcomeUserTxtReservations4"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/purple_round2"
+        android:layout_width="124dp"
+        android:layout_height="43dp"
+        android:src="@drawable/dark_green_rounded_rect"
+        app:layout_constraintBottom_toBottomOf="@+id/whiteRect"
+        app:layout_constraintEnd_toEndOf="@+id/whiteRect"
+        app:layout_constraintHorizontal_bias="0.221"
+        app:layout_constraintStart_toStartOf="@+id/whiteRect"
+        app:layout_constraintTop_toBottomOf="@+id/welcomeUserTxtReservations5"
+        app:layout_constraintVertical_bias="0.025" />
+
+    <TextView
+        android:id="@+id/txt2"
+        android:layout_width="103dp"
+        android:layout_height="28dp"
+        android:fontFamily="@font/poppins_light"
+        android:text="January 12, 2022"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/purple_round2"
+        app:layout_constraintEnd_toEndOf="@+id/purple_round2"
+        app:layout_constraintHorizontal_bias="0.523"
+        app:layout_constraintStart_toStartOf="@+id/purple_round2"
+        app:layout_constraintTop_toTopOf="@+id/purple_round2"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/smileSpecialistTxt"
+        android:layout_width="121dp"
+        android:layout_height="18dp"
+        android:fontFamily="@font/poppins_light"
+        android:text="Smile Specialist Dental Center"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="8sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/whiteRect"
+        app:layout_constraintEnd_toEndOf="@+id/whiteRect"
+        app:layout_constraintHorizontal_bias="0.246"
+        app:layout_constraintStart_toStartOf="@+id/whiteRect"
+        app:layout_constraintTop_toTopOf="@+id/txt2"
+        app:layout_constraintVertical_bias="0.133" />
+
+    <TextView
+        android:id="@+id/orthoTxt2"
+        android:layout_width="118dp"
+        android:layout_height="14dp"
+        android:fontFamily="@font/poppins_light"
+        android:text="Orthodontics (Braces)"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/whiteRect"
+        app:layout_constraintEnd_toEndOf="@+id/whiteRect"
+        app:layout_constraintHorizontal_bias="0.242"
+        app:layout_constraintStart_toStartOf="@+id/whiteRect"
+        app:layout_constraintTop_toBottomOf="@+id/smileSpecialistTxt"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/angelCastleTxt"
+        android:layout_width="91dp"
+        android:layout_height="16dp"
+        android:fontFamily="@font/poppins_light"
+        android:text="Angel Castle"
+        android:textAlignment="center"
+        android:textColor="@color/gray"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/whiteRect"
+        app:layout_constraintEnd_toEndOf="@+id/whiteRect"
+        app:layout_constraintHorizontal_bias="0.26"
+        app:layout_constraintStart_toStartOf="@+id/whiteRect"
+        app:layout_constraintTop_toBottomOf="@+id/orthoTxt2"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/timeTxt2"
+        android:layout_width="48dp"
+        android:layout_height="16dp"
+        android:fontFamily="@font/poppins_light"
+        android:text="2:00 PM"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/whiteRect"
+        app:layout_constraintEnd_toEndOf="@+id/whiteRect"
+        app:layout_constraintHorizontal_bias="0.101"
+        app:layout_constraintStart_toEndOf="@+id/purple_round2"
+        app:layout_constraintTop_toBottomOf="@+id/welcomeUserTxtReservations3"
+        app:layout_constraintVertical_bias="0.331" />
+
+    <ImageView
+        android:id="@+id/infoJan12"
+        android:layout_width="26dp"
+        android:layout_height="29dp"
+        android:src="@drawable/ic_info"
+        app:layout_constraintBottom_toBottomOf="@+id/whiteRect"
+        app:layout_constraintEnd_toEndOf="@+id/whiteRect"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toEndOf="@+id/timeTxt2"
+        app:layout_constraintTop_toBottomOf="@+id/infoJan11"
+        app:layout_constraintVertical_bias="0.276" />
+
+    <ImageView
+        android:id="@+id/purple_round3"
+        android:layout_width="124dp"
+        android:layout_height="43dp"
+        android:src="@drawable/dark_green_rounded_rect"
+        app:layout_constraintBottom_toBottomOf="@+id/whiteRect"
+        app:layout_constraintEnd_toEndOf="@+id/whiteRect"
+        app:layout_constraintHorizontal_bias="0.225"
+        app:layout_constraintStart_toStartOf="@+id/whiteRect"
+        app:layout_constraintTop_toBottomOf="@+id/angelCastleTxt"
+        app:layout_constraintVertical_bias="0.017" />
+
+    <TextView
+        android:id="@+id/txt3"
+        android:layout_width="103dp"
+        android:layout_height="28dp"
+        android:fontFamily="@font/poppins_light"
+        android:text="January 14, 2022"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/purple_round3"
+        app:layout_constraintEnd_toEndOf="@+id/purple_round3"
+        app:layout_constraintHorizontal_bias="0.523"
+        app:layout_constraintStart_toStartOf="@+id/purple_round3"
+        app:layout_constraintTop_toTopOf="@+id/purple_round3"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/laEsparanzaTxt"
+        android:layout_width="91dp"
+        android:layout_height="16dp"
+        android:fontFamily="@font/poppins_light"
+        android:text="La Esperanza Spa"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/whiteRect"
+        app:layout_constraintEnd_toEndOf="@+id/whiteRect"
+        app:layout_constraintHorizontal_bias="0.26"
+        app:layout_constraintStart_toStartOf="@+id/whiteRect"
+        app:layout_constraintTop_toTopOf="@+id/txt3"
+        app:layout_constraintVertical_bias="0.275" />
+
+    <TextView
+        android:id="@+id/manicureTxt2"
+        android:layout_width="91dp"
+        android:layout_height="16dp"
+        android:fontFamily="@font/poppins_light"
+        android:text="Manicure"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/whiteRect"
+        app:layout_constraintEnd_toEndOf="@+id/whiteRect"
+        app:layout_constraintHorizontal_bias="0.258"
+        app:layout_constraintStart_toStartOf="@+id/whiteRect"
+        app:layout_constraintTop_toBottomOf="@+id/laEsparanzaTxt"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/lyspgyTxt"
+        android:layout_width="91dp"
+        android:layout_height="16dp"
+        android:fontFamily="@font/poppins_light"
+        android:text="Lys Pgy"
+        android:textAlignment="center"
+        android:textColor="@color/gray"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/whiteRect"
+        app:layout_constraintEnd_toEndOf="@+id/whiteRect"
+        app:layout_constraintHorizontal_bias="0.258"
+        app:layout_constraintStart_toStartOf="@+id/whiteRect"
+        app:layout_constraintTop_toBottomOf="@+id/manicureTxt2"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/timeTxt3"
+        android:layout_width="48dp"
+        android:layout_height="16dp"
+        android:fontFamily="@font/poppins_light"
+        android:text="10:00 AM"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/whiteRect"
+        app:layout_constraintEnd_toEndOf="@+id/whiteRect"
+        app:layout_constraintHorizontal_bias="0.101"
+        app:layout_constraintStart_toEndOf="@+id/purple_round3"
+        app:layout_constraintTop_toBottomOf="@+id/timeTxt2"
+        app:layout_constraintVertical_bias="0.481" />
+
+    <ImageView
+        android:id="@+id/infoJan14"
+        android:layout_width="26dp"
+        android:layout_height="29dp"
+        android:src="@drawable/ic_info"
+        app:layout_constraintBottom_toBottomOf="@+id/whiteRect"
+        app:layout_constraintEnd_toEndOf="@+id/whiteRect"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toEndOf="@+id/timeTxt3"
+        app:layout_constraintTop_toBottomOf="@+id/infoJan12"
+        app:layout_constraintVertical_bias="0.45" />
+
+    <TextView
+        android:id="@+id/reservationsTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_light"
+        android:text="Reservation History"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.177"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/whiteRect"
+        app:layout_constraintVertical_bias="0.082" />
+
+    <ImageView
+        android:id="@+id/whiteRect2"
+        android:layout_width="275dp"
+        android:layout_height="184dp"
+        android:background="@drawable/white_rect4png"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.573"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reservationsTxt"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/purple_round4"
+        android:layout_width="124dp"
+        android:layout_height="43dp"
+        android:src="@drawable/dark_green_rounded_rect"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/whiteRect2"
+        app:layout_constraintHorizontal_bias="0.211"
+        app:layout_constraintStart_toStartOf="@+id/whiteRect2"
+        app:layout_constraintTop_toTopOf="@+id/whiteRect2"
+        app:layout_constraintVertical_bias="0.033" />
+
+    <TextView
+        android:id="@+id/txt4"
+        android:layout_width="103dp"
+        android:layout_height="28dp"
+        android:fontFamily="@font/poppins_light"
+        android:text="January 3, 2022"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/whiteRect2"
+        app:layout_constraintEnd_toEndOf="@+id/purple_round4"
+        app:layout_constraintHorizontal_bias="0.619"
+        app:layout_constraintStart_toStartOf="@+id/purple_round4"
+        app:layout_constraintTop_toTopOf="@+id/purple_round4"
+        app:layout_constraintVertical_bias="0.098" />
+
+    <TextView
+        android:id="@+id/laEsparanzaTxt2"
+        android:layout_width="91dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/poppins_light"
+        android:text="La Esperanza Spa"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/whiteRect2"
+        app:layout_constraintHorizontal_bias="0.26"
+        app:layout_constraintStart_toStartOf="@+id/whiteRect2"
+        app:layout_constraintTop_toTopOf="@+id/txt4"
+        app:layout_constraintVertical_bias="0.08" />
+
+    <TextView
+        android:id="@+id/hairRebondTxt"
+        android:layout_width="91dp"
+        android:layout_height="16dp"
+        android:fontFamily="@font/poppins_light"
+        android:text="Hair Rebond"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/whiteRect2"
+        app:layout_constraintHorizontal_bias="0.258"
+        app:layout_constraintStart_toStartOf="@+id/whiteRect2"
+        app:layout_constraintTop_toBottomOf="@+id/laEsparanzaTxt2"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/mvillsanTxt"
+        android:layout_width="91dp"
+        android:layout_height="16dp"
+        android:fontFamily="@font/poppins_light"
+        android:text="Mvil San"
+        android:textAlignment="center"
+        android:textColor="@color/gray"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/whiteRect2"
+        app:layout_constraintHorizontal_bias="0.258"
+        app:layout_constraintStart_toStartOf="@+id/whiteRect2"
+        app:layout_constraintTop_toBottomOf="@+id/hairRebondTxt"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <TextView
+        android:id="@+id/timeTxt3"
+        android:layout_width="48dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/poppins_light"
+        android:text="10:00 AM"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/whiteRect2"
+        app:layout_constraintHorizontal_bias="0.088"
+        app:layout_constraintStart_toEndOf="@+id/purple_round4"
+        app:layout_constraintTop_toTopOf="@+id/whiteRect2"
+        app:layout_constraintVertical_bias="0.089" />
+
+    <ImageView
+        android:id="@+id/infoJan3"
+        android:layout_width="26dp"
+        android:layout_height="29dp"
+        android:src="@drawable/ic_info"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/whiteRect2"
+        app:layout_constraintHorizontal_bias="0.854"
+        app:layout_constraintStart_toEndOf="@+id/laEsparanzaTxt2"
+        app:layout_constraintTop_toTopOf="@+id/whiteRect2"
+        app:layout_constraintVertical_bias="0.092" />
+
+    <TextView
+        android:id="@+id/completedTxt"
+        android:layout_width="62dp"
+        android:layout_height="13dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/poppins_light"
+        android:text="Completed"
+        android:textAlignment="center"
+        android:textColor="@color/green"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/whiteRect2"
+        app:layout_constraintHorizontal_bias="0.229"
+        app:layout_constraintStart_toEndOf="@+id/hairRebondTxt"
+        app:layout_constraintTop_toTopOf="@+id/whiteRect2"
+        app:layout_constraintVertical_bias="0.155" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
