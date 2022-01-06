@@ -1,4 +1,4 @@
-package com.example.pakigsabot;
+package com.example.pakigsabot.Favorites;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
+
+import com.example.pakigsabot.R;
 
 public class ServicesFavorites extends AppCompatActivity {
 

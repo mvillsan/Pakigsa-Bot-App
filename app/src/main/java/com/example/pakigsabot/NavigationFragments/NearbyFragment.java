@@ -10,9 +10,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import com.example.pakigsabot.CurrentLocation;
+import com.example.pakigsabot.Location.CurrentLocation;
 import com.example.pakigsabot.R;
-import com.example.pakigsabot.ServicesFavorites;
 
 /**
  * A simple {@link Fragment} subclass.

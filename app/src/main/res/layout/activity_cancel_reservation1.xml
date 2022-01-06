@@ -5,7 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/homebg_customer"
-    tools:context=".CancelReservation.CancelReservation1">
+    tools:context=".CancelReservation.CancelReservation1"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="0dp">
 
     <ImageView
         android:id="@+id/imageView9"
@@ -80,28 +82,26 @@
 
     <ImageView
         android:id="@+id/imageView6"
-        android:layout_width="414dp"
-        android:layout_height="574dp"
-        android:layout_marginTop="5dp"
+        android:layout_width="391dp"
+        android:layout_height="531dp"
         android:src="@drawable/reservations_bg"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toTopOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="0.511" />
 
     <ImageView
         android:id="@+id/detail_rect"
-        android:layout_width="314dp"
-        android:layout_height="497dp"
+        android:layout_width="336dp"
+        android:layout_height="486dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.546"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.594"
-        app:srcCompat="@drawable/peach_rect" />
+        app:srcCompat="@drawable/white_rect_light" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -126,33 +126,34 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/detail_rect"
         app:layout_constraintEnd_toEndOf="@+id/detail_rect"
-        app:layout_constraintHorizontal_bias="0.161"
+        app:layout_constraintHorizontal_bias="0.125"
         app:layout_constraintStart_toEndOf="@+id/textView13"
         app:layout_constraintTop_toBottomOf="@+id/textView18"
-        app:layout_constraintVertical_bias="0.09" />
+        app:layout_constraintVertical_bias="0.093" />
 
     <TextView
         android:id="@+id/textView17"
         android:layout_width="106dp"
         android:layout_height="24dp"
         android:fontFamily="@font/poppins_light"
-        android:text="Jane Dela Cruz"
+        android:text="Mvil San"
         android:textColor="@color/black"
         android:textSize="12sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/detail_rect"
         app:layout_constraintEnd_toEndOf="@+id/detail_rect"
-        app:layout_constraintHorizontal_bias="0.191"
+        app:layout_constraintHorizontal_bias="0.196"
         app:layout_constraintStart_toEndOf="@+id/textView10"
         app:layout_constraintTop_toBottomOf="@+id/textView15"
-        app:layout_constraintVertical_bias="0.026" />
+        app:layout_constraintVertical_bias="0.018" />
 
     <TextView
         android:id="@+id/textView16"
-        android:layout_width="91dp"
-        android:layout_height="16dp"
+        android:layout_width="139dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="2dp"
         android:fontFamily="@font/poppins_light"
-        android:text="Terrace, Table 1"
+        android:text="Hukad | Terrace, Table 1"
         android:textColor="@color/black"
         android:textSize="12sp"
         android:textStyle="bold"
@@ -174,31 +175,32 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/detail_rect"
         app:layout_constraintEnd_toEndOf="@+id/detail_rect"
-        app:layout_constraintHorizontal_bias="0.063"
+        app:layout_constraintHorizontal_bias="0.077"
         app:layout_constraintStart_toEndOf="@+id/textView12"
         app:layout_constraintTop_toBottomOf="@+id/textView16"
-        app:layout_constraintVertical_bias="0.081" />
+        app:layout_constraintVertical_bias="0.041" />
 
     <TextView
         android:id="@+id/textView15"
         android:layout_width="106dp"
         android:layout_height="24dp"
         android:fontFamily="@font/poppins_light"
-        android:text="12:00 PM"
+        android:text="5:00 PM"
         android:textColor="@color/black"
         android:textSize="12sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/detail_rect"
         app:layout_constraintEnd_toEndOf="@+id/detail_rect"
-        app:layout_constraintHorizontal_bias="0.116"
+        app:layout_constraintHorizontal_bias="0.117"
         app:layout_constraintStart_toEndOf="@+id/textView9"
         app:layout_constraintTop_toBottomOf="@+id/textView14"
-        app:layout_constraintVertical_bias="0.01" />
+        app:layout_constraintVertical_bias="0.023" />
 
     <TextView
         android:id="@+id/textView14"
         android:layout_width="106dp"
         android:layout_height="24dp"
+        android:layout_marginTop="2dp"
         android:fontFamily="@font/poppins_light"
         android:text="January 11, 2022"
         android:textColor="@color/black"
@@ -206,10 +208,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/detail_rect"
         app:layout_constraintEnd_toEndOf="@+id/detail_rect"
-        app:layout_constraintHorizontal_bias="0.119"
+        app:layout_constraintHorizontal_bias="0.117"
         app:layout_constraintStart_toEndOf="@+id/textView5"
         app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        app:layout_constraintVertical_bias="0.038" />
+        app:layout_constraintVertical_bias="0.026" />
 
     <TextView
         android:id="@+id/textView5"
@@ -297,18 +299,18 @@
 
     <ImageView
         android:id="@+id/closeImageViewRDetails"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="36dp"
+        android:layout_height="40dp"
         app:layout_constraintBottom_toBottomOf="@+id/detail_rect"
         app:layout_constraintEnd_toEndOf="@+id/detail_rect"
-        app:layout_constraintHorizontal_bias="0.953"
+        app:layout_constraintHorizontal_bias="0.9"
         app:layout_constraintStart_toStartOf="@+id/detail_rect"
         app:layout_constraintTop_toTopOf="@+id/detail_rect"
-        app:layout_constraintVertical_bias="0.217"
+        app:layout_constraintVertical_bias="0.221"
         app:srcCompat="@android:drawable/ic_menu_close_clear_cancel" />
 
     <ImageView
-        android:id="@+id/cancelReservationImageView"
+        android:id="@+id/cancelReservationBtn1"
         android:layout_width="305dp"
         android:layout_height="51dp"
         app:layout_constraintBottom_toBottomOf="@+id/detail_rect"
@@ -327,9 +329,20 @@
         android:text="CANCEL RESERVATION"
         android:textColor="@color/white"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/cancelReservationImageView"
-        app:layout_constraintEnd_toEndOf="@+id/cancelReservationImageView"
-        app:layout_constraintStart_toStartOf="@+id/cancelReservationImageView"
-        app:layout_constraintTop_toTopOf="@+id/cancelReservationImageView" />
+        app:layout_constraintBottom_toBottomOf="@+id/cancelReservationBtn1"
+        app:layout_constraintEnd_toEndOf="@+id/cancelReservationBtn1"
+        app:layout_constraintStart_toStartOf="@+id/cancelReservationBtn1"
+        app:layout_constraintTop_toTopOf="@+id/cancelReservationBtn1" />
+
+    <ImageView
+        android:id="@+id/imageView20"
+        android:layout_width="553dp"
+        android:layout_height="74dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageView6"
+        app:layout_constraintStart_toStartOf="@+id/imageView6"
+        app:layout_constraintTop_toBottomOf="@+id/detail_rect"
+        app:layout_constraintVertical_bias="0.36"
+        app:srcCompat="@drawable/reservations_bg2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
