@@ -11,6 +11,7 @@
         <entry key="..\:/PakigsaBot/app/src/main/res/drawable/ic_beach.xml" value="0.2942708333333333" />
         <entry key="..\:/PakigsaBot/app/src/main/res/drawable/ic_bed.xml" value="0.2942708333333333" />
         <entry key="..\:/PakigsaBot/app/src/main/res/drawable/ic_bfast.xml" value="0.2942708333333333" />
+        <entry key="..\:/PakigsaBot/app/src/main/res/drawable/ic_chatbot.xml" value="0.2942708333333333" />
         <entry key="..\:/PakigsaBot/app/src/main/res/drawable/ic_close.xml" value="0.2942708333333333" />
         <entry key="..\:/PakigsaBot/app/src/main/res/drawable/ic_details.xml" value="0.2942708333333333" />
         <entry key="..\:/PakigsaBot/app/src/main/res/drawable/ic_done.xml" value="0.2942708333333333" />
@@ -23,6 +24,7 @@
         <entry key="..\:/PakigsaBot/app/src/main/res/drawable/ic_reserve.xml" value="0.29010416666666666" />
         <entry key="..\:/PakigsaBot/app/src/main/res/drawable/ic_services.xml" value="0.2942708333333333" />
         <entry key="..\:/PakigsaBot/app/src/main/res/drawable/ic_share.xml" value="0.29010416666666666" />
+        <entry key="..\:/PakigsaBot/app/src/main/res/drawable/ic_user.xml" value="0.2942708333333333" />
         <entry key="..\:/PakigsaBot/app/src/main/res/drawable/ic_workspace.xml" value="0.2942708333333333" />
         <entry key="..\:/PakigsaBot/app/src/main/res/drawable/profile_banner.xml" value="0.2942708333333333" />
         <entry key="..\:/PakigsaBot/app/src/main/res/font/fonts.xml" value="0.17604166666666668" />
@@ -72,18 +74,18 @@
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_spa_salon_select_time.xml" value="0.2753623188405797" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_splash_screen.xml" value="0.278125" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/example_item.xml" value="0.278125" />
-        <entry key="..\:/PakigsaBot/app/src/main/res/layout/fragment_chatbot.xml" value="0.27395833333333336" />
+        <entry key="..\:/PakigsaBot/app/src/main/res/layout/fragment_chatbot.xml" value="0.40150375939849625" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/fragment_estfavorites.xml" value="0.33" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/fragment_favorites.xml" value="0.27395833333333336" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/fragment_home.xml" value="0.33" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/fragment_nearby.xml" value="0.33" />
-        <entry key="..\:/PakigsaBot/app/src/main/res/layout/fragment_reservations.xml" value="0.25" />
+        <entry key="..\:/PakigsaBot/app/src/main/res/layout/fragment_reservations.xml" value="0.33" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/single_item.xml" value="0.278125" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/single_items.xml" value="0.278125" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_15_PREVIEW" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_15" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
