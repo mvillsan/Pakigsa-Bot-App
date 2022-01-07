@@ -284,6 +284,7 @@
         android:id="@+id/timeTxt2"
         android:layout_width="48dp"
         android:layout_height="16dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="@font/poppins_light"
         android:text="2:00 PM"
         android:textAlignment="center"
@@ -295,7 +296,7 @@
         app:layout_constraintHorizontal_bias="0.101"
         app:layout_constraintStart_toEndOf="@+id/purple_round2"
         app:layout_constraintTop_toBottomOf="@+id/welcomeUserTxtReservations3"
-        app:layout_constraintVertical_bias="0.331" />
+        app:layout_constraintVertical_bias="0.288" />
 
     <ImageView
         android:id="@+id/infoJan12"
@@ -539,10 +540,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/whiteRect2"
-        app:layout_constraintHorizontal_bias="0.088"
+        app:layout_constraintHorizontal_bias="0.126"
         app:layout_constraintStart_toEndOf="@+id/purple_round4"
         app:layout_constraintTop_toTopOf="@+id/whiteRect2"
-        app:layout_constraintVertical_bias="0.089" />
+        app:layout_constraintVertical_bias="0.064" />
 
     <ImageView
         android:id="@+id/infoJan3"
@@ -572,6 +573,59 @@
         app:layout_constraintHorizontal_bias="0.229"
         app:layout_constraintStart_toEndOf="@+id/hairRebondTxt"
         app:layout_constraintTop_toTopOf="@+id/whiteRect2"
-        app:layout_constraintVertical_bias="0.155" />
+        app:layout_constraintVertical_bias="0.096" />
 
+    <TextView
+        android:id="@+id/pendingTxt"
+        android:layout_width="62dp"
+        android:layout_height="13dp"
+        android:layout_marginTop="2dp"
+        android:fontFamily="@font/poppins_light"
+        android:text="Pending"
+        android:textAlignment="center"
+        android:textColor="@color/red"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/whiteRect2"
+        app:layout_constraintHorizontal_bias="0.153"
+        app:layout_constraintStart_toEndOf="@+id/welcomeUserTxtReservations9"
+        app:layout_constraintTop_toTopOf="@+id/welcomeUserTxtReservations3"
+        app:layout_constraintVertical_bias="0.022" />
+
+    <TextView
+        android:id="@+id/confirmedTxt"
+        android:layout_width="62dp"
+        android:layout_height="13dp"
+        android:layout_marginTop="3dp"
+        android:fontFamily="@font/poppins_light"
+        android:text="Confirmed"
+        android:textAlignment="center"
+        android:textColor="@color/darkgreen"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/whiteRect2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/purple_round2"
+        app:layout_constraintTop_toTopOf="@+id/timeTxt2"
+        app:layout_constraintVertical_bias="0.022" />
+
+    <TextView
+        android:id="@+id/confirmedTxt2"
+        android:layout_width="62dp"
+        android:layout_height="13dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/poppins_light"
+        android:text="Confirmed"
+        android:textAlignment="center"
+        android:textColor="@color/darkgreen"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/whiteRect2"
+        app:layout_constraintHorizontal_bias="0.256"
+        app:layout_constraintStart_toEndOf="@+id/manicureTxt2"
+        app:layout_constraintTop_toTopOf="@+id/purple_round3"
+        app:layout_constraintVertical_bias="0.058" />
 </androidx.constraintlayout.widget.ConstraintLayout>
