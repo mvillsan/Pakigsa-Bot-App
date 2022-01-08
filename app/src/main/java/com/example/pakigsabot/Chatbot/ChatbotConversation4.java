@@ -8,31 +8,32 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.example.pakigsabot.R;
-public class ChatbotConversation3 extends AppCompatActivity {
 
-    TextView homeMenuTxt2CC3;
+public class ChatbotConversation4 extends AppCompatActivity {
+
+    TextView homeMenuTxt2CC4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_chatbot_conversation3);
+        setContentView(R.layout.activity_chatbot_conversation4);
 
         refs();
 
-        homeMenuTxt2CC3.setOnClickListener(new View.OnClickListener() {
+        homeMenuTxt2CC4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                chatbotConversation4();
+                chatbotConversation5();
             }
         });
     }
 
     public void refs(){
-        homeMenuTxt2CC3 = findViewById(R.id.homeMenuTxt2CC3);
+        homeMenuTxt2CC4 = findViewById(R.id.homeMenuTxt2CC4);
     }
 
-    private void chatbotConversation4(){
-        Intent intent = new Intent(getApplicationContext(), ChatbotConversation4.class);
+    private void chatbotConversation5(){
+        Intent intent = new Intent(getApplicationContext(), ChatbotConversation5.class);
         startActivity(intent);
     }
 }
