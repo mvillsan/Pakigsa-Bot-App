@@ -33,6 +33,8 @@
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_cancel_reservation2.xml" value="0.33" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_cancel_reservation3.xml" value="0.33" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_cancel_reservation_successful.xml" value="0.20380434782608695" />
+        <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_chatbot_conversation2.xml" value="0.33" />
+        <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_chatbot_conversation3.xml" value="0.33" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_check_in_time_reserve2.xml" value="0.278125" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_check_in_time_reserve_dc.xml" value="0.278125" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_confirmand_pay.xml" value="0.33" />
@@ -74,7 +76,7 @@
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_spa_salon_select_time.xml" value="0.2753623188405797" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_splash_screen.xml" value="0.278125" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/example_item.xml" value="0.278125" />
-        <entry key="..\:/PakigsaBot/app/src/main/res/layout/fragment_chatbot.xml" value="0.40150375939849625" />
+        <entry key="..\:/PakigsaBot/app/src/main/res/layout/fragment_chatbot.xml" value="0.25" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/fragment_estfavorites.xml" value="0.33" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/fragment_favorites.xml" value="0.27395833333333336" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/fragment_home.xml" value="0.33" />
@@ -85,7 +87,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_15" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_15_PREVIEW" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

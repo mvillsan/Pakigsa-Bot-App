@@ -1,5 +1,6 @@
 package com.example.pakigsabot.NavigationFragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,7 +8,9 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
+import com.example.pakigsabot.Chatbot.ChatbotConversation2;
 import com.example.pakigsabot.R;
 
 /**
@@ -61,6 +64,24 @@ public class ChatbotFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_chatbot, container, false);
+        View view = inflater.inflate(R.layout.fragment_chatbot, container, false);
+
+        //References:
+        ImageView imageView21 = (ImageView) view.findViewById(R.id.imageView21);
+
+        imageView21.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                chatbotConversation2();
+            }
+        });
+
+        return view;
+    }
+
+    private void chatbotConversation2(){
+        Intent intent = new Intent(getActivity(), ChatbotConversation2.class);
+        intent.putExtra("cC2", "cC2");
+        startActivity(intent);
     }
 }
