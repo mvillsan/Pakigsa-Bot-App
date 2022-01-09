@@ -14,6 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PakigsaBot">
         <activity
+            android:name=".EmailMessage.EmailMessageLayout"
+            android:exported="false" />
+        <activity
             android:name=".ShareApp.ShareAppToTwitter"
             android:exported="false" />
         <activity
