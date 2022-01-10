@@ -17,6 +17,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.pakigsabot.NavBar.BottomNavigation;
+import com.example.pakigsabot.SignUpRequirements.AgreementScreen;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
@@ -200,8 +201,8 @@ public class Signup extends AppCompatActivity {
         }
 
         if(isValid){
-            Toast.makeText(Signup.this, R.string.signUp_success, Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(getApplicationContext(), BottomNavigation.class);
+            Toast.makeText(Signup.this, R.string.agreeTxt, Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(getApplicationContext(), AgreementScreen.class);
             startActivity(intent);
         }
         return true;
