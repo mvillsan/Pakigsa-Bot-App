@@ -159,7 +159,7 @@
         android:layout_width="194dp"
         android:layout_height="19dp"
         android:fontFamily="@font/poppins_medium"
-        android:text="No. of PC Units:     - 0 +"
+        android:text="No. of PC Units:     - 1 +"
         android:textColor="@color/darkgreen"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
