@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/topbar_bg"
+    android:background="@drawable/topbar_chatbot_bg"
     tools:context=".Chatbot.ChatbotConversation5">
 
     <ImageView
@@ -110,7 +110,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/pakigsabotSupportTxt2"
         app:layout_constraintTop_toBottomOf="@+id/message"
-        app:layout_constraintVertical_bias="0.021" />
+        app:layout_constraintVertical_bias="0.005" />
 
     <ImageView
         android:id="@+id/logo"
@@ -139,13 +139,12 @@
         app:layout_constraintHorizontal_bias="0.035"
         app:layout_constraintStart_toEndOf="@+id/logo"
         app:layout_constraintTop_toBottomOf="@+id/message"
-        app:layout_constraintVertical_bias="0.025" />
+        app:layout_constraintVertical_bias="0.014" />
 
     <TextView
         android:id="@+id/message2"
         android:layout_width="128dp"
         android:layout_height="16dp"
-        android:layout_marginTop="3dp"
         android:drawableRight="@drawable/ic_arrow_down"
         android:fontFamily="@font/poppins_light"
         android:text="Choose from below "
@@ -154,10 +153,10 @@
         android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintHorizontal_bias="0.039"
         app:layout_constraintStart_toEndOf="@+id/logo"
-        app:layout_constraintTop_toBottomOf="@+id/pakigsabotSupportTxt2"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="@+id/pakigsabotSupportTxt2"
+        app:layout_constraintVertical_bias="0.033" />
 
     <TextView
         android:id="@+id/message3"
@@ -258,6 +257,7 @@
         app:layout_constraintTop_toBottomOf="@+id/message6"
         app:layout_constraintVertical_bias="0.0" />
 
+
     <TextView
         android:id="@+id/timeTxt3"
         android:layout_width="40dp"
@@ -272,8 +272,7 @@
         app:layout_constraintHorizontal_bias="0.52"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/homeMenuTxt"
-        app:layout_constraintVertical_bias="0.037" />
-
+        app:layout_constraintVertical_bias="0.022" />
 
     <TextView
         android:id="@+id/message8"
@@ -367,7 +366,7 @@
         app:layout_constraintHorizontal_bias="0.044"
         app:layout_constraintStart_toEndOf="@+id/logo"
         app:layout_constraintTop_toTopOf="@+id/pakigsabotSupportTxt3"
-        app:layout_constraintVertical_bias="0.072" />
+        app:layout_constraintVertical_bias="0.045" />
 
     <TextView
         android:id="@+id/message10"

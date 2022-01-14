@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/topbar_bg"
+    android:background="@drawable/topbar_chatbot_bg"
     tools:context=".Chatbot.ChatbotConversation6">
 
     <ImageView
