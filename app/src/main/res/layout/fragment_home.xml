@@ -161,7 +161,7 @@
         android:layout_height="37dp"
         android:layout_marginStart="5dp"
         android:background="@color/darkgreen"
-        android:src="@drawable/ic_clinicss_icon"
+        android:src="@drawable/clinics_icon_new"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.133"
