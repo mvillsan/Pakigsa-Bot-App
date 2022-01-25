@@ -12,11 +12,13 @@
         <entry key="..\:/PakigsaBot/app/src/main/res/drawable/ic_bed.xml" value="0.2942708333333333" />
         <entry key="..\:/PakigsaBot/app/src/main/res/drawable/ic_bfast.xml" value="0.2942708333333333" />
         <entry key="..\:/PakigsaBot/app/src/main/res/drawable/ic_chatbot.xml" value="0.2942708333333333" />
+        <entry key="..\:/PakigsaBot/app/src/main/res/drawable/ic_clinicss_icon.xml" value="0.1" />
         <entry key="..\:/PakigsaBot/app/src/main/res/drawable/ic_close.xml" value="0.2942708333333333" />
         <entry key="..\:/PakigsaBot/app/src/main/res/drawable/ic_details.xml" value="0.2942708333333333" />
         <entry key="..\:/PakigsaBot/app/src/main/res/drawable/ic_done.xml" value="0.2942708333333333" />
         <entry key="..\:/PakigsaBot/app/src/main/res/drawable/ic_est.xml" value="0.2942708333333333" />
         <entry key="..\:/PakigsaBot/app/src/main/res/drawable/ic_favorites.xml" value="0.29010416666666666" />
+        <entry key="..\:/PakigsaBot/app/src/main/res/drawable/ic_health_icon.xml" value="0.1" />
         <entry key="..\:/PakigsaBot/app/src/main/res/drawable/ic_nearby.xml" value="0.29010416666666666" />
         <entry key="..\:/PakigsaBot/app/src/main/res/drawable/ic_others.xml" value="0.2942708333333333" />
         <entry key="..\:/PakigsaBot/app/src/main/res/drawable/ic_profile.xml" value="0.29010416666666666" />
@@ -56,15 +58,15 @@
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_internet_cafe_cdetails.xml" value="0.25815217391304346" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_internet_cafe_confirm_and_pay.xml" value="0.25815217391304346" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_internet_cafe_details_rcalendar.xml" value="0.25" />
-        <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_internet_cafe_rdetails.xml" value="0.5" />
+        <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_internet_cafe_rdetails.xml" value="0.33" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_internet_cafe_reservation.xml" value="0.25" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_internet_cafe_reservation_success.xml" value="0.2536231884057971" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_internet_cafe_select_time.xml" value="0.26721014492753625" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_main.xml" value="0.5" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_profile.xml" value="0.33" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_rate.xml" value="0.33" />
-        <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_resort_confirmation_details.xml" value="0.25" />
-        <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_resort_details_rcalendar.xml" value="0.25" />
+        <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_resort_confirmation_details.xml" value="0.33" />
+        <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_resort_details_rcalendar.xml" value="0.4258373205741627" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_resort_reservation.xml" value="0.33" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_resort_reservation_details.xml" value="0.33" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_resort_reservation_success.xml" value="0.2640625" />
@@ -88,7 +90,7 @@
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/fragment_chatbot.xml" value="0.25" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/fragment_estfavorites.xml" value="0.33" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/fragment_favorites.xml" value="0.27395833333333336" />
-        <entry key="..\:/PakigsaBot/app/src/main/res/layout/fragment_home.xml" value="0.33" />
+        <entry key="..\:/PakigsaBot/app/src/main/res/layout/fragment_home.xml" value="0.22" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/fragment_nearby.xml" value="0.33" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/fragment_reservations.xml" value="0.33" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/single_item.xml" value="0.278125" />
@@ -96,7 +98,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_15_PREVIEW" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_15" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
