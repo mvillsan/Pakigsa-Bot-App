@@ -27,8 +27,8 @@
 
     <TextView
         android:id="@+id/welcomeUserTxt"
-        android:layout_width="204dp"
-        android:layout_height="42dp"
+        android:layout_width="203dp"
+        android:layout_height="34dp"
         android:fontFamily="@font/poppins_light"
         android:text="@string/welcomeTxt"
         android:textAlignment="center"
@@ -112,15 +112,16 @@
 
     <TextView
         android:id="@+id/restoTxt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="81dp"
+        android:layout_height="14dp"
         android:fontFamily="@font/poppins_light"
         android:text="@string/resto"
+        android:textAlignment="center"
         android:textColor="@color/lightpurple"
         android:textSize="8sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.181"
+        app:layout_constraintHorizontal_bias="0.151"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/restoBtn"
         app:layout_constraintVertical_bias="0.0" />
@@ -149,35 +150,37 @@
         android:textSize="8sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.113"
+        app:layout_constraintHorizontal_bias="0.04"
         app:layout_constraintStart_toEndOf="@+id/restoTxt"
         app:layout_constraintTop_toBottomOf="@+id/resortBtn"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.001" />
 
     <ImageButton
         android:id="@+id/dentalClinicBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="37dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="5dp"
         android:background="@color/darkgreen"
-        android:src="@drawable/dentalclinics"
+        android:src="@drawable/ic_clinicss_icon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.161"
+        app:layout_constraintHorizontal_bias="0.133"
         app:layout_constraintStart_toEndOf="@+id/resortBtn"
         app:layout_constraintTop_toBottomOf="@+id/whatAreULookingTxt"
-        app:layout_constraintVertical_bias="0.025" />
+        app:layout_constraintVertical_bias="0.016" />
 
     <TextView
         android:id="@+id/dentalClinicTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
         android:fontFamily="@font/poppins_light"
         android:text="@string/dentalc"
         android:textColor="@color/lightpurple"
         android:textSize="8sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.126"
+        app:layout_constraintHorizontal_bias="0.15"
         app:layout_constraintStart_toEndOf="@+id/resortTxt"
         app:layout_constraintTop_toBottomOf="@+id/dentalClinicBtn"
         app:layout_constraintVertical_bias="0.0" />
@@ -197,25 +200,27 @@
 
     <TextView
         android:id="@+id/icTxt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="53dp"
+        android:layout_height="25dp"
         android:fontFamily="@font/poppins_light"
         android:text="@string/ic"
+        android:textAlignment="center"
         android:textColor="@color/lightpurple"
         android:textSize="8sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.147"
+        app:layout_constraintHorizontal_bias="0.193"
         app:layout_constraintStart_toEndOf="@+id/dentalClinicTxt"
         app:layout_constraintTop_toBottomOf="@+id/internetCafeBtn"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/spaSalonTxt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="53dp"
+        android:layout_height="26dp"
         android:fontFamily="@font/poppins_light"
         android:text="@string/spaSalon"
+        android:textAlignment="center"
         android:textColor="@color/lightpurple"
         android:textSize="8sp"
         app:layout_constraintBottom_toBottomOf="parent"

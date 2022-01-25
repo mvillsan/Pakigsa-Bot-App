@@ -34,11 +34,11 @@
     <string name="chatbot_fragment">CHATBOT</string>
     <string name="welcomeTxt">Welcome, User!</string>
     <string name="whatareulooking">What are you looking for?</string>
-    <string name="resto">Restaurants</string>
-    <string name="resort">Resorts</string>
-    <string name="dentalc">Dental Clinics</string>
-    <string name="ic">Internet Cafes</string>
-    <string name="spaSalon">Spa \&amp; Salons</string>
+    <string name="resto">Tables and Palate</string>
+    <string name="resort">Leisure</string>
+    <string name="dentalc">Health</string>
+    <string name="ic">Surfing and Gaming</string>
+    <string name="spaSalon">Beauty and Relaxation</string>
     <string name="upcomingR">Upcoming Reservations</string>
     <string name="donthaversrv">You don\'t have any reservation</string>
     <string name="selectRsrv">Select and Reserve a Slot to any establishment you want first.</string>

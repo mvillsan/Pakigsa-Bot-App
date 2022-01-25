@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/homebg_customer2"
+    android:background="@drawable/homebg_favitems"
     tools:context=".Favorites.ServicesFavorites">
 
     <TextView
@@ -65,10 +65,10 @@
         android:layout_width="323dp"
         android:layout_height="102dp"
         android:fontFamily="@font/poppins_light"
-        android:text="Collect services or facilities from the establishment you loved by tapping the heart icon..."
+        android:text="Collect services, items or facilities from the establishment you loved by tapping the heart icon..."
         android:textAlignment="textStart"
         android:textColor="@color/black"
-        android:textSize="20sp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
