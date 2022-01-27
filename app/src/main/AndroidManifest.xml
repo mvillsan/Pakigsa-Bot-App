@@ -14,6 +14,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PakigsaBot">
         <activity
+            android:name=".PremiumApp.UpgradeScreen"
+            android:exported="false" />
+        <activity
+            android:name=".PremiumApp.GoPremiumCA"
+            android:exported="false" />
+        <activity
             android:name=".Chatbot.ChatbotConversationDefault"
             android:exported="false" />
         <activity
