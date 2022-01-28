@@ -8,6 +8,19 @@
     tools:context=".PremiumApp.UpgradeScreen">
 
     <ImageView
+        android:id="@+id/backBtnProfile"
+        android:layout_width="47dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.085"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.062"
+        app:srcCompat="@drawable/back_arrow" />
+
+    <ImageView
         android:id="@+id/imageView10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -31,7 +44,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView10"
-        app:layout_constraintVertical_bias="0.019" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/upgradePriceTxt"
@@ -46,7 +59,7 @@
         app:layout_constraintHorizontal_bias="0.554"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt17"
-        app:layout_constraintVertical_bias="0.066" />
+        app:layout_constraintVertical_bias="0.021" />
 
     <TextView
         android:id="@+id/upgradePriceTxt2"
@@ -144,6 +157,22 @@
         app:layout_constraintTop_toBottomOf="@+id/featuresTxt4"
         app:layout_constraintVertical_bias="0.047" />
 
+    <TextView
+        android:id="@+id/featuresTxt6"
+        android:layout_width="255dp"
+        android:layout_height="48dp"
+        android:fontFamily="@font/poppins_light"
+        android:text="• Parking Space Reservation"
+        android:textAlignment="center"
+        android:textColor="@color/gray"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.557"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/featuresTxt5"
+        app:layout_constraintVertical_bias="0.047" />
+
     <Button
         android:id="@+id/agreeContinueBtn"
         android:layout_width="230dp"
@@ -158,8 +187,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.546"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/featuresTxt5"
-        app:layout_constraintVertical_bias="0.15" />
+        app:layout_constraintTop_toBottomOf="@+id/featuresTxt6"
+        app:layout_constraintVertical_bias="0.044" />
 
     <TextView
         android:id="@+id/termsTxt"

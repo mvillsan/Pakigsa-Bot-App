@@ -13,7 +13,7 @@ import com.example.pakigsabot.Signup;
 
 public class CancelReservation1 extends AppCompatActivity {
 
-    ImageView cancelReservationBtn1;
+    ImageView cancelReservationBtn1, cannotCancelBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,10 +36,18 @@ public class CancelReservation1 extends AppCompatActivity {
                 cancelReservationConfirmation();
             }
         });
+
+        cannotCancelBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                cannotCancel();
+            }
+        });
     }
 
     public void refs(){
         cancelReservationBtn1 = findViewById(R.id.cancelReservationBtn1);
+        cannotCancelBtn = findViewById(R.id.imageView2);
     }
 
     private void cancelReservationConfirmation(){
@@ -47,5 +55,8 @@ public class CancelReservation1 extends AppCompatActivity {
         startActivity(intent);
     }
 
-
+    private void cannotCancel(){
+        Intent intent = new Intent(getApplicationContext(), CancellationNotAllowed.class);
+        startActivity(intent);
+    }
 }

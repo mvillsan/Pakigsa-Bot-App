@@ -112,10 +112,10 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.312"
+        app:layout_constraintHorizontal_bias="0.317"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sendEmailTxt"
-        app:layout_constraintVertical_bias="0.041"
+        app:layout_constraintVertical_bias="0.022"
         app:srcCompat="@drawable/idea_icon" />
 
     <TextView
@@ -124,13 +124,13 @@
         android:layout_height="71dp"
         android:layout_marginEnd="64dp"
         android:fontFamily="@font/poppins_light"
-        android:text="You can cancel your reservation 3 days before your check-in date."
+        android:text="You can cancel your reservation a day before your reservation date."
         android:textAlignment="center"
         android:textColor="@color/gray"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.932"
+        app:layout_constraintHorizontal_bias="0.864"
         app:layout_constraintStart_toStartOf="@+id/imageView16"
         app:layout_constraintTop_toBottomOf="@+id/sendEmailTxt"
         app:layout_constraintVertical_bias="0.045" />
@@ -155,9 +155,9 @@
     <TextView
         android:id="@+id/cancellingTxt"
         android:layout_width="299dp"
-        android:layout_height="33dp"
+        android:layout_height="50dp"
         android:fontFamily="@font/poppins_light"
-        android:text="• You may click here for cancelling ..."
+        android:text="• You may click here for viewing your reservation status or cancelling."
         android:textAlignment="center"
         android:textColor="@color/gray"
         android:textSize="16sp"
@@ -173,7 +173,7 @@
         android:layout_width="300dp"
         android:layout_height="45dp"
         android:fontFamily="@font/poppins_light"
-        android:text="• For questions/inquiries, click here to go to Pakigsa-Bot support (Chatbot)"
+        android:text="• For questions/inquiries, click here to go to Pakigsa-Bot support (Chatbot)."
         android:textAlignment="center"
         android:textColor="@color/gray"
         android:textSize="16sp"
@@ -186,17 +186,17 @@
 
     <TextView
         android:id="@+id/emailTxt"
-        android:layout_width="327dp"
-        android:layout_height="41dp"
+        android:layout_width="302dp"
+        android:layout_height="52dp"
         android:fontFamily="@font/poppins_light"
-        android:text="• Email or contact the internet cafe here ..."
+        android:text="• Email or contact the co-working space here."
         android:textAlignment="center"
         android:textColor="@color/gray"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.726"
+        app:layout_constraintHorizontal_bias="0.559"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/chatbotTxt"
-        app:layout_constraintVertical_bias="0.236" />
+        app:layout_constraintVertical_bias="0.223" />
 </androidx.constraintlayout.widget.ConstraintLayout>
