@@ -14,6 +14,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PakigsaBot">
         <activity
+            android:name=".FacialRecog.FacialRecogEnable"
+            android:exported="false" />
+        <activity
+            android:name=".Translation.TranslateFilipino"
+            android:exported="false" />
+        <activity
+            android:name=".NotificationAlerts.EstCancelled"
+            android:exported="false" />
+        <activity
+            android:name=".NotificationAlerts.EstConfirmed"
+            android:exported="false" />
+        <activity
             android:name=".CancelReservation.CancellationNotAllowed"
             android:exported="false" />
         <activity
