@@ -20,6 +20,7 @@ import com.example.pakigsabot.NotificationAlerts.EstConfirmed;
 import com.example.pakigsabot.Profile.Profile;
 import com.example.pakigsabot.R;
 import com.example.pakigsabot.Resorts.ResortReservation;
+import com.example.pakigsabot.Resto.RestaurantReservation;
 import com.example.pakigsabot.ShareApp.Share;
 import com.example.pakigsabot.Signin;
 import com.example.pakigsabot.SpaSalon.SpaSalonReservation;
@@ -86,6 +87,7 @@ public class HomeFragment extends Fragment{
         ImageButton dentalClinicBtn = (ImageButton) view.findViewById(R.id.dentalClinicBtn);
         ImageButton spaSalonBtn = (ImageButton) view.findViewById(R.id.spaSalonBtn);
         ImageButton internetCafeBtn = (ImageButton) view.findViewById(R.id.internetCafeBtn);
+        ImageButton restoBtn = (ImageButton) view.findViewById(R.id.restoBtn);
         TextView estConfirmed = (TextView) view.findViewById(R.id.upcomingReservesTxt);
         ImageButton estCancelled = (ImageButton) view.findViewById(R.id.noUpcomingRsrvBtn);
         ImageView translateBtn = (ImageView) view.findViewById(R.id.translateBtn);
@@ -143,6 +145,13 @@ public class HomeFragment extends Fragment{
             @Override
             public void onClick(View view) {
                 internetCafeReservation();
+            }
+        });
+
+        restoBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                restoReservation();
             }
         });
 
@@ -215,6 +224,12 @@ public class HomeFragment extends Fragment{
     public void internetCafeReservation(){
         Intent in = new Intent(getActivity(), InternetCafeReservation.class);
         in.putExtra("internetCafeReserve", "internetCafeReserve");
+        startActivity(in);
+    }
+
+    public void restoReservation(){
+        Intent in = new Intent(getActivity(), RestaurantReservation.class);
+        in.putExtra("restaurantsReserve", "restaurantsReserve");
         startActivity(in);
     }
 

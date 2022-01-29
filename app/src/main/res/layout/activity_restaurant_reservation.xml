@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/topbar_bg"
+    tools:context=".Resto.RestaurantReservation">
+
+    <Button
+        android:id="@+id/selectMoonCafeBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#325863"
+        android:text="@string/select"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.291"
+        app:layout_constraintStart_toEndOf="@+id/reviewsAsmara3"
+        app:layout_constraintTop_toBottomOf="@+id/selectHukadBtn"
+        app:layout_constraintVertical_bias="0.262" />
+
+    <TextView
+        android:id="@+id/reviewsAsmara3"
+        android:layout_width="64dp"
+        android:layout_height="13dp"
+        android:fontFamily="@font/poppins_light"
+        android:text="5 Reviews"
+        android:textColor="#000000"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.041"
+        app:layout_constraintStart_toEndOf="@+id/serenityStars"
+        app:layout_constraintTop_toBottomOf="@+id/serenityAdd"
+        app:layout_constraintVertical_bias="0.029" />
+
+    <TextView
+        android:id="@+id/reviewsAsmara4"
+        android:layout_width="64dp"
+        android:layout_height="13dp"
+        android:fontFamily="@font/poppins_light"
+        android:text="5 Reviews"
+        android:textColor="#000000"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.033"
+        app:layout_constraintStart_toEndOf="@+id/serenityStars2"
+        app:layout_constraintTop_toBottomOf="@+id/serenityAdd2"
+        app:layout_constraintVertical_bias="0.023" />
+
+    <TextView
+        android:id="@+id/reviewsAsmara2"
+        android:layout_width="64dp"
+        android:layout_height="13dp"
+        android:fontFamily="@font/poppins_light"
+        android:text="5 Reviews"
+        android:textColor="#000000"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.033"
+        app:layout_constraintStart_toEndOf="@+id/westTownStars"
+        app:layout_constraintTop_toBottomOf="@+id/westTownAdd"
+        app:layout_constraintVertical_bias="0.015" />
+
+    <ImageView
+        android:id="@+id/resortIcon"
+        android:layout_width="53dp"
+        android:layout_height="40dp"
+        android:src="@drawable/resort_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imgBackBtn"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023"
+        app:srcCompat="@drawable/restuarant" />
+
+    <ImageView
+        android:id="@+id/imgBackBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="TODO"
+        android:src="@drawable/ic_arrow_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lblResort"
+        android:layout_width="276dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins_light"
+        android:text="@string/tablesPalate"
+        android:textColor="#FFFFFF"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/resortIcon"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/searchByResortsBar"
+        android:layout_width="354dp"
+        android:layout_height="55dp"
+        app:endIconMode="clear_text"
+        app:errorEnabled="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblResort"
+        app:layout_constraintVertical_bias="0.024"
+        app:startIconDrawable="@drawable/ic_search">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/estEditTxtFBS"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_light"
+            android:hint="Search by Restaurant's Name"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/txtHouseOfLechon"
+        android:layout_width="146dp"
+        android:layout_height="18dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="132dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/houseOfLechon"
+        android:textColor="#000000"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/houseOfLechonImage"
+        app:layout_constraintTop_toBottomOf="@+id/searchByResortsBar"
+        app:layout_constraintVertical_bias="0.018" />
+
+    <ImageView
+        android:id="@+id/houseOfLechonStars"
+        android:layout_width="95dp"
+        android:layout_height="20dp"
+        android:src="@drawable/stars_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.42"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblHOLAddress"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/reviewsAsmara"
+        android:layout_width="58dp"
+        android:layout_height="19dp"
+        android:fontFamily="@font/poppins_light"
+        android:text="5 Reviews"
+        android:textColor="#000000"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.056"
+        app:layout_constraintStart_toEndOf="@+id/houseOfLechonStars"
+        app:layout_constraintTop_toBottomOf="@+id/lblHOLAddress"
+        app:layout_constraintVertical_bias="0.01" />
+
+    <TextView
+        android:id="@+id/lblHOLAddress"
+        android:layout_width="173dp"
+        android:layout_height="15dp"
+        android:fontFamily="@font/poppins_light"
+        android:text="@string/houseOfLechonAddress"
+        android:textColor="#000000"
+        android:textSize="9sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.558"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtHouseOfLechon"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/selectHOLBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:backgroundTint="#325863"
+        android:text="@string/select"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.636"
+        app:layout_constraintStart_toEndOf="@+id/txtHouseOfLechon"
+        app:layout_constraintTop_toBottomOf="@+id/searchByResortsBar"
+        app:layout_constraintVertical_bias="0.013" />
+
+    <TextView
+        android:id="@+id/westTownLabel"
+        android:layout_width="190dp"
+        android:layout_height="38dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/kuyaJRestaurant"
+        android:textColor="#000000"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.601"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/houseOfLechonStars"
+        app:layout_constraintVertical_bias="0.095" />
+
+    <ImageView
+        android:id="@+id/westTownStars"
+        android:layout_width="95dp"
+        android:layout_height="19dp"
+        android:src="@drawable/stars_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.42"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/westTownAdd"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/westTownAdd"
+        android:layout_width="167dp"
+        android:layout_height="31dp"
+        android:fontFamily="@font/poppins_light"
+        android:text="@string/kuyaJAddress"
+        android:textColor="#000000"
+        android:textSize="9sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.545"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/westTownLabel"
+        app:layout_constraintVertical_bias="0.032" />
+
+    <ImageView
+        android:id="@+id/houseOfLechonImage"
+        android:layout_width="82dp"
+        android:layout_height="85dp"
+        android:layout_marginBottom="364dp"
+        android:src="@drawable/houseoflechon_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.112"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchByResortsBar"
+        app:layout_constraintVertical_bias="0.177" />
+
+    <ImageView
+        android:id="@+id/kuyaJImage"
+        android:layout_width="82dp"
+        android:layout_height="85dp"
+        android:src="@drawable/kuyaj_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.112"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/houseOfLechonImage"
+        app:layout_constraintVertical_bias="0.059" />
+
+    <Button
+        android:id="@+id/selHukadBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#325863"
+        android:text="@string/select"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.831"
+        app:layout_constraintStart_toEndOf="@+id/westTownStars"
+        app:layout_constraintTop_toBottomOf="@+id/selectHOLBtn"
+        app:layout_constraintVertical_bias="0.134" />
+
+    <TextView
+        android:id="@+id/serenityLabel"
+        android:layout_width="190dp"
+        android:layout_height="38dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/hukad"
+        android:textColor="#000000"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.597"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/westTownStars"
+        app:layout_constraintVertical_bias="0.132" />
+
+    <TextView
+        android:id="@+id/serenityLabel3"
+        android:layout_width="190dp"
+        android:layout_height="38dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/moonCafe"
+        android:textColor="#000000"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.601"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/serenityStars"
+        app:layout_constraintVertical_bias="0.239" />
+
+    <ImageView
+        android:id="@+id/serenityStars"
+        android:layout_width="95dp"
+        android:layout_height="17dp"
+        android:src="@drawable/stars_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.417"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/serenityLabel"
+        app:layout_constraintVertical_bias="0.154" />
+
+    <ImageView
+        android:id="@+id/serenityStars2"
+        android:layout_width="95dp"
+        android:layout_height="17dp"
+        android:src="@drawable/stars_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.42"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/serenityAdd2"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/serenityAdd"
+        android:layout_width="172dp"
+        android:layout_height="29dp"
+        android:fontFamily="@font/poppins_light"
+        android:text="@string/hukadAddress"
+        android:textColor="#000000"
+        android:textSize="9sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.554"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/serenityLabel"
+        app:layout_constraintVertical_bias="0.054" />
+
+    <TextView
+        android:id="@+id/serenityAdd2"
+        android:layout_width="163dp"
+        android:layout_height="30dp"
+        android:fontFamily="@font/poppins_light"
+        android:text="@string/moonCafeAddress"
+        android:textColor="#000000"
+        android:textSize="9sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.536"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/serenityLabel3"
+        app:layout_constraintVertical_bias="0.078" />
+
+    <Button
+        android:id="@+id/selectHukadBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#325863"
+        android:text="@string/select"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toEndOf="@+id/reviewsAsmara3"
+        app:layout_constraintTop_toBottomOf="@+id/selHukadBtn"
+        app:layout_constraintVertical_bias="0.162" />
+
+    <ImageView
+        android:id="@+id/hukadIcon"
+        android:layout_width="82dp"
+        android:layout_height="85dp"
+        android:src="@drawable/hukad_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.112"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/kuyaJImage"
+        app:layout_constraintVertical_bias="0.085" />
+
+    <ImageView
+        android:id="@+id/moonCafeImage"
+        android:layout_width="82dp"
+        android:layout_height="85dp"
+        android:src="@drawable/mooncafe_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.112"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hukadIcon"
+        app:layout_constraintVertical_bias="0.191" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
