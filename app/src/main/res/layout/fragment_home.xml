@@ -12,7 +12,6 @@
 
     <!-- TODO: Update blank fragment layout -->
 
-
     <ImageButton
         android:id="@+id/profileBtn"
         android:layout_width="49dp"
@@ -314,5 +313,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/whatAreULookingTxt"
         app:layout_constraintVertical_bias="0.191" />
+
+    <ImageView
+        android:id="@+id/imageView33"
+        android:layout_width="16dp"
+        android:layout_height="17dp"
+        android:src="@drawable/active_status"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.124"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.05" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
