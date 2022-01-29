@@ -9,16 +9,21 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.pakigsabot.DentalClinics.DentalClinicReservation;
 import com.example.pakigsabot.Feedback.Feedback;
 import com.example.pakigsabot.InternetCafe.InternetCafeReservation;
+import com.example.pakigsabot.NotificationAlerts.EstCancelled;
+import com.example.pakigsabot.NotificationAlerts.EstConfirmed;
 import com.example.pakigsabot.Profile.Profile;
 import com.example.pakigsabot.R;
 import com.example.pakigsabot.Resorts.ResortReservation;
 import com.example.pakigsabot.ShareApp.Share;
 import com.example.pakigsabot.Signin;
 import com.example.pakigsabot.SpaSalon.SpaSalonReservation;
+import com.example.pakigsabot.Translation.TranslateFilipino;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -81,6 +86,9 @@ public class HomeFragment extends Fragment{
         ImageButton dentalClinicBtn = (ImageButton) view.findViewById(R.id.dentalClinicBtn);
         ImageButton spaSalonBtn = (ImageButton) view.findViewById(R.id.spaSalonBtn);
         ImageButton internetCafeBtn = (ImageButton) view.findViewById(R.id.internetCafeBtn);
+        TextView estConfirmed = (TextView) view.findViewById(R.id.upcomingReservesTxt);
+        ImageButton estCancelled = (ImageButton) view.findViewById(R.id.noUpcomingRsrvBtn);
+        ImageView translateBtn = (ImageView) view.findViewById(R.id.translateBtn);
 
         profileBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -138,6 +146,27 @@ public class HomeFragment extends Fragment{
             }
         });
 
+        estConfirmed.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                confirmedEst();
+            }
+        });
+
+        estCancelled.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                cancelledEst();
+            }
+        });
+
+        translateBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                translateFilipino();
+            }
+        });
+
         return view;
     }
 
@@ -186,6 +215,24 @@ public class HomeFragment extends Fragment{
     public void internetCafeReservation(){
         Intent in = new Intent(getActivity(), InternetCafeReservation.class);
         in.putExtra("internetCafeReserve", "internetCafeReserve");
+        startActivity(in);
+    }
+
+    public void confirmedEst(){
+        Intent in = new Intent(getActivity(), EstConfirmed.class);
+        in.putExtra("estConfirmedd", "estConfirmedd");
+        startActivity(in);
+    }
+
+    public void cancelledEst(){
+        Intent in = new Intent(getActivity(), EstCancelled.class);
+        in.putExtra("estCancelled", "estCancelled");
+        startActivity(in);
+    }
+
+    public void translateFilipino(){
+        Intent in = new Intent(getActivity(), TranslateFilipino.class);
+        in.putExtra("transFilipino", "transFilipino");
         startActivity(in);
     }
 }
