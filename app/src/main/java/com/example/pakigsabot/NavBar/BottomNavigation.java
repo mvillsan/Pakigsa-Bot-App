@@ -6,7 +6,7 @@ import androidx.fragment.app.Fragment;
 import android.os.Bundle;
 
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
-import com.example.pakigsabot.NavigationFragments.ChatbotFragment;
+import com.example.pakigsabot.NavigationFragments.HelpCenterFragment;
 import com.example.pakigsabot.NavigationFragments.EstFavoritesFragment;
 import com.example.pakigsabot.NavigationFragments.HomeFragment;
 import com.example.pakigsabot.NavigationFragments.NearbyFragment;
@@ -31,7 +31,7 @@ public class BottomNavigation extends AppCompatActivity {
         bottomNavigation.add(new MeowBottomNavigation.Model(2,R.drawable.ic_reserve));
         bottomNavigation.add(new MeowBottomNavigation.Model(3,R.drawable.ic_baseline_home_24));
         bottomNavigation.add(new MeowBottomNavigation.Model(4, R.drawable.ic_favorites));
-        bottomNavigation.add(new MeowBottomNavigation.Model(5,R.drawable.ic_chatbot));
+        bottomNavigation.add(new MeowBottomNavigation.Model(5,R.drawable.ic_help));
 
         bottomNavigation.setOnShowListener(new MeowBottomNavigation.ShowListener() {
             @Override
@@ -58,7 +58,7 @@ public class BottomNavigation extends AppCompatActivity {
                         break;
 
                     case 5: //When id is 5, initialize chatbot fragment
-                        fragment = new ChatbotFragment();
+                        fragment = new HelpCenterFragment();
                         break;
                 }
                 //Load fragment

@@ -1,4 +1,4 @@
-package com.example.pakigsabot.Chatbot;
+package com.example.pakigsabot.HelpCenter;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,14 +8,14 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.example.pakigsabot.R;
-public class ChatbotConversation3 extends AppCompatActivity {
+public class HelpCenter3 extends AppCompatActivity {
 
     TextView homeMenuTxt2CC3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_chatbot_conversation3);
+        setContentView(R.layout.activity_help_center3);
 
         refs();
 
@@ -32,7 +32,7 @@ public class ChatbotConversation3 extends AppCompatActivity {
     }
 
     private void chatbotConversation4(){
-        Intent intent = new Intent(getApplicationContext(), ChatbotConversation4.class);
+        Intent intent = new Intent(getApplicationContext(), HelpCenter4.class);
         startActivity(intent);
     }
 }

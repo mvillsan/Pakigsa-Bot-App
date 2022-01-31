@@ -62,7 +62,7 @@
             android:name=".PremiumApp.GoPremiumCA"
             android:exported="false" />
         <activity
-            android:name=".Chatbot.ChatbotConversationDefault"
+            android:name=".HelpCenter.HelpCenter7"
             android:exported="false" />
         <activity
             android:name=".SignUpRequirements.AgreementScreen"
@@ -80,19 +80,19 @@
             android:name=".ShareApp.ShareAppToFB"
             android:exported="false" />
         <activity
-            android:name=".Chatbot.ChatbotConversation6"
+            android:name=".HelpCenter.HelpCenter6"
             android:exported="false" />
         <activity
-            android:name=".Chatbot.ChatbotConversation5"
+            android:name=".HelpCenter.HelpCenter5"
             android:exported="false" />
         <activity
-            android:name=".Chatbot.ChatbotConversation4"
+            android:name=".HelpCenter.HelpCenter4"
             android:exported="false" />
         <activity
-            android:name=".Chatbot.ChatbotConversation3"
+            android:name=".HelpCenter.HelpCenter3"
             android:exported="false" />
         <activity
-            android:name=".Chatbot.ChatbotConversation2"
+            android:name=".HelpCenter.HelpCenter2"
             android:exported="false" />
         <activity
             android:name=".CancelReservation.CancelReservationSuccessful"

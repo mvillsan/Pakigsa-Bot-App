@@ -10,15 +10,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-import com.example.pakigsabot.Chatbot.ChatbotConversation2;
+import com.example.pakigsabot.HelpCenter.HelpCenter2;
 import com.example.pakigsabot.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link ChatbotFragment#newInstance} factory method to
+ * Use the {@link HelpCenterFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ChatbotFragment extends Fragment {
+public class HelpCenterFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -29,7 +29,7 @@ public class ChatbotFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public ChatbotFragment() {
+    public HelpCenterFragment() {
         // Required empty public constructor
     }
 
@@ -39,11 +39,11 @@ public class ChatbotFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment ChatbotFragment.
+     * @return A new instance of fragment HelpCenterFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static ChatbotFragment newInstance(String param1, String param2) {
-        ChatbotFragment fragment = new ChatbotFragment();
+    public static HelpCenterFragment newInstance(String param1, String param2) {
+        HelpCenterFragment fragment = new HelpCenterFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -64,7 +64,7 @@ public class ChatbotFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_chatbot, container, false);
+        View view = inflater.inflate(R.layout.fragment_helpcenter, container, false);
 
         //References:
         ImageView imageView21 = (ImageView) view.findViewById(R.id.imageView21);
@@ -80,7 +80,7 @@ public class ChatbotFragment extends Fragment {
     }
 
     private void chatbotConversation2(){
-        Intent intent = new Intent(getActivity(), ChatbotConversation2.class);
+        Intent intent = new Intent(getActivity(), HelpCenter2.class);
         intent.putExtra("cC2", "cC2");
         startActivity(intent);
     }
