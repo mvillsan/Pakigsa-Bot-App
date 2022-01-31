@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/topbar_chatbot_bg"
-    tools:context=".Chatbot.ChatbotConversation4">
+    tools:context=".HelpCenter.HelpCenter4">
 
     <ImageView
         android:id="@+id/chatbotImage"
