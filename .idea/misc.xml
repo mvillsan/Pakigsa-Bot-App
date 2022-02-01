@@ -65,6 +65,11 @@
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_facial_recog_enable.xml" value="0.33" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_feedback.xml" value="0.278125" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_go_premium_ca.xml" value="0.278125" />
+        <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_help_center2.xml" value="0.67" />
+        <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_help_center3.xml" value="0.5" />
+        <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_help_center4.xml" value="0.5" />
+        <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_help_center5.xml" value="0.5" />
+        <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_help_center6.xml" value="0.5" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_internet_cafe_cdetails.xml" value="0.25815217391304346" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_internet_cafe_confirm_and_pay.xml" value="0.25815217391304346" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/activity_internet_cafe_details_rcalendar.xml" value="0.25" />
