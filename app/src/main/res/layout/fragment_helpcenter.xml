@@ -59,7 +59,7 @@
         app:layout_constraintHorizontal_bias="0.085"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/backBtnHelpCenter"
-        app:layout_constraintVertical_bias="0.06" />
+        app:layout_constraintVertical_bias="0.073" />
 
     <TextView
         android:id="@+id/pakigsabotSupportTxt2"
@@ -75,7 +75,7 @@
         app:layout_constraintHorizontal_bias="0.044"
         app:layout_constraintStart_toEndOf="@+id/imageView21"
         app:layout_constraintTop_toBottomOf="@+id/helpCenterTxt"
-        app:layout_constraintVertical_bias="0.056" />
+        app:layout_constraintVertical_bias="0.072" />
 
     <TextView
         android:id="@+id/message1"
@@ -229,7 +229,7 @@
         app:layout_constraintHorizontal_bias="0.085"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/aboutPakigsabotTxt"
-        app:layout_constraintVertical_bias="0.052" />
+        app:layout_constraintVertical_bias="0.102" />
 
     <TextView
         android:id="@+id/searchingBookingTxt2"
@@ -247,7 +247,7 @@
         app:layout_constraintHorizontal_bias="0.047"
         app:layout_constraintStart_toEndOf="@+id/logoInsert"
         app:layout_constraintTop_toBottomOf="@+id/aboutPakigsabotTxt"
-        app:layout_constraintVertical_bias="0.048" />
+        app:layout_constraintVertical_bias="0.094" />
 
     <TextView
         android:id="@+id/messageInsert"
@@ -351,25 +351,25 @@
         app:layout_constraintHorizontal_bias="0.085"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/homeMenuTxt"
-        app:layout_constraintVertical_bias="0.25" />
+        app:layout_constraintVertical_bias="0.239" />
 
     <TextView
         android:id="@+id/howAboutReservationsTxt2"
-        android:layout_width="160dp"
+        android:layout_width="100dp"
         android:layout_height="18dp"
         android:background="@color/white"
-        android:drawableLeft="@drawable/ic_reservations"
+        android:drawableLeft="@drawable/ic_searchbook"
         android:fontFamily="@font/poppins_light"
-        android:text="All about your Reservations"
+        android:text="Searching Tips"
         android:textColor="@color/black"
         android:textSize="10sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.047"
+        app:layout_constraintHorizontal_bias="0.03"
         app:layout_constraintStart_toEndOf="@+id/logo1"
         app:layout_constraintTop_toBottomOf="@+id/homeMenuTxt"
-        app:layout_constraintVertical_bias="0.187" />
+        app:layout_constraintVertical_bias="0.208" />
 
     <TextView
         android:id="@+id/message4"
@@ -443,7 +443,7 @@
         app:layout_constraintVertical_bias="0.010" />
 
     <TextView
-        android:id="@+id/homeMenuTxt2"
+        android:id="@+id/homeMenuTxt3"
         android:layout_width="120dp"
         android:layout_height="18dp"
         android:background="@color/white"
@@ -453,11 +453,12 @@
         android:textColor="@color/black"
         android:textSize="10sp"
         android:textStyle="bold"
+        android:layout_marginBottom="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.042"
         app:layout_constraintStart_toEndOf="@+id/logo1"
         app:layout_constraintTop_toBottomOf="@+id/saveFavorites"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.022" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
