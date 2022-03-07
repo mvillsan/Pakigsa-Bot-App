@@ -11,10 +11,12 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.pakigsabot.DentalClinics.DentalClinicReservation;
 import com.example.pakigsabot.Feedback.Feedback;
 import com.example.pakigsabot.InternetCafe.InternetCafeReservation;
+import com.example.pakigsabot.MainActivity;
 import com.example.pakigsabot.NotificationAlerts.EstCancelled;
 import com.example.pakigsabot.NotificationAlerts.EstConfirmed;
 import com.example.pakigsabot.Profile.Profile;
@@ -22,9 +24,10 @@ import com.example.pakigsabot.R;
 import com.example.pakigsabot.Resorts.ResortReservation;
 import com.example.pakigsabot.Resto.RestaurantReservation;
 import com.example.pakigsabot.ShareApp.Share;
-import com.example.pakigsabot.Signin;
 import com.example.pakigsabot.SpaSalon.SpaSalonReservation;
 import com.example.pakigsabot.Translation.TranslateFilipino;
+import com.google.firebase.auth.FirebaseAuth;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -198,9 +201,12 @@ public class HomeFragment extends Fragment{
     }
 
     public void signOutApp(){
-        Intent in = new Intent(getActivity(), Signin.class);
+        FirebaseAuth.getInstance().signOut();
+        Toast.makeText(getActivity(),"Signed Out from Pakigsa-Bot", Toast.LENGTH_SHORT).show();
+        Intent in = new Intent(getActivity(), MainActivity.class);
         in.putExtra("signin", "signin");
         startActivity(in);
+        getActivity().finish();
     }
 
     public void resortsReservation(){

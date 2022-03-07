@@ -4,22 +4,33 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
-
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
-import com.example.pakigsabot.NavBar.BottomNavigation;
 import com.example.pakigsabot.SignUpRequirements.AgreementScreen;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class Signup extends AppCompatActivity {
 
@@ -30,12 +41,17 @@ public class Signup extends AppCompatActivity {
     RadioGroup genderRG;
     RadioButton maleRB, femaleRB;
     Button createAccBtnn;
+    ProgressBar progressBarSU;
+    FirebaseAuth fAuth;
+    FirebaseFirestore fStore;
+    String cust_id;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
 
+        //References::
         refs();
 
         prev.setOnClickListener(new View.OnClickListener() {
@@ -87,6 +103,9 @@ public class Signup extends AppCompatActivity {
         maleRB = findViewById(R.id.maleRadioBtn);
         femaleRB = findViewById(R.id.femaleRadioBtn);
         createAccBtnn = findViewById(R.id.createAccBtn);
+        progressBarSU = findViewById(R.id.progressBarSignUp);
+        fAuth = FirebaseAuth.getInstance();
+        fStore = FirebaseFirestore.getInstance();
     }
 
     public void welcomeScreen(){
@@ -102,7 +121,15 @@ public class Signup extends AppCompatActivity {
 
     //Validations for Signing Up on the Application
     public boolean signUpCustomer(){
+        //Variables::
         boolean isValid = true;
+        String email = editTxtEmailAdd.getText().toString().trim();
+        String pass = editTxtPass.getText().toString().trim();
+        String fName = firstNameEditTxt.getText().toString();
+        String lName = lastNameEditTxt.getText().toString();
+        String phoneNum = phoneNumEditTxt.getText().toString();
+        int gender = genderRG.getId();
+        String bday = birthdateEditTxt.getText().toString();
 
         //First Name Validation
         if (firstNameEditTxt.getText().toString().trim().isEmpty()) {
@@ -201,10 +228,50 @@ public class Signup extends AppCompatActivity {
         }
 
         if(isValid){
-            Toast.makeText(Signup.this, R.string.agreeTxt, Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(getApplicationContext(), AgreementScreen.class);
-            startActivity(intent);
+            progressBarSU.setVisibility(View.VISIBLE);
+
+            //Register the user in Firebase::
+            fAuth.createUserWithEmailAndPassword(email, pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                @Override
+                public void onComplete(@NonNull Task<AuthResult> task) {
+                    if(task.isSuccessful()){
+                        Toast.makeText(Signup.this, "Account has been Created Successfully", Toast.LENGTH_SHORT).show();
+                        cust_id = fAuth.getCurrentUser().getUid();
+                        DocumentReference docRef = fStore.collection("customers").document(cust_id);
+                        Map<String,Object> customer = new HashMap<>();
+                        customer.put("cust_fname", fName);
+                        customer.put("cust_lname", lName);
+                        customer.put("cust_phoneNum", phoneNum);
+                        customer.put("cust_gender", gender);
+                        customer.put("cust_birthDate", bday);
+                        customer.put("cust_email", email);
+                        customer.put("cust_password", pass);
+                        docRef.set(customer).addOnSuccessListener(new OnSuccessListener<Void>() {
+                            @Override
+                            public void onSuccess(Void unused) {
+                                Log.d("SignUp", "onSignUpSuccess: Data is Stored for " + cust_id);
+                            }
+                        }).addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                Log.d("SignUp", "onSignUpFailure: " + e.toString());
+                            }
+                        });
+                        startActivity(new Intent(getApplicationContext(),AgreementScreen.class));
+                    }else{
+                        Toast.makeText(Signup.this, "Error! " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                        progressBarSU.setVisibility(View.GONE);
+                    }
+                }
+            });
         }
+
+        //User is Log-in already::
+        if(fAuth.getCurrentUser() != null){
+            startActivity(new Intent(getApplicationContext(), Signup.class));
+            finish();
+        }
+
         return true;
     }
 
