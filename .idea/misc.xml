@@ -121,10 +121,15 @@
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/fragment_reservations.xml" value="0.33" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/single_item.xml" value="0.278125" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/single_items.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_facial_recog_enable.xml" value="0.1" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_facial_recog_sign_in.xml" value="0.22" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_signin.xml" value="0.1" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_signup.xml" value="0.1" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_upgrade_screen.xml" value="0.1" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_15" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_15_PREVIEW" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

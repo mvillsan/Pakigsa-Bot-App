@@ -7,16 +7,16 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
-import com.example.pakigsabot.NavBar.BottomNavigation;
 import com.example.pakigsabot.R;
+import com.example.pakigsabot.Signin;
 
-public class FacialRecogEnable extends AppCompatActivity {
+public class FacialRecogSignIn extends AppCompatActivity {
     Button enableNowBtn, maybeBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_facial_recog_enable);
+        setContentView(R.layout.activity_facial_recog_sign_in);
 
         //References::
         refs();
@@ -24,19 +24,19 @@ public class FacialRecogEnable extends AppCompatActivity {
         maybeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                homeScreen();
+                signInScreen();
             }
         });
     }
 
-    public void refs() {
-        enableNowBtn = findViewById(R.id.enableNowBtn);
-        maybeBtn = findViewById(R.id.maybeBtn);
+    public void refs(){
+        enableNowBtn = findViewById(R.id.enableNowBtnFRSI);
+        maybeBtn = findViewById(R.id.maybeBtnFRSI);
     }
 
-    public void homeScreen() {
-        Toast.makeText(FacialRecogEnable.this, "Welcome to Pakigsa-Bot", Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent(getApplicationContext(), BottomNavigation.class);
+    public void signInScreen(){
+        Toast.makeText(FacialRecogSignIn.this, "Sign In Using Email Address", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(getApplicationContext(), Signin.class);
         startActivity(intent);
     }
 }

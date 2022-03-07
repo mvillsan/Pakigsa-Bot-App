@@ -1,23 +1,30 @@
 package com.example.pakigsabot;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.WindowManager;
+import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.pakigsabot.FacialRecog.FacialRecogEnable;
-import com.example.pakigsabot.NavBar.BottomNavigation;
+import com.example.pakigsabot.FacialRecog.FacialRecogSignIn;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
-
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class Signin extends AppCompatActivity {
 
@@ -26,6 +33,10 @@ public class Signin extends AppCompatActivity {
     TextInputEditText emailAddEditTxt,passEditTxt;
     TextInputLayout emailTxtInputL, passTxtInputL;
     Button signInBtn;
+    ProgressBar progressBarSI;
+    FirebaseAuth fAuth2;
+
+    public static String passwordAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,7 +73,7 @@ public class Signin extends AppCompatActivity {
         facialRecogBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                facialEnable();
+                facialSignIn();
             }
         });
 
@@ -84,6 +95,8 @@ public class Signin extends AppCompatActivity {
         emailTxtInputL = findViewById(R.id.emailTxtInputLayout);
         passTxtInputL = findViewById(R.id.passwordTextInputLayout);
         facialRecogBtn = findViewById(R.id.facialRecogBtn);
+        fAuth2 = FirebaseAuth.getInstance();
+        progressBarSI = findViewById(R.id.progressBarSignIn);
     }
 
     public void welcomeScreen(){
@@ -98,6 +111,10 @@ public class Signin extends AppCompatActivity {
 
     //Validations for Signing In on the Application
     public boolean signInCustomer(){
+
+        //Variables::
+        String email = emailAddEditTxt.getText().toString().trim();
+        String pass = passEditTxt.getText().toString().trim();
         boolean isValid = true;
 
         if(emailAddEditTxt.getText().toString().isEmpty()){
@@ -125,15 +142,40 @@ public class Signin extends AppCompatActivity {
                 requestFocus(passEditTxt);
                 return false;
             }else{
-                passTxtInputL.setEnabled(false);
                 passTxtInputL.setError("");
             }
         }
 
+        passEditTxt.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView textView, int actionId, KeyEvent keyEvent) {
+                boolean handled = false;
+                if(actionId == EditorInfo.IME_ACTION_SEND || keyEvent.getKeyCode() == KeyEvent.KEYCODE_ENTER && keyEvent.getAction() == KeyEvent.ACTION_DOWN){
+                    passwordAuth = passEditTxt.getText().toString();
+                    handled = true;
+                }else{
+                    Toast.makeText(Signin.this, "Incorrect Password", Toast.LENGTH_SHORT).show();
+                    passEditTxt.requestFocus();
+                }return handled;
+            }
+        });
+
         if(isValid){
-            Toast.makeText(Signin.this, R.string.signIn_success, Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(getApplicationContext(), BottomNavigation.class);
-            startActivity(intent);
+            progressBarSI.setVisibility(View.VISIBLE);
+
+            //Authenticate User::
+            fAuth2.signInWithEmailAndPassword(email,pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                @Override
+                public void onComplete(@NonNull Task<AuthResult> task) {
+                    if(task.isSuccessful()){
+                        Toast.makeText(Signin.this, "Signed In Successfully", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(getApplicationContext(), FacialRecogEnable.class));
+                    }else{
+                        Toast.makeText(Signin.this, "Error! " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                        progressBarSI.setVisibility(View.GONE);
+                    }
+                }
+            });
         }
 
         return true;
@@ -205,8 +247,10 @@ public class Signin extends AppCompatActivity {
         }
     }
 
-    public void facialEnable(){
-        Intent intent = new Intent(getApplicationContext(), FacialRecogEnable.class);
+    public void facialSignIn(){
+        Intent intent = new Intent(getApplicationContext(), FacialRecogSignIn.class);
         startActivity(intent);
     }
+
+    //end Mvil
 }
