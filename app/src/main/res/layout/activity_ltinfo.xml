@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/topbar_bg"
+    tools:context=".LoyaltyTier.LTInfo">
+
+    <ImageView
+        android:id="@+id/backBtnProfile"
+        android:layout_width="43dp"
+        android:layout_height="39dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023"
+        app:srcCompat="@drawable/ic_arrow_back" />
+
+    <TextView
+        android:id="@+id/tierTxt"
+        android:layout_width="230dp"
+        android:layout_height="40dp"
+        android:fontFamily="@font/comforta"
+        android:text="Pakigsa-Bot Loyalty"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.099"
+        app:layout_constraintStart_toEndOf="@+id/backBtnProfile"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
+
+    <ImageView
+        android:id="@+id/helpImgVw"
+        android:layout_width="37dp"
+        android:layout_height="27dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.357"
+        app:layout_constraintStart_toEndOf="@+id/tierTxt"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.03"
+        app:srcCompat="@drawable/ic_help" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="320dp"
+        android:layout_height="190dp"
+        android:layout_margin="5dp"
+        android:elevation="10dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.528"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tierTxt"
+        app:layout_constraintVertical_bias="0.078">
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/pcard_classic"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="-45dp" />
+
+        <TextView
+            android:id="@+id/seeTiersTxt"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="See All Tiers >"
+            android:textAlignment="textEnd"
+            android:textColor="@color/darkgreen"
+            android:textSize="14sp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"/>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/benefitsTxt"
+        android:layout_width="229dp"
+        android:layout_height="35dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Unlock at Silver"
+        android:textAlignment="center"
+        android:textColor="@color/darkgreen"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        app:layout_constraintVertical_bias="0.031" />
+
+    <ImageView
+        android:id="@+id/imageView39"
+        android:layout_width="220dp"
+        android:layout_height="170dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/benefitsTxt"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/circle_10" />
+
+    <ProgressBar
+        android:id="@+id/rsrvNumProgressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:progressDrawable="@drawable/custom_progressbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView39"
+        app:layout_constraintVertical_bias="0.075" />
+
+    <TextView
+        android:id="@+id/progressTxt"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/rsrvNumProgressBar"
+        app:layout_constraintEnd_toEndOf="@+id/rsrvNumProgressBar"
+        app:layout_constraintStart_toStartOf="@+id/rsrvNumProgressBar"
+        app:layout_constraintTop_toTopOf="@+id/rsrvNumProgressBar" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="346dp"
+        android:layout_height="81dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.569"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rsrvNumProgressBar"
+        app:layout_constraintVertical_bias="0.18"
+        app:srcCompat="@drawable/rectangle_white" />
+
+    <TextView
+        android:id="@+id/privTxt"
+        android:layout_width="243dp"
+        android:layout_height="26dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Reserve up to 3 establishments"
+        android:textAlignment="center"
+        android:textColor="@color/darkgreen"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintEnd_toEndOf="@+id/imageView4"
+        app:layout_constraintHorizontal_bias="0.737"
+        app:layout_constraintStart_toStartOf="@+id/imageView4"
+        app:layout_constraintTop_toTopOf="@+id/imageView4"
+        app:layout_constraintVertical_bias="0.509" />
+
+    <ImageView
+        android:id="@+id/imageView32"
+        android:layout_width="38dp"
+        android:layout_height="34dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintEnd_toStartOf="@+id/privTxt"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/imageView4"
+        app:layout_constraintTop_toTopOf="@+id/imageView4"
+        app:layout_constraintVertical_bias="0.446"
+        app:srcCompat="@drawable/ic_done" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

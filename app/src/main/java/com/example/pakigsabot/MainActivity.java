@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.pakigsabot.SignUpRequirements.AgreementScreen;
+
 public class MainActivity extends AppCompatActivity {
 
     Button signin, signup;
@@ -28,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                signupScreen();
+                agreementScreen();
             }
         });
 
@@ -44,8 +46,8 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void signupScreen(){
-        Intent intent = new Intent(getApplicationContext(), Signup.class);
+    public void agreementScreen(){
+        Intent intent = new Intent(getApplicationContext(), AgreementScreen.class);
         startActivity(intent);
     }
 

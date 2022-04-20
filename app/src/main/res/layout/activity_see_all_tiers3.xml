@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/topbar_bg"
+    tools:context=".LoyaltyTier.SeeAllTiers3">
+
+    <ImageView
+        android:id="@+id/backBtnProfile"
+        android:layout_width="43dp"
+        android:layout_height="39dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023"
+        app:srcCompat="@drawable/ic_arrow_back" />
+
+    <TextView
+        android:id="@+id/tierTxt"
+        android:layout_width="230dp"
+        android:layout_height="40dp"
+        android:fontFamily="@font/comforta"
+        android:text="Pakigsa-Bot Loyalty"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.099"
+        app:layout_constraintStart_toEndOf="@+id/backBtnProfile"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
+
+    <ImageView
+        android:id="@+id/helpImgVw"
+        android:layout_width="37dp"
+        android:layout_height="27dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.357"
+        app:layout_constraintStart_toEndOf="@+id/tierTxt"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.03"
+        app:srcCompat="@drawable/ic_help" />
+
+    <TextView
+        android:id="@+id/loyaltyTxt"
+        android:layout_width="160dp"
+        android:layout_height="32dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Loyalty Tiers"
+        android:textAlignment="center"
+        android:textColor="@color/darkgreen"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView40"
+        app:layout_constraintVertical_bias="0.155" />
+
+    <TextView
+        android:id="@+id/lblTxt"
+        android:layout_width="214dp"
+        android:layout_height="27dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Reserve and Earn Rewards!"
+        android:textAlignment="center"
+        android:textColor="@color/gray"
+        android:textSize="14sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loyaltyTxt"
+        app:layout_constraintVertical_bias="0.022" />
+
+    <ImageView
+        android:id="@+id/imageView40"
+        android:layout_width="116dp"
+        android:layout_height="92dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tierTxt"
+        app:layout_constraintVertical_bias="0.089"
+        app:srcCompat="@drawable/pakigsabot_logo_official" />
+
+    <ImageView
+        android:id="@+id/imageView41"
+        android:layout_width="360dp"
+        android:layout_height="258dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loyaltyTxt"
+        app:layout_constraintVertical_bias="0.092"
+        app:srcCompat="@drawable/reachnewlevel" />
+
+    <ImageView
+        android:id="@+id/imageView42"
+        android:layout_width="713dp"
+        android:layout_height="320dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.754"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView41"
+        app:layout_constraintVertical_bias="0.485"
+        app:srcCompat="@drawable/rectangle_white" />
+
+    <TextView
+        android:id="@+id/classicTxt"
+        android:layout_width="99dp"
+        android:layout_height="28dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/classicLvl"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.083"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView41"
+        app:layout_constraintVertical_bias="0.136" />
+
+    <TextView
+        android:id="@+id/silverTxt"
+        android:layout_width="71dp"
+        android:layout_height="29dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/silverlvl"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.042"
+        app:layout_constraintStart_toEndOf="@+id/classicTxt"
+        app:layout_constraintTop_toBottomOf="@+id/imageView41"
+        app:layout_constraintVertical_bias="0.136" />
+
+    <TextView
+        android:id="@+id/goldTxt"
+        android:layout_width="65dp"
+        android:layout_height="30dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/goldlvl"
+        android:textAlignment="center"
+        android:textColor="@color/gray"
+        android:textSize="20sp"
+        android:textStyle=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.056"
+        app:layout_constraintStart_toEndOf="@+id/silverTxt"
+        app:layout_constraintTop_toBottomOf="@+id/imageView41"
+        app:layout_constraintVertical_bias="0.137" />
+
+    <TextView
+        android:id="@+id/platinumTxt"
+        android:layout_width="99dp"
+        android:layout_height="28dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/platinumlvl"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.083"
+        app:layout_constraintStart_toEndOf="@+id/goldTxt"
+        app:layout_constraintTop_toBottomOf="@+id/imageView41"
+        app:layout_constraintVertical_bias="0.136" />
+
+    <TextView
+        android:id="@+id/classicDesc"
+        android:layout_width="279dp"
+        android:layout_height="30dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Reserve up to 10 establishments"
+        android:textAlignment="center"
+        android:textColor="@color/darkbluegreen"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imageView43"
+        app:layout_constraintTop_toBottomOf="@+id/classicTxt"
+        app:layout_constraintVertical_bias="0.096" />
+
+    <ImageView
+        android:id="@+id/imageView43"
+        android:layout_width="35dp"
+        android:layout_height="31dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.098"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/classicTxt"
+        app:layout_constraintVertical_bias="0.089"
+        app:srcCompat="@drawable/ic_done" />
+
+    <TextView
+        android:id="@+id/silverDesc"
+        android:layout_width="227dp"
+        android:layout_height="30dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Discount birthday voucher"
+        android:textAlignment="center"
+        android:textColor="@color/darkbluegreen"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imageView43"
+        app:layout_constraintTop_toBottomOf="@+id/classicDesc"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/silverImgView"
+        android:layout_width="35dp"
+        android:layout_height="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.099"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView43"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_done" />
+
+    <TextView
+        android:id="@+id/goldDesc"
+        android:layout_width="236dp"
+        android:layout_height="28dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="100% off of transaction fees"
+        android:textAlignment="center"
+        android:textColor="@color/darkbluegreen"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imageView43"
+        app:layout_constraintTop_toBottomOf="@+id/silverDesc"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/goldImgView"
+        android:layout_width="35dp"
+        android:layout_height="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.098"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/silverImgView"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_done" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
