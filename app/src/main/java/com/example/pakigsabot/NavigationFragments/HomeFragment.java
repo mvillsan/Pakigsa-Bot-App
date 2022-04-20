@@ -1,6 +1,7 @@
 package com.example.pakigsabot.NavigationFragments;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -25,9 +26,11 @@ import com.example.pakigsabot.Resorts.ResortReservation;
 import com.example.pakigsabot.Resto.RestaurantReservation;
 import com.example.pakigsabot.ShareApp.Share;
 import com.example.pakigsabot.SpaSalon.SpaSalonReservation;
-import com.example.pakigsabot.Translation.TranslateFilipino;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
-
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.squareup.picasso.Picasso;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -81,10 +84,9 @@ public class HomeFragment extends Fragment{
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
-        //References:
-        ImageButton profileBtn = (ImageButton) view.findViewById(R.id.profileBtn);
+        //References::
+        ImageView profileBtn = (ImageView) view.findViewById(R.id.profileBtn);
         ImageButton shareBtn = (ImageButton) view.findViewById(R.id.shareBtn);
-        ImageButton feedBackBtn = (ImageButton) view.findViewById(R.id.feedBackBtn);
         ImageButton signOutBtn = (ImageButton) view.findViewById(R.id.signoutHomeBtn);
         ImageButton resortBtn = (ImageButton) view.findViewById(R.id.resortBtn);
         ImageButton dentalClinicBtn = (ImageButton) view.findViewById(R.id.dentalClinicBtn);
@@ -93,7 +95,20 @@ public class HomeFragment extends Fragment{
         ImageButton restoBtn = (ImageButton) view.findViewById(R.id.restoBtn);
         TextView estConfirmed = (TextView) view.findViewById(R.id.upcomingReservesTxt);
         ImageButton estCancelled = (ImageButton) view.findViewById(R.id.noUpcomingRsrvBtn);
-        ImageView translateBtn = (ImageView) view.findViewById(R.id.translateBtn);
+
+        //Fetching Data from FireStore DB
+        FirebaseAuth fAuth = FirebaseAuth.getInstance();
+        String userID = fAuth.getCurrentUser().getUid();
+        StorageReference storageRef = FirebaseStorage.getInstance().getReference();
+
+
+        StorageReference profileRef = storageRef.child("customers/"+userID+"profile.jpg");
+        profileRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+            @Override
+            public void onSuccess(Uri uri) {
+                Picasso.get().load(uri).into(profileBtn);
+            }
+        });
 
         profileBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -106,13 +121,6 @@ public class HomeFragment extends Fragment{
             @Override
             public void onClick(View view) {
                 shareScreen();
-            }
-        });
-
-        feedBackBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                feedbackScreen();
             }
         });
 
@@ -172,13 +180,6 @@ public class HomeFragment extends Fragment{
             }
         });
 
-        translateBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                translateFilipino();
-            }
-        });
-
         return view;
     }
 
@@ -191,12 +192,6 @@ public class HomeFragment extends Fragment{
     public void shareScreen(){
         Intent in = new Intent(getActivity(), Share.class);
         in.putExtra("share", "share");
-        startActivity(in);
-    }
-
-    public void feedbackScreen(){
-        Intent in = new Intent(getActivity(), Feedback.class);
-        in.putExtra("fb", "fb");
         startActivity(in);
     }
 
@@ -248,12 +243,6 @@ public class HomeFragment extends Fragment{
     public void cancelledEst(){
         Intent in = new Intent(getActivity(), EstCancelled.class);
         in.putExtra("estCancelled", "estCancelled");
-        startActivity(in);
-    }
-
-    public void translateFilipino(){
-        Intent in = new Intent(getActivity(), TranslateFilipino.class);
-        in.putExtra("transFilipino", "transFilipino");
         startActivity(in);
     }
 }

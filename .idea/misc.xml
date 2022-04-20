@@ -121,15 +121,43 @@
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/fragment_reservations.xml" value="0.33" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/single_item.xml" value="0.278125" />
         <entry key="..\:/PakigsaBot/app/src/main/res/layout/single_items.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/drawable/custom_progressbar.xml" value="0.12962962962962962" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/drawable/ic_add_photo.xml" value="0.2942708333333333" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/drawable/ic_help.xml" value="0.2942708333333333" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/drawable/ic_profile.xml" value="0.2942708333333333" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_agreement_screen.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_change_pass.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_confirmand_pay.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_dental_clinic_reservation_success.xml" value="0.278125" />
         <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_facial_recog_enable.xml" value="0.1" />
-        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_facial_recog_sign_in.xml" value="0.22" />
-        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_signin.xml" value="0.1" />
-        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_signup.xml" value="0.1" />
-        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_upgrade_screen.xml" value="0.1" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_facial_recog_sign_in.xml" value="0.25" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_go_premium_ca.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_internet_cafe_reservation_success.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_ltinfo.xml" value="0.33" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_main.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_pay_premium.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_profile.xml" value="0.33" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_rate.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_resort_details_rcalendar.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_resort_reservation.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_resort_reservation_details.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_resort_reservation_success.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_resto_reservation_success.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_see_all_tiers.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_see_all_tiers2.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_see_all_tiers3.xml" value="0.33" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_see_all_tiers4.xml" value="0.33" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_signin.xml" value="0.22" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_signup.xml" value="0.25" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_spa_salon_reservation_success.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_subscription_terms.xml" value="0.4767857142857143" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_translate_filipino.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_upgrade_screen.xml" value="0.33" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/fragment_home.xml" value="0.33" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_15_PREVIEW" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_15" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

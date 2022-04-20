@@ -1,8 +1,10 @@
 package com.example.pakigsabot;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
@@ -12,14 +14,16 @@ import android.view.View;
 import android.view.WindowManager;
 import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
-import android.widget.ImageView;
+import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.pakigsabot.FacialRecog.FacialRecogEnable;
-import com.example.pakigsabot.FacialRecog.FacialRecogSignIn;
+import com.example.pakigsabot.NavBar.BottomNavigation;
+import com.example.pakigsabot.SignUpRequirements.AgreementScreen;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
@@ -28,8 +32,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class Signin extends AppCompatActivity {
 
-    ImageView prev, facialRecogBtn;
-    TextView signup;
+    TextView signup, forgotPassTxtLink;
     TextInputEditText emailAddEditTxt,passEditTxt;
     TextInputLayout emailTxtInputL, passTxtInputL;
     Button signInBtn;
@@ -45,17 +48,10 @@ public class Signin extends AppCompatActivity {
 
         refs();
 
-        prev.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                welcomeScreen();
-            }
-        });
-
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                signUpScreen();
+                agreementScreen();
             }
         });
 
@@ -66,16 +62,50 @@ public class Signin extends AppCompatActivity {
             }
         });
 
+        //Reset Password Method
+        forgotPassTxtLink.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                EditText resetMail = new EditText(view.getContext());
+                AlertDialog.Builder passwordResetDialog = new AlertDialog.Builder(view.getContext());
+                passwordResetDialog.setTitle("Do you want to Reset Password ?");
+                passwordResetDialog.setMessage("Enter your Email Address to Receive the Reset Password Link");
+                passwordResetDialog.setView(resetMail);
+
+                passwordResetDialog.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        //Extract the email add and send the reset password link
+
+                        String emailAdd = resetMail.getText().toString();
+                        fAuth2.sendPasswordResetEmail(emailAdd).addOnSuccessListener(new OnSuccessListener<Void>() {
+                            @Override
+                            public void onSuccess(Void unused) {
+                                Toast.makeText(Signin.this, "Reset Link Sent to your Email", Toast.LENGTH_SHORT).show();
+                            }
+                        }).addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                Toast.makeText(Signin.this, "ERROR! Reset Link is NOT SENT " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                            }
+                        });
+                    }
+                });
+
+                passwordResetDialog.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        //close the dialog
+                    }
+                });
+
+                passwordResetDialog.create().show();
+            }
+        });
+
         //Validations
         passEditTxt.addTextChangedListener(new ValidationTextWatcher(passEditTxt));
         emailAddEditTxt.addTextChangedListener(new ValidationTextWatcher(emailAddEditTxt));
-
-        facialRecogBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                facialSignIn();
-            }
-        });
 
         Bundle bundle = getIntent().getExtras();
         if(bundle != null){
@@ -87,25 +117,20 @@ public class Signin extends AppCompatActivity {
     }
 
     public void refs(){
-        prev = findViewById(R.id.backBtnSignIn);
         signup = findViewById(R.id.signUpTxtView);
         signInBtn = findViewById(R.id.signInBtnn);
         emailAddEditTxt = findViewById(R.id.emailAddEditTxtSI);
         passEditTxt = findViewById(R.id.passwordEditTxtSI);
         emailTxtInputL = findViewById(R.id.emailTxtInputLayout);
         passTxtInputL = findViewById(R.id.passwordTextInputLayout);
-        facialRecogBtn = findViewById(R.id.facialRecogBtn);
         fAuth2 = FirebaseAuth.getInstance();
         progressBarSI = findViewById(R.id.progressBarSignIn);
+        forgotPassTxtLink = findViewById(R.id.forgotPassTxtView);
     }
 
-    public void welcomeScreen(){
-        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-        startActivity(intent);
-    }
 
-    public void signUpScreen(){
-        Intent intent = new Intent(getApplicationContext(), Signup.class);
+    public void agreementScreen(){
+        Intent intent = new Intent(getApplicationContext(), AgreementScreen.class);
         startActivity(intent);
     }
 
@@ -169,15 +194,18 @@ public class Signin extends AppCompatActivity {
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if(task.isSuccessful()){
                         Toast.makeText(Signin.this, "Signed In Successfully", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(getApplicationContext(), FacialRecogEnable.class));
+                        Toast.makeText(Signin.this, "Welcome to Pakigsa-Bot", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(getApplicationContext(), BottomNavigation.class));
+                        passEditTxt.setText(null);
+                        emailAddEditTxt.setText(null);
                     }else{
+                        passEditTxt.setText(null);
                         Toast.makeText(Signin.this, "Error! " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                         progressBarSI.setVisibility(View.GONE);
                     }
                 }
             });
         }
-
         return true;
     }
 
@@ -246,11 +274,4 @@ public class Signin extends AppCompatActivity {
             }
         }
     }
-
-    public void facialSignIn(){
-        Intent intent = new Intent(getApplicationContext(), FacialRecogSignIn.class);
-        startActivity(intent);
-    }
-
-    //end Mvil
 }

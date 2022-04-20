@@ -14,6 +14,30 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PakigsaBot">
         <activity
+            android:name=".LoyaltyTier.SeeAllTiers4"
+            android:exported="false" />
+        <activity
+            android:name=".LoyaltyTier.SeeAllTiers3"
+            android:exported="false" />
+        <activity
+            android:name=".LoyaltyTier.SeeAllTiers2"
+            android:exported="false" />
+        <activity
+            android:name=".LoyaltyTier.SeeAllTiers"
+            android:exported="false" />
+        <activity
+            android:name=".LoyaltyTier.LTInfo"
+            android:exported="false" />
+        <activity
+            android:name=".PremiumApp.PayPremium"
+            android:exported="false" />
+        <activity
+            android:name=".PremiumApp.SubscriptionTerms"
+            android:exported="false" />
+        <activity
+            android:name=".Profile.ChangePass"
+            android:exported="false" />
+        <activity
             android:name=".FacialRecog.FacialRecogSignIn"
             android:exported="false" />
         <activity

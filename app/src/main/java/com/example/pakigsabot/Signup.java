@@ -17,7 +17,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import com.example.pakigsabot.SignUpRequirements.AgreementScreen;
+
+import com.example.pakigsabot.NavBar.BottomNavigation;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -45,6 +46,7 @@ public class Signup extends AppCompatActivity {
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
     String cust_id;
+    String genderLabel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -128,7 +130,6 @@ public class Signup extends AppCompatActivity {
         String fName = firstNameEditTxt.getText().toString();
         String lName = lastNameEditTxt.getText().toString();
         String phoneNum = phoneNumEditTxt.getText().toString();
-        int gender = genderRG.getId();
         String bday = birthdateEditTxt.getText().toString();
 
         //First Name Validation
@@ -230,6 +231,17 @@ public class Signup extends AppCompatActivity {
         if(isValid){
             progressBarSU.setVisibility(View.VISIBLE);
 
+            //Get value of RadioButton
+            if(genderRG.getCheckedRadioButtonId() == -1){
+                Toast.makeText(Signup.this, "Please Select Gender", Toast.LENGTH_SHORT).show();
+            }else{
+                if(maleRB.isChecked()){
+                    genderLabel = maleRB.getText().toString();
+                }else{
+                    genderLabel = femaleRB.getText().toString();
+                }
+            }
+
             //Register the user in Firebase::
             fAuth.createUserWithEmailAndPassword(email, pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override
@@ -239,13 +251,15 @@ public class Signup extends AppCompatActivity {
                         cust_id = fAuth.getCurrentUser().getUid();
                         DocumentReference docRef = fStore.collection("customers").document(cust_id);
                         Map<String,Object> customer = new HashMap<>();
+                        customer.put("cust_id",cust_id);
                         customer.put("cust_fname", fName);
                         customer.put("cust_lname", lName);
                         customer.put("cust_phoneNum", phoneNum);
-                        customer.put("cust_gender", gender);
+                        customer.put("cust_gender", genderLabel);
                         customer.put("cust_birthDate", bday);
                         customer.put("cust_email", email);
                         customer.put("cust_password", pass);
+                        customer.put("cust_status", "Free");
                         docRef.set(customer).addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void unused) {
@@ -257,7 +271,14 @@ public class Signup extends AppCompatActivity {
                                 Log.d("SignUp", "onSignUpFailure: " + e.toString());
                             }
                         });
-                        startActivity(new Intent(getApplicationContext(),AgreementScreen.class));
+                        Toast.makeText(Signup.this, R.string.signUp_success, Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(getApplicationContext(), BottomNavigation.class));
+                        firstNameEditTxt.setText(null);
+                        lastNameEditTxt.setText(null);
+                        phoneNumEditTxt.setText(null);
+                        birthdateEditTxt.setText(null);
+                        editTxtEmailAdd.setText(null);
+                        editTxtPass.setText(null);
                     }else{
                         Toast.makeText(Signup.this, "Error! " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                         progressBarSU.setVisibility(View.GONE);
@@ -326,7 +347,7 @@ public class Signup extends AppCompatActivity {
             phoneNumL.setError(getString(R.string.phoneNum_req));
         } else {
             String phone = phoneNumEditTxt.getText().toString();
-            Boolean  validPhone = Patterns.PHONE.matcher(phone).matches();
+            Boolean  validPhone = phone.matches("^(?:\\d{2}-\\d{3}-\\d{3}-\\d{3}|\\d{11})$");
             if (!validPhone) {
                 phoneNumL.setError("Invalid Phone Number");
                 requestFocus(phoneNumEditTxt);
