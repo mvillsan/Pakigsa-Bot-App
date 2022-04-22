@@ -174,17 +174,33 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.023" />
 
-    <ImageView
-        android:id="@+id/profileImageView"
-        android:layout_width="121dp"
-        android:layout_height="115dp"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView3"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.531"
+        app:layout_constraintHorizontal_bias="0.527"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profileTxt"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/ic_profile" />
+        app:layout_constraintTop_toBottomOf="@+id/backBtnProfile"
+        app:layout_constraintVertical_bias="0.012">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            app:cardCornerRadius="100dp">
+
+            <ImageView
+                android:id="@+id/profileImageView"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_profile" />
+        </androidx.cardview.widget.CardView>
+    </androidx.cardview.widget.CardView>
 
     <ImageView
         android:id="@+id/uploadImg"
@@ -192,10 +208,10 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.633"
+        app:layout_constraintHorizontal_bias="0.657"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/profileTxt"
-        app:layout_constraintVertical_bias="0.117"
+        app:layout_constraintVertical_bias="0.113"
         app:srcCompat="@drawable/ic_profimg" />
 
     <ImageView
@@ -218,7 +234,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.524"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profileImageView"
+        app:layout_constraintTop_toBottomOf="@+id/cardView3"
         app:layout_constraintVertical_bias="0.02"
         app:srcCompat="@drawable/white_rounded_rect" />
 
@@ -305,10 +321,10 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.111"
+        app:layout_constraintHorizontal_bias="0.105"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profileImageView"
-        app:layout_constraintVertical_bias="0.077" />
+        app:layout_constraintTop_toBottomOf="@+id/cardView3"
+        app:layout_constraintVertical_bias="0.103" />
 
     <EditText
         android:id="@+id/emailAddProfileET"
