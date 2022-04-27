@@ -38,9 +38,6 @@
             android:name=".Profile.ChangePass"
             android:exported="false" />
         <activity
-            android:name=".FacialRecog.FacialRecogSignIn"
-            android:exported="false" />
-        <activity
             android:name=".Resto.ConfirmAndPayResto"
             android:exported="false" />
         <activity
@@ -66,12 +63,6 @@
             android:exported="false" />
         <activity
             android:name=".Resto.Resto_CheckIn"
-            android:exported="false" />
-        <activity
-            android:name=".FacialRecog.FacialRecogEnable"
-            android:exported="false" />
-        <activity
-            android:name=".Translation.TranslateFilipino"
             android:exported="false" />
         <activity
             android:name=".NotificationAlerts.EstCancelled"
