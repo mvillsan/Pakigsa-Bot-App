@@ -85,7 +85,7 @@ public class HomeFragment extends Fragment{
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
         //References::
-        ImageView profileBtn = (ImageView) view.findViewById(R.id.profileBtn);
+        ImageView profileBtn = (ImageView) view.findViewById(R.id.profileImageView);
         ImageButton shareBtn = (ImageButton) view.findViewById(R.id.shareBtn);
         ImageButton signOutBtn = (ImageButton) view.findViewById(R.id.signoutHomeBtn);
         ImageButton resortBtn = (ImageButton) view.findViewById(R.id.resortBtn);

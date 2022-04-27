@@ -142,6 +142,7 @@
         <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_resort_reservation.xml" value="0.278125" />
         <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_resort_reservation_details.xml" value="0.278125" />
         <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_resort_reservation_success.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_resto_details_rcalendar.xml" value="0.278125" />
         <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_resto_reservation_success.xml" value="0.278125" />
         <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_see_all_tiers.xml" value="0.278125" />
         <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_see_all_tiers2.xml" value="0.278125" />
@@ -153,11 +154,11 @@
         <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_subscription_terms.xml" value="0.4767857142857143" />
         <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_translate_filipino.xml" value="0.278125" />
         <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_upgrade_screen.xml" value="0.33" />
-        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/fragment_home.xml" value="0.33" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/fragment_home.xml" value="0.67" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_15" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_15_PREVIEW" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
