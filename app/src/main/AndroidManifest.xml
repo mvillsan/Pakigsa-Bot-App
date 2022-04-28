@@ -14,6 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PakigsaBot">
         <activity
+            android:name=".HelpCenter.HelpCenter"
+            android:exported="false" />
+        <activity
             android:name=".LoyaltyTier.SeeAllTiers4"
             android:exported="false" />
         <activity

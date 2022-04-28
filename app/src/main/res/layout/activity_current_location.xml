@@ -11,5 +11,4 @@
         android:layout_height="match_parent"
         android:id="@+id/google_map"
         android:name="com.google.android.gms.maps.SupportMapFragment"/>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

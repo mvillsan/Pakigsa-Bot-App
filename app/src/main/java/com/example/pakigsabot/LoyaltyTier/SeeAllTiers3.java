@@ -55,7 +55,7 @@ public class SeeAllTiers3 extends AppCompatActivity {
         backBtnProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                profile();
+                ltinfo();
             }
         });
     }
@@ -88,8 +88,8 @@ public class SeeAllTiers3 extends AppCompatActivity {
         startActivity(intent);
     }
 
-    private void profile(){
-        Intent intent = new Intent(getApplicationContext(), Profile.class);
+    private void ltinfo(){
+        Intent intent = new Intent(getApplicationContext(), LTInfo.class);
         startActivity(intent);
     }
 }

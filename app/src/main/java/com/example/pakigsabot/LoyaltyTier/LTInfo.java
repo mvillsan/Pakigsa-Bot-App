@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.example.pakigsabot.Profile.Profile;
 import com.example.pakigsabot.R;
 /*import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
@@ -103,7 +104,8 @@ public class LTInfo extends AppCompatActivity {
     }
 
     private void prevScreen(){
-        super.onBackPressed();
+        Intent intent = new Intent(getApplicationContext(), Profile.class);
+        startActivity(intent);
     }
 
     private void seeTiers(){

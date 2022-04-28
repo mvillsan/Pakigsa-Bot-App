@@ -15,7 +15,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.pakigsabot.DentalClinics.DentalClinicReservation;
-import com.example.pakigsabot.Feedback.Feedback;
 import com.example.pakigsabot.InternetCafe.InternetCafeReservation;
 import com.example.pakigsabot.MainActivity;
 import com.example.pakigsabot.NotificationAlerts.EstCancelled;
