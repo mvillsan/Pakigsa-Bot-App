@@ -83,9 +83,6 @@
             android:name=".PremiumApp.GoPremiumCA"
             android:exported="false" />
         <activity
-            android:name=".HelpCenter.HelpCenter7"
-            android:exported="false" />
-        <activity
             android:name=".SignUpRequirements.AgreementScreen"
             android:exported="false" />
         <activity
@@ -99,21 +96,6 @@
             android:exported="false" />
         <activity
             android:name=".ShareApp.ShareAppToFB"
-            android:exported="false" />
-        <activity
-            android:name=".HelpCenter.HelpCenter6"
-            android:exported="false" />
-        <activity
-            android:name=".HelpCenter.HelpCenter5"
-            android:exported="false" />
-        <activity
-            android:name=".HelpCenter.HelpCenter4"
-            android:exported="false" />
-        <activity
-            android:name=".HelpCenter.HelpCenter3"
-            android:exported="false" />
-        <activity
-            android:name=".HelpCenter.HelpCenter2"
             android:exported="false" />
         <activity
             android:name=".CancelReservation.CancelReservationSuccessful"
