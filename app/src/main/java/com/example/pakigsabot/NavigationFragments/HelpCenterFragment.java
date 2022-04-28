@@ -8,9 +8,9 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
+import android.widget.Button;
 
-import com.example.pakigsabot.HelpCenter.HelpCenter2;
+import com.example.pakigsabot.HelpCenter.HelpCenter;
 import com.example.pakigsabot.R;
 
 /**
@@ -67,21 +67,22 @@ public class HelpCenterFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_helpcenter, container, false);
 
         //References:
-        ImageView imageView21 = (ImageView) view.findViewById(R.id.imageView21);
+        Button browseBtn = (Button) view.findViewById(R.id.browseBtn);
 
-        imageView21.setOnClickListener(new View.OnClickListener() {
+        browseBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                chatbotConversation2();
+                helpCenter();
             }
         });
+
 
         return view;
     }
 
-    private void chatbotConversation2(){
-        Intent intent = new Intent(getActivity(), HelpCenter2.class);
-        intent.putExtra("cC2", "cC2");
-        startActivity(intent);
+    private void helpCenter(){
+        Intent in = new Intent(getActivity(), HelpCenter.class);
+        in.putExtra("helpcenter", "helpcenter");
+        startActivity(in);
     }
 }

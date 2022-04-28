@@ -69,19 +69,11 @@ public class EstFavoritesFragment extends Fragment {
 
         //References:
         ImageView estFav = (ImageView) view.findViewById(R.id.estFavImageView);
-        ImageView servFav = (ImageView) view.findViewById(R.id.servicesFavImageView);
 
         estFav.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 estFavScreen();
-            }
-        });
-
-        servFav.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                services();
             }
         });
 
@@ -91,11 +83,5 @@ public class EstFavoritesFragment extends Fragment {
     public void estFavScreen(){
         FragmentTransaction ft = getFragmentManager().beginTransaction();
         ft.detach(EstFavoritesFragment.this).attach(EstFavoritesFragment.this).commit();
-    }
-
-    public void services(){
-         Intent intent = new Intent(getActivity(), ServicesFavorites.class);
-         intent.putExtra("servFav", "servFav");
-         startActivity(intent);
     }
 }
