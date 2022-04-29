@@ -250,6 +250,7 @@ public class Signup extends AppCompatActivity {
                     if(task.isSuccessful()){
                         Toast.makeText(Signup.this, "Account has been Created Successfully", Toast.LENGTH_SHORT).show();
                         cust_id = fAuth.getCurrentUser().getUid();
+                        //Saving Data to the database
                         DocumentReference docRef = fStore.collection("customers").document(cust_id);
                         Map<String,Object> customer = new HashMap<>();
                         customer.put("cust_id",cust_id);
@@ -261,6 +262,7 @@ public class Signup extends AppCompatActivity {
                         customer.put("cust_email", email);
                         customer.put("cust_password", pass);
                         customer.put("cust_status", "Free");
+                        customer.put("cust_image", "No profile picture");
                         docRef.set(customer).addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void unused) {
