@@ -9,7 +9,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.WindowManager;
@@ -22,7 +21,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.pakigsabot.NavBar.BottomNavigation;
-import com.example.pakigsabot.Profile.Profile;
 import com.example.pakigsabot.SignUpRequirements.AgreementScreen;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -57,6 +55,7 @@ public class Signin extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signin);
 
+        //References::
         refs();
 
         signup.setOnClickListener(new View.OnClickListener() {
@@ -218,6 +217,8 @@ public class Signin extends AppCompatActivity {
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if(task.isSuccessful()){
                         cust_id = fAuth2.getCurrentUser().getUid();
+
+                        //Save data to database
                         DocumentReference docRef = fStore.collection("customers").document(cust_id);
                         Map<String,Object> edited = new HashMap<>();
                         edited.put("cust_password", pass);
@@ -232,6 +233,7 @@ public class Signin extends AppCompatActivity {
                             @Override
                             public void onFailure(@NonNull Exception e) {
                                 Toast.makeText(Signin.this, "No Changes has been made", Toast.LENGTH_SHORT).show();
+                                progressBarSI.setVisibility(View.GONE);
                             }
                         });
                         //Clear fields

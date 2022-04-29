@@ -101,7 +101,7 @@ public class HomeFragment extends Fragment{
         StorageReference storageRef = FirebaseStorage.getInstance().getReference();
 
 
-        StorageReference profileRef = storageRef.child("customers/"+userID+"profile.jpg");
+        StorageReference profileRef = storageRef.child("customers/profile_pictures/"+userID+"profile.jpg");
         profileRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
             @Override
             public void onSuccess(Uri uri) {

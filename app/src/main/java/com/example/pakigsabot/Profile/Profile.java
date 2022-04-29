@@ -10,6 +10,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -54,11 +55,11 @@ public class Profile extends AppCompatActivity {
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
     FirebaseUser user;
-    String userID;
     StorageReference storageRef;
     StorageReference profileRef;
     DocumentReference documentReference;
     DocumentReference docRef;
+    String userID;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,7 +84,7 @@ public class Profile extends AppCompatActivity {
         userID = fAuth.getCurrentUser().getUid();
         storageRef = FirebaseStorage.getInstance().getReference();
 
-        profileRef = storageRef.child("customers/"+userID+"profile.jpg");
+        profileRef = storageRef.child("customers/profile_pictures/"+userID+"profile.jpg");
         profileRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
             @Override
             public void onSuccess(Uri uri) {
@@ -189,7 +190,7 @@ public class Profile extends AppCompatActivity {
 
     //Upload Image to Firebase Storage::
     private void uploadImageToFirebase(Uri imageUri) {
-        final StorageReference fileRef = storageRef.child("customers/"+userID+"profile.jpg");
+        final StorageReference fileRef = storageRef.child("customers/profile_pictures/"+userID+"profile.jpg");
         fileRef.putFile(imageUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
             @Override
             public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
@@ -197,6 +198,18 @@ public class Profile extends AppCompatActivity {
                     @Override
                     public void onSuccess(Uri uri) {
                         Picasso.get().load(uri).into(profileImageView);
+
+                        //Save the image to firestore database
+                        String imgUrl = String.valueOf(uri);
+                        DocumentReference docRef = fStore.collection("customers").document(userID);
+                        Map<String,Object> customer = new HashMap<>();
+                        customer.put("cust_image",imgUrl);
+                        docRef.update(customer).addOnSuccessListener(new OnSuccessListener<Void>() {
+                            @Override
+                            public void onSuccess(Void unused) {
+                                Log.d("PROFILE-IMG SAVED TO DB","SUCCESS");
+                            }
+                        });
                     }
                 });
                 Toast.makeText(Profile.this, "Image Uploaded", Toast.LENGTH_SHORT).show();
@@ -237,7 +250,7 @@ public class Profile extends AppCompatActivity {
                 user.updateEmail(emailAddP).addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void unused) {
-                        docRef = fStore.collection("customers").document(user.getUid());
+                        docRef = fStore.collection("customers").document(userID);
                         Map<String,Object> edited = new HashMap<>();
                         edited.put("cust_email",emailAddP);
                         edited.put("cust_fname",firstNameP);
