@@ -9,17 +9,20 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.WindowManager;
 import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.pakigsabot.NavBar.BottomNavigation;
+import com.example.pakigsabot.Profile.Profile;
 import com.example.pakigsabot.SignUpRequirements.AgreementScreen;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -29,6 +32,11 @@ import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class Signin extends AppCompatActivity {
 
@@ -36,8 +44,11 @@ public class Signin extends AppCompatActivity {
     TextInputEditText emailAddEditTxt,passEditTxt;
     TextInputLayout emailTxtInputL, passTxtInputL;
     Button signInBtn;
+    ImageView backBtnSignIn;
     ProgressBar progressBarSI;
     FirebaseAuth fAuth2;
+    String cust_id;
+    FirebaseFirestore fStore;
 
     public static String passwordAuth;
 
@@ -59,6 +70,13 @@ public class Signin extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 signInCustomer();
+            }
+        });
+
+        backBtnSignIn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                welcomeScreen();
             }
         });
 
@@ -126,8 +144,14 @@ public class Signin extends AppCompatActivity {
         fAuth2 = FirebaseAuth.getInstance();
         progressBarSI = findViewById(R.id.progressBarSignIn);
         forgotPassTxtLink = findViewById(R.id.forgotPassTxtView);
+        fStore = FirebaseFirestore.getInstance();
+        backBtnSignIn = findViewById(R.id.backBtnSignIn);
     }
 
+    public void welcomeScreen(){
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(intent);
+    }
 
     public void agreementScreen(){
         Intent intent = new Intent(getApplicationContext(), AgreementScreen.class);
@@ -193,9 +217,24 @@ public class Signin extends AppCompatActivity {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if(task.isSuccessful()){
-                        Toast.makeText(Signin.this, "Signed In Successfully", Toast.LENGTH_SHORT).show();
-                        Toast.makeText(Signin.this, "Welcome to Pakigsa-Bot", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(getApplicationContext(), BottomNavigation.class));
+                        cust_id = fAuth2.getCurrentUser().getUid();
+                        DocumentReference docRef = fStore.collection("customers").document(cust_id);
+                        Map<String,Object> edited = new HashMap<>();
+                        edited.put("cust_password", pass);
+                        docRef.update(edited).addOnSuccessListener(new OnSuccessListener<Void>() {
+                            @Override
+                            public void onSuccess(Void unused) {
+                                Toast.makeText(Signin.this, "Welcome to Pakigsa-Bot", Toast.LENGTH_SHORT).show();
+                                startActivity(new Intent(getApplicationContext(), BottomNavigation.class));
+                                finish();
+                            }
+                        }).addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                Toast.makeText(Signin.this, "No Changes has been made", Toast.LENGTH_SHORT).show();
+                            }
+                        });
+                        //Clear fields
                         passEditTxt.setText(null);
                         emailAddEditTxt.setText(null);
                     }else{
@@ -205,6 +244,10 @@ public class Signin extends AppCompatActivity {
                     }
                 }
             });
+        }
+        else{
+            Toast.makeText(Signin.this, "Please Input All Fields", Toast.LENGTH_SHORT).show();
+            progressBarSI.setVisibility(View.GONE);
         }
         return true;
     }

@@ -151,9 +151,9 @@ public class ChangePass extends AppCompatActivity {
                             Toast.makeText(ChangePass.this, e.getMessage(), Toast.LENGTH_SHORT).show();
                         }
                     });
-                    }else{
+                }else{
                         Toast.makeText(ChangePass.this, "Enter OLD Password", Toast.LENGTH_SHORT).show();
-                    }
+                }
             }else{
                 Toast.makeText(ChangePass.this, "Password Mismatched", Toast.LENGTH_SHORT).show();
             }

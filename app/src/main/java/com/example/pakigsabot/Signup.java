@@ -19,6 +19,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.pakigsabot.NavBar.BottomNavigation;
+import com.example.pakigsabot.SignUpRequirements.AgreementScreen;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -59,7 +60,7 @@ public class Signup extends AppCompatActivity {
         prev.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                welcomeScreen();
+                agreementScreen();
             }
         });
 
@@ -110,8 +111,8 @@ public class Signup extends AppCompatActivity {
         fStore = FirebaseFirestore.getInstance();
     }
 
-    public void welcomeScreen(){
-        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+    public void agreementScreen(){
+        Intent intent = new Intent(getApplicationContext(), AgreementScreen.class);
         startActivity(intent);
     }
 
@@ -271,28 +272,27 @@ public class Signup extends AppCompatActivity {
                                 Log.d("SignUp", "onSignUpFailure: " + e.toString());
                             }
                         });
-                        Toast.makeText(Signup.this, R.string.signUp_success, Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(getApplicationContext(), BottomNavigation.class));
-                        firstNameEditTxt.setText(null);
-                        lastNameEditTxt.setText(null);
-                        phoneNumEditTxt.setText(null);
-                        birthdateEditTxt.setText(null);
-                        editTxtEmailAdd.setText(null);
-                        editTxtPass.setText(null);
+                        Toast.makeText(Signup.this, R.string.signUp_success, Toast.LENGTH_SHORT).show();
                     }else{
                         Toast.makeText(Signup.this, "Error! " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                         progressBarSU.setVisibility(View.GONE);
                     }
                 }
             });
+            //Clear fields in case the user go back to previous page
+            firstNameEditTxt.setText(null);
+            lastNameEditTxt.setText(null);
+            phoneNumEditTxt.setText(null);
+            birthdateEditTxt.setText(null);
+            editTxtEmailAdd.setText(null);
+            editTxtPass.setText(null);
+        }else if(fAuth.getCurrentUser() != null){//User is Log-in already::
+            startActivity(new Intent(getApplicationContext(), Signin.class));
+        }else{
+            Toast.makeText(Signup.this, "Please Input All Fields" , Toast.LENGTH_SHORT).show();
+            progressBarSU.setVisibility(View.GONE);
         }
-
-        //User is Log-in already::
-        if(fAuth.getCurrentUser() != null){
-            startActivity(new Intent(getApplicationContext(), Signup.class));
-            finish();
-        }
-
         return true;
     }
 
