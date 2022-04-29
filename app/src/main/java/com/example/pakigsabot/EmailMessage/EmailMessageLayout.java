@@ -40,15 +40,16 @@ public class EmailMessageLayout extends AppCompatActivity {
                     intent.putExtra(Intent.EXTRA_TEXT, bodyEDEM.getText().toString());
                     intent.setData(Uri.parse("mailto:"));
                     if(intent.resolveActivity(getPackageManager()) != null){
-                        startActivity(intent);
+                        startActivity(Intent.createChooser(intent, "Send Email"));
                     }else{
                         Toast.makeText(EmailMessageLayout.this,"There's no email application that supports this action.", Toast.LENGTH_SHORT).show();
                     }
+                    //Clear text fields
+                    subjectETEM.setText(null);
+                    bodyEDEM.setText(null);
                 }else{
                     Toast.makeText(EmailMessageLayout.this,"Please input all the fields! ", Toast.LENGTH_SHORT).show();
                 }
-                subjectETEM.setText(null);
-                bodyEDEM.setText(null);
             }
         });
 

@@ -41,7 +41,7 @@ public class GoPremiumCA extends AppCompatActivity {
         backBtnProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                onBackPressed();
+                profileScreen();
             }
         });
     }
@@ -60,9 +60,5 @@ public class GoPremiumCA extends AppCompatActivity {
     public void profileScreen(){
         Intent intent = new Intent(getApplicationContext(), Profile.class);
         startActivity(intent);
-    }
-
-    public void onBackPressed(){
-        super.onBackPressed();
     }
 }

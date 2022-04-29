@@ -101,8 +101,8 @@
 
     <EditText
         android:id="@+id/subjectETEM"
-        android:layout_width="260dp"
-        android:layout_height="38dp"
+        android:layout_width="259dp"
+        android:layout_height="43dp"
         android:drawablePadding="5dp"
         android:ems="10"
         android:fontFamily="@font/poppins_light"
@@ -113,10 +113,10 @@
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.169"
+        app:layout_constraintHorizontal_bias="0.022"
         app:layout_constraintStart_toEndOf="@+id/subjTxt"
         app:layout_constraintTop_toBottomOf="@+id/emailAddEditTextEM"
-        app:layout_constraintVertical_bias="0.058" />
+        app:layout_constraintVertical_bias="0.04" />
 
     <TextView
         android:id="@+id/msgTxt"
