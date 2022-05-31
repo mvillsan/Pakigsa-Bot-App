@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/topbar_bg"
+    tools:context=".RestaurantAndCafe.NearbyResto">
+
+    <ImageView
+        android:id="@+id/restoIcon"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/restuarant"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imgBackBtn"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
+
+    <ImageView
+        android:id="@+id/imgBackBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="TODO"
+        android:src="@drawable/ic_arrow_back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
+
+    <TextView
+        android:id="@+id/lbl"
+        android:layout_width="218dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="15dp"
+        android:fontFamily="@font/poppins_light"
+        android:text="@string/tablesPalate"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/restoIcon"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
+
+    <Button
+        android:id="@+id/lessthan1kmBtn"
+        android:layout_width="60dp"
+        android:layout_height="43dp"
+        android:text=">1km"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/swipeRefresh"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.037"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl"
+        app:layout_constraintVertical_bias="0.458" />
+
+    <Button
+        android:id="@+id/lessthan2kmBtn"
+        android:layout_width="60dp"
+        android:layout_height="43dp"
+        android:text="1km"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/swipeRefresh"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/lessthan1kmBtn"
+        app:layout_constraintTop_toBottomOf="@+id/lbl"
+        app:layout_constraintVertical_bias="0.458" />
+
+    <Button
+        android:id="@+id/lessthan3kmBtn"
+        android:layout_width="60dp"
+        android:layout_height="43dp"
+        android:text="2km"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/swipeRefresh"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/lessthan2kmBtn"
+        app:layout_constraintTop_toBottomOf="@+id/lbl"
+        app:layout_constraintVertical_bias="0.458" />
+
+    <Button
+        android:id="@+id/lessthan4kmBtn"
+        android:layout_width="60dp"
+        android:layout_height="43dp"
+        android:text="3km"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/swipeRefresh"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/lessthan3kmBtn"
+        app:layout_constraintTop_toBottomOf="@+id/lbl"
+        app:layout_constraintVertical_bias="0.458" />
+
+    <Button
+        android:id="@+id/lessthan5kmBtn"
+        android:layout_width="60dp"
+        android:layout_height="43dp"
+        android:text="4km"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/swipeRefresh"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/lessthan4kmBtn"
+        app:layout_constraintTop_toBottomOf="@+id/lbl"
+        app:layout_constraintVertical_bias="0.458" />
+
+    <Button
+        android:id="@+id/lessthan6kmBtn"
+        android:layout_width="60dp"
+        android:layout_height="43dp"
+        android:text="5km"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/swipeRefresh"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/lessthan5kmBtn"
+        app:layout_constraintTop_toBottomOf="@+id/lbl"
+        app:layout_constraintVertical_bias="0.458" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="150dp"
+        tools:layout_editor_absoluteX="16dp">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/restoCafeRecyclerView"
+                android:layout_width="372dp"
+                android:layout_height="500dp"
+                android:layout_gravity="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.487"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/searchByResortSV"
+                app:layout_constraintVertical_bias="0.395" />
+        </LinearLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

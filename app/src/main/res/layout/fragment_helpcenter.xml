@@ -53,7 +53,7 @@
         android:background="@color/darkbluegreen"
         android:fontFamily="@font/poppins_medium"
         android:text="Browse Help Topics"
-        android:textColor="@color/purple"
+        android:textColor="@color/lemongreen"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"

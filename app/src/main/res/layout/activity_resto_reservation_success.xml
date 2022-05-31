@@ -4,80 +4,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/topbar_bg"
-    tools:context=".Resto.RestoReservationSuccess">
+    android:background="@color/peach"
+    tools:context=".RestaurantAndCafe.RestoReservationSuccess">
 
     <ImageView
         android:id="@+id/imageView16"
-        android:layout_width="416dp"
-        android:layout_height="302dp"
-        android:layout_marginStart="10dp"
+        android:layout_width="300dp"
+        android:layout_height="280dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.266"
+        app:layout_constraintHorizontal_bias="0.567"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.272"
+        app:layout_constraintVertical_bias="0.257"
         app:srcCompat="@drawable/white_rect" />
-
-    <ImageView
-        android:id="@+id/smileLogo"
-        android:layout_width="53dp"
-        android:layout_height="40dp"
-        android:src="@drawable/hukad_icon"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.145"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023" />
-
-    <TextView
-        android:id="@+id/lblDentalClinic2"
-        android:layout_width="265dp"
-        android:layout_height="37dp"
-        android:fontFamily="@font/poppins_light"
-        android:text="@string/hukad"
-        android:textColor="#FFFFFF"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/smileLogo"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023" />
-
-    <TextView
-        android:id="@+id/lblSerenityAddress"
-        android:layout_width="259dp"
-        android:layout_height="14dp"
-        android:fontFamily="@font/poppins_light"
-        android:text="@string/hukadAddress"
-        android:textColor="@color/lemongreen"
-        android:textSize="10sp"
-        android:textStyle="italic"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/lblDentalClinic2"
-        app:layout_constraintTop_toTopOf="@+id/lblDentalClinic2"
-        app:layout_constraintVertical_bias="0.031" />
 
     <TextView
         android:id="@+id/successTxt"
-        android:layout_width="201dp"
-        android:layout_height="59dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:fontFamily="@font/comforta"
         android:text="SUCCESS !"
         android:textColor="@color/darkgreen"
-        android:textSize="30sp"
+        android:textSize="28sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView16"
+        app:layout_constraintEnd_toEndOf="@+id/imageView16"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/imageView19"
         app:layout_constraintTop_toTopOf="@+id/imageView16"
-        app:layout_constraintVertical_bias="0.032" />
+        app:layout_constraintVertical_bias="0.081" />
 
     <ImageView
         android:id="@+id/imageView19"
@@ -85,72 +41,39 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.29"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.154"
+        app:layout_constraintStart_toStartOf="@+id/imageView16"
         app:layout_constraintTop_toTopOf="@+id/imageView16"
         app:layout_constraintVertical_bias="0.031"
         app:srcCompat="@drawable/ic_done" />
-
-    <TextView
-        android:id="@+id/sendEmailTxt"
-        android:layout_width="273dp"
-        android:layout_height="52dp"
-        android:fontFamily="@font/poppins_light"
-        android:text="We'll email you a reservation confirmation within 24 hours."
-        android:textColor="@color/gray"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.652"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/successTxt"
-        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/imageView15"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.341"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sendEmailTxt"
-        app:layout_constraintVertical_bias="0.017"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView16"
+        app:layout_constraintEnd_toStartOf="@+id/sendEmailTxt"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/imageView16"
+        app:layout_constraintTop_toTopOf="@+id/imageView16"
+        app:layout_constraintVertical_bias="0.333"
         app:srcCompat="@drawable/idea_icon" />
 
     <TextView
-        android:id="@+id/cancelReservationTxt"
-        android:layout_width="208dp"
-        android:layout_height="71dp"
-        android:layout_marginEnd="64dp"
+        android:id="@+id/sendEmailTxt"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
         android:fontFamily="@font/poppins_light"
-        android:text="You can cancel your reservation a day before your reservation date."
+        android:text="We'll send you an SMS reservation confirmation once the establishment accepted your reservation."
         android:textAlignment="center"
         android:textColor="@color/gray"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.932"
-        app:layout_constraintStart_toStartOf="@+id/imageView16"
-        app:layout_constraintTop_toBottomOf="@+id/sendEmailTxt"
-        app:layout_constraintVertical_bias="0.045" />
-
-    <Button
-        android:id="@+id/okBtnReservationSuccess"
-        android:layout_width="86dp"
-        android:layout_height="52dp"
-        android:backgroundTint="@color/lemongreen"
-        android:fontFamily="@font/poppins_medium"
-        android:text="ok"
-        android:textColor="@color/darkgreen"
         android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.553"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cancelReservationTxt"
-        app:layout_constraintVertical_bias="0.04" />
+        app:layout_constraintBottom_toBottomOf="@+id/imageView16"
+        app:layout_constraintEnd_toEndOf="@+id/imageView16"
+        app:layout_constraintHorizontal_bias="0.73"
+        app:layout_constraintStart_toStartOf="@+id/imageView16"
+        app:layout_constraintTop_toBottomOf="@+id/successTxt"
+        app:layout_constraintVertical_bias="0.465" />
 
     <TextView
         android:id="@+id/cancellingTxt"
@@ -163,13 +86,13 @@
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.63"
+        app:layout_constraintHorizontal_bias="0.567"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/okBtnReservationSuccess"
-        app:layout_constraintVertical_bias="0.202" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView16"
+        app:layout_constraintVertical_bias="0.079" />
 
     <TextView
-        android:id="@+id/chatbotTxt"
+        android:id="@+id/goTohelpCenterTxt"
         android:layout_width="300dp"
         android:layout_height="45dp"
         android:fontFamily="@font/poppins_light"
@@ -197,7 +120,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.619"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/chatbotTxt"
+        app:layout_constraintTop_toBottomOf="@+id/goTohelpCenterTxt"
         app:layout_constraintVertical_bias="0.217" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

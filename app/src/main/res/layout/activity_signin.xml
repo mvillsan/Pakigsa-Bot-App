@@ -30,7 +30,7 @@
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.171"
+        app:layout_constraintHorizontal_bias="0.205"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/signInTxt"
         app:layout_constraintVertical_bias="0.098" />
@@ -45,10 +45,10 @@
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.156"
+        app:layout_constraintHorizontal_bias="0.184"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emailTxtInputLayout"
-        app:layout_constraintVertical_bias="0.094" />
+        app:layout_constraintVertical_bias="0.073" />
 
     <Button
         android:id="@+id/signInBtnn"
@@ -62,10 +62,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.428"
+        app:layout_constraintHorizontal_bias="0.474"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/passwordTextInputLayout"
-        app:layout_constraintVertical_bias="0.129" />
+        app:layout_constraintVertical_bias="0.126" />
 
     <TextView
         android:id="@+id/textView"
@@ -100,7 +100,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins_light"
         android:text="@string/forgot"
-        android:textColor="@color/black"
+        android:textColor="@color/gray"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
@@ -114,21 +114,21 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.136"
+        app:layout_constraintHorizontal_bias="0.162"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.055"
+        app:layout_constraintVertical_bias="0.054"
         app:srcCompat="@drawable/back_arrow" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/emailTxtInputLayout"
         android:layout_width="306dp"
         android:layout_height="wrap_content"
-        app:errorEnabled="true"
         app:endIconMode="clear_text"
+        app:errorEnabled="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintHorizontal_bias="0.59"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emailTxt"
         app:layout_constraintVertical_bias="0.028"
@@ -139,12 +139,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins_light"
-            android:textColor="@color/black"
-            android:textSize="14sp"
             android:inputType="textEmailAddress"
-            android:maxLines="1"
             android:maxLength="50"
-            android:singleLine="true"/>
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -152,13 +152,13 @@
         android:id="@+id/passwordTextInputLayout"
         android:layout_width="306dp"
         android:layout_height="wrap_content"
-        app:endIconMode="password_toggle"
-        app:endIconTint="@color/gray"
         app:counterEnabled="true"
         app:counterMaxLength="30"
+        app:endIconMode="password_toggle"
+        app:endIconTint="@color/gray"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.514"
+        app:layout_constraintHorizontal_bias="0.59"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/passTxt"
         app:layout_constraintVertical_bias="0.046"
@@ -169,12 +169,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins_light"
-            android:textColor="@color/black"
             android:inputType="textPassword"
-            android:textSize="14sp"
-            android:maxLines="1"
             android:maxLength="31"
-            android:singleLine="true"/>
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <ProgressBar

@@ -4,15 +4,15 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 
+import com.example.pakigsabot.Favorites.LoadFavorites;
 import com.example.pakigsabot.R;
-import com.example.pakigsabot.Favorites.ServicesFavorites;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -69,19 +69,21 @@ public class EstFavoritesFragment extends Fragment {
 
         //References:
         ImageView estFav = (ImageView) view.findViewById(R.id.estFavImageView);
+        Button viewFavEstBtn = (Button) view.findViewById(R.id.viewFavBtn);
 
-        estFav.setOnClickListener(new View.OnClickListener() {
+        viewFavEstBtn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                estFavScreen();
+            public void onClick(View v) {
+                loadFavoriteEst();
             }
         });
-
         return view;
     }
 
-    public void estFavScreen(){
-        FragmentTransaction ft = getFragmentManager().beginTransaction();
-        ft.detach(EstFavoritesFragment.this).attach(EstFavoritesFragment.this).commit();
+    public void loadFavoriteEst(){
+        Intent in = new Intent(getActivity(), LoadFavorites.class);
+        in.putExtra("LoadFavorites", "Loading Favorites");
+        startActivity(in);
+
     }
 }

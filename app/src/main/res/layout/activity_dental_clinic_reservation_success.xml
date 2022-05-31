@@ -4,64 +4,45 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/topbar_bg"
-    tools:context=".DentalClinics.DentalClinicReservationSuccess">
+    android:background="@color/peach"
+    tools:context=".DentalAndEyeClinics.DentalClinicReservationSuccess">
 
     <ImageView
         android:id="@+id/imageView16"
-        android:layout_width="416dp"
-        android:layout_height="302dp"
+        android:layout_width="347dp"
+        android:layout_height="290dp"
         android:layout_marginStart="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.266"
+        app:layout_constraintHorizontal_bias="0.703"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.272"
+        app:layout_constraintVertical_bias="0.183"
         app:srcCompat="@drawable/white_rect" />
 
     <ImageView
-        android:id="@+id/smileLogo"
-        android:layout_width="53dp"
-        android:layout_height="40dp"
-        android:src="@drawable/smiledental_logo"
+        android:id="@+id/imageView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView16"
+        app:layout_constraintEnd_toStartOf="@+id/sendEmailTxt"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/imageView16"
+        app:layout_constraintTop_toTopOf="@+id/imageView16"
+        app:layout_constraintVertical_bias="0.397"
+        app:srcCompat="@drawable/idea_icon" />
+
+    <ImageView
+        android:id="@+id/imageView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.145"
+        app:layout_constraintHorizontal_bias="0.252"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023" />
-
-    <TextView
-        android:id="@+id/lblDentalClinic2"
-        android:layout_width="265dp"
-        android:layout_height="37dp"
-        android:fontFamily="@font/poppins_light"
-        android:text="Smile Specialist Dental Center"
-        android:textColor="#FFFFFF"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/smileLogo"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023" />
-
-    <TextView
-        android:id="@+id/lblSerenityAddress"
-        android:layout_width="259dp"
-        android:layout_height="14dp"
-        android:fontFamily="@font/poppins_light"
-        android:text="I1 Building,Jose Maria del Mar St., Lahug, Cebu City"
-        android:textColor="@color/lemongreen"
-        android:textSize="10sp"
-        android:textStyle="italic"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/lblDentalClinic2"
-        app:layout_constraintTop_toTopOf="@+id/lblDentalClinic2"
-        app:layout_constraintVertical_bias="0.031" />
+        app:layout_constraintTop_toTopOf="@+id/imageView16"
+        app:layout_constraintVertical_bias="0.038"
+        app:srcCompat="@drawable/ic_done" />
 
     <TextView
         android:id="@+id/successTxt"
@@ -77,83 +58,26 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/imageView19"
         app:layout_constraintTop_toTopOf="@+id/imageView16"
-        app:layout_constraintVertical_bias="0.032" />
-
-    <ImageView
-        android:id="@+id/imageView19"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.29"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView16"
-        app:layout_constraintVertical_bias="0.031"
-        app:srcCompat="@drawable/ic_done" />
+        app:layout_constraintVertical_bias="0.039" />
 
     <TextView
         android:id="@+id/sendEmailTxt"
-        android:layout_width="273dp"
-        android:layout_height="52dp"
+        android:layout_width="224dp"
+        android:layout_height="157dp"
         android:fontFamily="@font/poppins_light"
-        android:text="We'll email you a reservation confirmation within 24 hours."
-        android:textColor="@color/gray"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.652"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/successTxt"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <ImageView
-        android:id="@+id/imageView15"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.314"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sendEmailTxt"
-        app:layout_constraintVertical_bias="0.024"
-        app:srcCompat="@drawable/idea_icon" />
-
-    <TextView
-        android:id="@+id/cancelReservationTxt"
-        android:layout_width="208dp"
-        android:layout_height="71dp"
-        android:layout_marginEnd="64dp"
-        android:fontFamily="@font/poppins_light"
-        android:text="You can cancel your reservation a day before your reservation date."
+        android:text="We'll send you an SMS reservation confirmation once the establishment accepted your reservation."
         android:textAlignment="center"
         android:textColor="@color/gray"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.857"
-        app:layout_constraintStart_toStartOf="@+id/imageView16"
-        app:layout_constraintTop_toBottomOf="@+id/sendEmailTxt"
-        app:layout_constraintVertical_bias="0.045" />
-
-    <Button
-        android:id="@+id/okBtnReservationSuccess"
-        android:layout_width="86dp"
-        android:layout_height="52dp"
-        android:backgroundTint="@color/lemongreen"
-        android:fontFamily="@font/poppins_medium"
-        android:text="ok"
-        android:textColor="@color/darkgreen"
         android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.553"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cancelReservationTxt"
-        app:layout_constraintVertical_bias="0.04" />
+        app:layout_constraintBottom_toBottomOf="@+id/imageView16"
+        app:layout_constraintEnd_toEndOf="@+id/imageView16"
+        app:layout_constraintHorizontal_bias="0.593"
+        app:layout_constraintStart_toStartOf="@+id/imageView16"
+        app:layout_constraintTop_toBottomOf="@+id/successTxt"
+        app:layout_constraintVertical_bias="0.568" />
 
     <TextView
-        android:id="@+id/cancellingTxt"
+        android:id="@+id/gotoReservationTxt"
         android:layout_width="299dp"
         android:layout_height="50dp"
         android:fontFamily="@font/poppins_light"
@@ -165,11 +89,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.553"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/okBtnReservationSuccess"
-        app:layout_constraintVertical_bias="0.139" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView16"
+        app:layout_constraintVertical_bias="0.098" />
 
     <TextView
-        android:id="@+id/chatbotTxt"
+        android:id="@+id/gotoHelpCenterTxt"
         android:layout_width="300dp"
         android:layout_height="45dp"
         android:fontFamily="@font/poppins_light"
@@ -181,13 +105,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.549"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cancellingTxt"
-        app:layout_constraintVertical_bias="0.117" />
+        app:layout_constraintTop_toBottomOf="@+id/gotoReservationTxt"
+        app:layout_constraintVertical_bias="0.088" />
 
     <TextView
-        android:id="@+id/emailTxt"
-        android:layout_width="327dp"
-        android:layout_height="41dp"
+        android:id="@+id/emailDentalClinicTxt"
+        android:layout_width="298dp"
+        android:layout_height="51dp"
         android:fontFamily="@font/poppins_light"
         android:text="• Email or contact the dental clinic here."
         android:textAlignment="center"
@@ -195,9 +119,19 @@
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.726"
+        app:layout_constraintHorizontal_bias="0.568"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/chatbotTxt"
-        app:layout_constraintVertical_bias="0.236" />
+        app:layout_constraintTop_toBottomOf="@+id/gotoHelpCenterTxt"
+        app:layout_constraintVertical_bias="0.181" />
 
+    <ImageView
+        android:id="@+id/backBtnDentSuccess"
+        android:layout_width="35dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.093"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back_arrow" />
 </androidx.constraintlayout.widget.ConstraintLayout>

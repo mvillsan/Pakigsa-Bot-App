@@ -1,14 +1,23 @@
 package com.example.pakigsabot;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.WindowManager;
@@ -21,6 +30,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.pakigsabot.NavBar.BottomNavigation;
+import com.example.pakigsabot.Profile.Profile;
+import com.example.pakigsabot.Reservations.ViewReservations;
 import com.example.pakigsabot.SignUpRequirements.AgreementScreen;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -30,14 +41,26 @@ import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
 
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class Signin extends AppCompatActivity {
 
+    //Initialization of variables::
     TextView signup, forgotPassTxtLink;
     TextInputEditText emailAddEditTxt,passEditTxt;
     TextInputLayout emailTxtInputL, passTxtInputL;
@@ -45,8 +68,12 @@ public class Signin extends AppCompatActivity {
     ImageView backBtnSignIn;
     ProgressBar progressBarSI;
     FirebaseAuth fAuth2;
-    String cust_id;
+    String cust_id, dateToday, expDate, status;
     FirebaseFirestore fStore;
+    FirebaseUser user;
+    ProgressDialog progressDialog;
+    SearchView searchView;
+    List<String> listDates, listCancellationDates, listConfirmDates;
 
     public static String passwordAuth;
 
@@ -57,6 +84,13 @@ public class Signin extends AppCompatActivity {
 
         //References::
         refs();
+
+        //Reminder Notification::
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
+            NotificationChannel channel = new NotificationChannel("Alert","Alert", NotificationManager.IMPORTANCE_DEFAULT);
+            NotificationManager manager = getSystemService(NotificationManager.class);
+            manager.createNotificationChannel(channel);
+        }
 
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -217,28 +251,60 @@ public class Signin extends AppCompatActivity {
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if(task.isSuccessful()){
                         cust_id = fAuth2.getCurrentUser().getUid();
+                        user = fAuth2.getInstance().getCurrentUser();
 
-                        //Save data to database
-                        DocumentReference docRef = fStore.collection("customers").document(cust_id);
-                        Map<String,Object> edited = new HashMap<>();
-                        edited.put("cust_password", pass);
-                        docRef.update(edited).addOnSuccessListener(new OnSuccessListener<Void>() {
-                            @Override
-                            public void onSuccess(Void unused) {
-                                Toast.makeText(Signin.this, "Welcome to Pakigsa-Bot", Toast.LENGTH_SHORT).show();
-                                startActivity(new Intent(getApplicationContext(), BottomNavigation.class));
-                                finish();
-                            }
-                        }).addOnFailureListener(new OnFailureListener() {
-                            @Override
-                            public void onFailure(@NonNull Exception e) {
-                                Toast.makeText(Signin.this, "No Changes has been made", Toast.LENGTH_SHORT).show();
-                                progressBarSI.setVisibility(View.GONE);
-                            }
-                        });
-                        //Clear fields
-                        passEditTxt.setText(null);
-                        emailAddEditTxt.setText(null);
+                        //Email Verification::
+                        if(user.isEmailVerified()){
+                            //Save data to database
+                            DocumentReference docRef = fStore.collection("customers").document(cust_id);
+                            Map<String,Object> edited = new HashMap<>();
+                            edited.put("cust_password", pass);
+                            docRef.update(edited).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                @Override
+                                public void onSuccess(Void unused) {
+                                    //Check if user's account is Free or Premium:
+                                    DocumentReference documentReference = fStore.collection("customers").document(cust_id);
+                                    documentReference.addSnapshotListener(Signin.this, new EventListener<DocumentSnapshot>() {
+                                        @Override
+                                        public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException error) {
+                                            status = documentSnapshot.getString("cust_status");
+
+                                            if(status.equalsIgnoreCase("Free")){
+                                                try{
+                                                    //Notification Alert
+                                                    notificationAlert();
+
+                                                    //Redirected to Home Page::
+                                                    Toast.makeText(Signin.this, "Welcome to Pakigsa-Bot", Toast.LENGTH_SHORT).show();
+                                                    startActivity(new Intent(getApplicationContext(), BottomNavigation.class));
+                                                    finish();
+
+                                                    //Clear fields
+                                                    passEditTxt.setText(null);
+                                                    emailAddEditTxt.setText(null);
+                                                }catch (Exception e){
+                                                    Toast.makeText(Signin.this, "Double Tap to Sign in", Toast.LENGTH_SHORT).show();
+                                                    progressBarSI.setVisibility(View.GONE);
+                                                }
+                                            }else{
+                                                //Check if subscription date has expired
+                                                checkDateExpiration();
+                                            }
+                                        }
+                                    });
+                                }
+                            }).addOnFailureListener(new OnFailureListener() {
+                                @Override
+                                public void onFailure(@NonNull Exception e) {
+                                    Toast.makeText(Signin.this, "Error! Incorrect credentials", Toast.LENGTH_SHORT).show();
+                                    progressBarSI.setVisibility(View.GONE);
+                                }
+                            });
+                        }else{
+                            user.sendEmailVerification();
+                            Toast.makeText(Signin.this, "Check your email to verify your account!", Toast.LENGTH_SHORT).show();
+                            progressBarSI.setVisibility(View.GONE);
+                        }
                     }else{
                         passEditTxt.setText(null);
                         Toast.makeText(Signin.this, "Error! " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
@@ -317,6 +383,211 @@ public class Signin extends AppCompatActivity {
                     validatePassword();
                     break;
             }
+        }
+    }
+
+    private void checkDateExpiration(){
+        //Getting the date today.
+        Date date = Calendar.getInstance().getTime();
+        SimpleDateFormat df = new SimpleDateFormat("MM/dd/yyyy");
+        dateToday = df.format(date);
+
+        DocumentReference documentReference = fStore.collection("premium-subscriptions").document(cust_id);
+        documentReference.addSnapshotListener(Signin.this, new EventListener<DocumentSnapshot>() {
+            @Override
+            public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException error) {
+                expDate = documentSnapshot.getString("subs_expDate");
+            }
+        });
+
+        try {
+            //Notification Alert
+            notificationAlert();
+
+            Date date1, date2;
+            SimpleDateFormat dates = new SimpleDateFormat("MM/dd/yyyy");
+            date1 = dates.parse(dateToday);
+            date2 = dates.parse(expDate);
+            long difference = date1.getTime() - date2.getTime();
+            if (difference <= 0) {
+                Toast.makeText(Signin.this, "Premium Account", Toast.LENGTH_SHORT).show();
+            } else {
+                //Update Account Status DB::
+                updateAccountStatusDB();
+                AlertDialog.Builder alert = new AlertDialog.Builder(Signin.this)
+                        .setTitle("Subscription Renewal Alert!")
+                        .setMessage("Premium Subscription has Expired")
+                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                Toast.makeText(Signin.this, "Go to Profile to Subscribe Premium", Toast.LENGTH_SHORT).show();
+                            }
+                        });
+                alert.show();
+            }
+            //Redirected to Home Page::
+            Toast.makeText(Signin.this, "Welcome to Pakigsa-Bot", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(getApplicationContext(), BottomNavigation.class));
+            finish();
+            //Clear fields
+            passEditTxt.setText(null);
+            emailAddEditTxt.setText(null);
+        } catch (Exception exception) {
+            Toast.makeText(Signin.this, "Double Tap to Sign in", Toast.LENGTH_SHORT).show();
+            progressBarSI.setVisibility(View.GONE);
+        }
+    }
+
+    private void updateAccountStatusDB(){
+        DocumentReference documentRef = fStore.collection("customers").document(cust_id);
+        Map<String,Object> edited = new HashMap<>();
+        edited.put("cust_status", "Free");
+        documentRef.update(edited).addOnSuccessListener(new OnSuccessListener<Void>() {
+            @Override
+            public void onSuccess(Void unused) {
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Toast.makeText(Signin.this, "Error!", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+    private void notificationAlert(){
+        //List of Check-in Dates::
+        fStore.collection("reservations")
+                .whereEqualTo("reserv_cust_ID", cust_id)
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        if (task.isSuccessful()) {
+                            listDates = new ArrayList<>();
+                            for (QueryDocumentSnapshot document : task.getResult()) {
+                                listDates.add(document.getString("reserv_dateIn"));
+                            }
+                            Log.d("TAG", listDates.toString());
+                        } else {
+                            Log.d("TAG", "Error getting documents: ", task.getException());
+                        }
+                    }
+                });
+
+        //List of Confirmation Dates::
+        fStore.collection("reservations")
+                .whereEqualTo("reserv_cust_ID", cust_id)
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        if (task.isSuccessful()) {
+                            listConfirmDates = new ArrayList<>();
+                            for (QueryDocumentSnapshot document : task.getResult()) {
+                                listConfirmDates.add(document.getString("reserv_confirmedDate"));
+                            }
+                            Log.d("TAG", listConfirmDates.toString());
+                        } else {
+                            Log.d("TAG", "Error getting documents: ", task.getException());
+                        }
+                    }
+                });
+
+        //List of Cancellation Dates::
+        fStore.collection("cancelled-reservations")
+                .whereEqualTo("cancelReserv_cust_ID", cust_id)
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        if (task.isSuccessful()) {
+                            listCancellationDates = new ArrayList<>();
+                            for (QueryDocumentSnapshot document : task.getResult()) {
+                                listCancellationDates.add(document.getString("cancelReserv_cancelledDate"));
+                            }
+                            Log.d("TAG", listCancellationDates.toString());
+                        } else {
+                            Log.d("TAG", "Error getting documents: ", task.getException());
+                        }
+                    }
+                });
+
+        //Getting the date today.
+        Date date = Calendar.getInstance().getTime();
+        SimpleDateFormat df = new SimpleDateFormat("MM/dd/yyyy");
+        dateToday = df.format(date);
+
+        //Getting date tomorrow
+        Calendar c = Calendar.getInstance();
+        c.setTime(date);
+        c.add(Calendar.DATE, 1);
+        Date tomorrowDate = c.getTime();
+        SimpleDateFormat df2 = new SimpleDateFormat("MM/dd/yyyy");
+        String tomorrowDateStr = df2.format(tomorrowDate);
+
+        if(listDates.contains(tomorrowDateStr) && listConfirmDates.contains(dateToday) && listCancellationDates.contains(dateToday)) {
+            NotificationCompat.Builder builder = new NotificationCompat.Builder(Signin.this, "Alert");
+            builder.setContentTitle("Confirmed & Cancelled Reservation Alert!");
+            builder.setContentText("You have a Reservation Tomorrrow - " + tomorrowDateStr);
+            builder.setSmallIcon(R.mipmap.icnew_launchercircle);
+            builder.setAutoCancel(true);
+
+            NotificationManagerCompat managerCompat = NotificationManagerCompat.from(Signin.this);
+            managerCompat.notify(1, builder.build());
+        }else if(listDates.contains(tomorrowDateStr) && listConfirmDates.contains(dateToday)){
+            NotificationCompat.Builder builder = new NotificationCompat.Builder(Signin.this, "Alert");
+            builder.setContentTitle("Confirmed Reservation Alert!");
+            builder.setContentText("You have a Reservation Tomorrrow - " + tomorrowDateStr);
+            builder.setSmallIcon(R.mipmap.icnew_launchercircle);
+            builder.setAutoCancel(true);
+
+            NotificationManagerCompat managerCompat = NotificationManagerCompat.from(Signin.this);
+            managerCompat.notify(1, builder.build());
+        }else if(listDates.contains(tomorrowDateStr) && listCancellationDates.contains(dateToday)){
+            NotificationCompat.Builder builder = new NotificationCompat.Builder(Signin.this, "Alert");
+            builder.setContentTitle("Cancelled Reservation Alert!");
+            builder.setContentText("Reservation Tomorrrow - " + tomorrowDateStr);
+            builder.setSmallIcon(R.mipmap.icnew_launchercircle);
+            builder.setAutoCancel(true);
+
+            NotificationManagerCompat managerCompat = NotificationManagerCompat.from(Signin.this);
+            managerCompat.notify(1, builder.build());
+        }else if(listConfirmDates.contains(dateToday) && listCancellationDates.contains(dateToday)){
+            NotificationCompat.Builder builder = new NotificationCompat.Builder(Signin.this, "Alert");
+            builder.setContentTitle("Confirmed & Cancelled Reservation Alert!");
+            builder.setContentText(">>Check Confirmed and Cancelled Reservations");
+            builder.setSmallIcon(R.mipmap.icnew_launchercircle);
+            builder.setAutoCancel(true);
+
+            NotificationManagerCompat managerCompat = NotificationManagerCompat.from(Signin.this);
+            managerCompat.notify(1, builder.build());
+        }else if(listDates.contains(tomorrowDateStr)){
+            NotificationCompat.Builder builder = new NotificationCompat.Builder(Signin.this, "Alert");
+            builder.setContentTitle("Notification Alert!");
+            builder.setContentText("\nYou have a Reservation Tomorrrow - " + tomorrowDateStr);
+            builder.setSmallIcon(R.mipmap.icnew_launchercircle);
+            builder.setAutoCancel(true);
+
+            NotificationManagerCompat managerCompat = NotificationManagerCompat.from(Signin.this);
+            managerCompat.notify(1, builder.build());
+        }else if(listConfirmDates.contains(dateToday)){
+            NotificationCompat.Builder builder = new NotificationCompat.Builder(Signin.this, "Confirmed");
+            builder.setContentTitle("Confirmed Reservation Alert!");
+            builder.setContentText("A Reservation has been CONFIRMED!");
+            builder.setSmallIcon(R.mipmap.icnew_launchercircle);
+            builder.setAutoCancel(true);
+
+            NotificationManagerCompat managerCompat = NotificationManagerCompat.from(Signin.this);
+            managerCompat.notify(1, builder.build());
+        }else if(listCancellationDates.contains(dateToday)) {
+            NotificationCompat.Builder builder = new NotificationCompat.Builder(Signin.this, "Cancelled");
+            builder.setContentTitle("Cancelled Reservation Alert!");
+            builder.setContentText("A Reservation has been CANCELLED!");
+            builder.setSmallIcon(R.mipmap.icnew_launchercircle);
+            builder.setAutoCancel(true);
+
+            NotificationManagerCompat managerCompat = NotificationManagerCompat.from(Signin.this);
+            managerCompat.notify(1, builder.build());
         }
     }
 }

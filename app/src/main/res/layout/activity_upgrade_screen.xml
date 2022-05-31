@@ -14,7 +14,7 @@
         android:layout_marginTop="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.085"
+        app:layout_constraintHorizontal_bias="0.142"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.062"
@@ -174,7 +174,7 @@
         app:layout_constraintVertical_bias="0.047" />
 
     <Button
-        android:id="@+id/agreeContinueBtn"
+        android:id="@+id/payBtn"
         android:layout_width="230dp"
         android:layout_height="43dp"
         android:background="@color/gold"
@@ -192,8 +192,8 @@
 
     <TextView
         android:id="@+id/termsTxt"
-        android:layout_width="255dp"
-        android:layout_height="52dp"
+        android:layout_width="247dp"
+        android:layout_height="21dp"
         android:fontFamily="@font/poppins_light"
         android:text="Subscription Terms"
         android:textAlignment="center"
@@ -204,7 +204,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.551"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/agreeContinueBtn"
+        app:layout_constraintTop_toBottomOf="@+id/payBtn"
         app:layout_constraintVertical_bias="0.068" />
+
+    <com.paypal.checkout.paymentbutton.PayPalButton
+        android:id="@+id/payPalButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/termsTxt"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

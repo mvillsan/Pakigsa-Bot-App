@@ -4,80 +4,43 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/topbar_bg"
+    android:background="@color/peach"
     tools:context=".Resorts.ResortReservationSuccess">
 
     <ImageView
         android:id="@+id/imageView16"
-        android:layout_width="416dp"
-        android:layout_height="302dp"
-        android:layout_marginStart="10dp"
+        android:layout_width="347dp"
+        android:layout_height="290dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.266"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.272"
+        app:layout_constraintVertical_bias="0.183"
         app:srcCompat="@drawable/white_rect" />
 
     <ImageView
-        android:id="@+id/resortIcon"
-        android:layout_width="53dp"
-        android:layout_height="40dp"
-        android:src="@drawable/cebu_wetland_icon_item"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.145"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023" />
+        android:id="@+id/imageView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView16"
+        app:layout_constraintEnd_toStartOf="@+id/sendEmailTxt"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/imageView16"
+        app:layout_constraintTop_toTopOf="@+id/imageView16"
+        app:layout_constraintVertical_bias="0.397"
+        app:srcCompat="@drawable/idea_icon" />
 
-    <TextView
-        android:id="@+id/lblResort"
-        android:layout_width="265dp"
-        android:layout_height="37dp"
-        android:fontFamily="@font/poppins_light"
-        android:text="Cebu Wetland Resort"
-        android:textColor="#FFFFFF"
-        android:textSize="21sp"
+    <ImageView
+        android:id="@+id/imageView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.341"
-        app:layout_constraintStart_toEndOf="@+id/resortIcon"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023" />
-
-    <TextView
-        android:id="@+id/lblSerenityAddress"
-        android:layout_width="173dp"
-        android:layout_height="15dp"
-        android:fontFamily="@font/poppins_light"
-        android:text="186 Natalio B. Bacalso Ave, Cebu City"
-        android:textColor="@color/lemongreen"
-        android:textSize="10sp"
-        android:textStyle="italic"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.282"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/lblResort"
-        app:layout_constraintVertical_bias="0.035" />
-
-    <TextView
-        android:id="@+id/privateWetland"
-        android:layout_width="46dp"
-        android:layout_height="24dp"
-        android:layout_marginTop="2dp"
-        android:fontFamily="@font/poppins_light"
-        android:text="(Private)"
-        android:textColor="@color/peach"
-        android:textSize="10sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.767"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/lblResort"
-        app:layout_constraintVertical_bias="0.034" />
+        app:layout_constraintTop_toTopOf="@+id/imageView16"
+        app:layout_constraintVertical_bias="0.036"
+        app:srcCompat="@drawable/ic_done" />
 
     <TextView
         android:id="@+id/successTxt"
@@ -90,86 +53,29 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.159"
         app:layout_constraintStart_toEndOf="@+id/imageView19"
         app:layout_constraintTop_toTopOf="@+id/imageView16"
-        app:layout_constraintVertical_bias="0.032" />
-
-    <ImageView
-        android:id="@+id/imageView19"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.29"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView16"
-        app:layout_constraintVertical_bias="0.031"
-        app:srcCompat="@drawable/ic_done" />
+        app:layout_constraintVertical_bias="0.038" />
 
     <TextView
         android:id="@+id/sendEmailTxt"
-        android:layout_width="273dp"
-        android:layout_height="52dp"
+        android:layout_width="224dp"
+        android:layout_height="157dp"
         android:fontFamily="@font/poppins_light"
-        android:text="We'll email you a reservation confirmation within 24 hours."
-        android:textColor="@color/gray"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.652"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/successTxt"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <ImageView
-        android:id="@+id/imageView15"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.312"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sendEmailTxt"
-        app:layout_constraintVertical_bias="0.019"
-        app:srcCompat="@drawable/idea_icon" />
-
-    <TextView
-        android:id="@+id/cancelReservationTxt"
-        android:layout_width="208dp"
-        android:layout_height="71dp"
-        android:layout_marginEnd="64dp"
-        android:fontFamily="@font/poppins_light"
-        android:text="You can cancel your reservation a day before your check-in date."
+        android:text="We'll send you an SMS reservation confirmation once the establishment accepted your reservation."
         android:textAlignment="center"
         android:textColor="@color/gray"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.849"
-        app:layout_constraintStart_toStartOf="@+id/imageView16"
-        app:layout_constraintTop_toBottomOf="@+id/sendEmailTxt"
-        app:layout_constraintVertical_bias="0.045" />
-
-    <Button
-        android:id="@+id/okBtnReservationSuccess"
-        android:layout_width="86dp"
-        android:layout_height="52dp"
-        android:backgroundTint="@color/lemongreen"
-        android:fontFamily="@font/poppins_medium"
-        android:text="ok"
-        android:textColor="@color/darkgreen"
         android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.553"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cancelReservationTxt"
-        app:layout_constraintVertical_bias="0.04" />
+        app:layout_constraintBottom_toBottomOf="@+id/imageView16"
+        app:layout_constraintEnd_toEndOf="@+id/imageView16"
+        app:layout_constraintHorizontal_bias="0.593"
+        app:layout_constraintStart_toStartOf="@+id/imageView16"
+        app:layout_constraintTop_toBottomOf="@+id/successTxt"
+        app:layout_constraintVertical_bias="0.568" />
 
     <TextView
-        android:id="@+id/cancellingTxt"
+        android:id="@+id/gotoReservationTxt"
         android:layout_width="299dp"
         android:layout_height="50dp"
         android:fontFamily="@font/poppins_light"
@@ -181,11 +87,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.553"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/okBtnReservationSuccess"
-        app:layout_constraintVertical_bias="0.139" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView16"
+        app:layout_constraintVertical_bias="0.098" />
 
     <TextView
-        android:id="@+id/chatbotTxt"
+        android:id="@+id/gotoHelpCenterTxt"
         android:layout_width="300dp"
         android:layout_height="45dp"
         android:fontFamily="@font/poppins_light"
@@ -197,11 +103,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.549"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cancellingTxt"
-        app:layout_constraintVertical_bias="0.117" />
+        app:layout_constraintTop_toBottomOf="@+id/gotoReservationTxt"
+        app:layout_constraintVertical_bias="0.088" />
 
     <TextView
-        android:id="@+id/emailTxtResort"
+        android:id="@+id/emailResortTxt"
         android:layout_width="302dp"
         android:layout_height="38dp"
         android:fontFamily="@font/poppins_light"
@@ -211,8 +117,8 @@
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.568"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/chatbotTxt"
+        app:layout_constraintTop_toBottomOf="@+id/gotoHelpCenterTxt"
         app:layout_constraintVertical_bias="0.181" />
 </androidx.constraintlayout.widget.ConstraintLayout>

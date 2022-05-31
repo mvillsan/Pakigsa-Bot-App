@@ -26,6 +26,7 @@ import com.example.pakigsabot.NavigationFragments.HomeFragment;
 import com.example.pakigsabot.NavigationFragments.NearbyFragment;
 import com.example.pakigsabot.NavigationFragments.ReservationsFragment;
 import com.example.pakigsabot.PremiumApp.GoPremiumCA;
+import com.example.pakigsabot.PremiumApp.PremiumPrivileges;
 import com.example.pakigsabot.R;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -50,7 +51,7 @@ public class Profile extends AppCompatActivity {
     MeowBottomNavigation bottomNavigation;
     TextView genderProfileET,BDateTxtView, statusType, tierTxt;
     ImageView prevBtn, profileImageView, uploadImg, saveProfBtn;
-    Button changePassBtn,goPremiumBtn;
+    Button changePassBtn,goPremiumBtn, premiumAccount;
     EditText firstNameProfileET,lastNameProfileET,emailAddProfileET,editTextPhone;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
@@ -59,6 +60,7 @@ public class Profile extends AppCompatActivity {
     StorageReference profileRef;
     DocumentReference documentReference;
     DocumentReference docRef;
+    DocumentReference docuRef;
     String userID;
 
     @Override
@@ -103,6 +105,15 @@ public class Profile extends AppCompatActivity {
                 BDateTxtView.setText(value.getString("cust_birthDate"));
                 genderProfileET.setText(value.getString("cust_gender"));
                 statusType.setText(value.getString("cust_status"));
+
+                //Check Account Status::
+                if(statusType.getText().toString().equalsIgnoreCase("Free")){
+                    goPremiumBtn.setVisibility(View.VISIBLE);
+                    premiumAccount.setVisibility(View.GONE);
+                }else{
+                    goPremiumBtn.setVisibility(View.GONE);
+                    premiumAccount.setVisibility(View.VISIBLE);
+                }
             }
         });
 
@@ -152,6 +163,14 @@ public class Profile extends AppCompatActivity {
                 loyalty();
             }
         });
+
+        //Premium Account::
+        premiumAccount.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                premiumPrivileges();
+            }
+        });
     }
 
     public void refs(){
@@ -169,6 +188,9 @@ public class Profile extends AppCompatActivity {
         saveProfBtn = findViewById(R.id.saveProfBtn);
         changePassBtn = findViewById(R.id.changePassBtn);
         tierTxt = findViewById(R.id.tierTxt);
+        premiumAccount = findViewById(R.id.premiumAccount);
+        goPremiumBtn.setVisibility(View.GONE);
+        premiumAccount.setVisibility(View.GONE);
     }
 
     public void uploadProfImg(){
@@ -201,10 +223,10 @@ public class Profile extends AppCompatActivity {
 
                         //Save the image to firestore database
                         String imgUrl = String.valueOf(uri);
-                        DocumentReference docRef = fStore.collection("customers").document(userID);
+                        docuRef = fStore.collection("customers").document(userID);
                         Map<String,Object> customer = new HashMap<>();
                         customer.put("cust_image",imgUrl);
-                        docRef.update(customer).addOnSuccessListener(new OnSuccessListener<Void>() {
+                        docuRef.update(customer).addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void unused) {
                                 Log.d("PROFILE-IMG SAVED TO DB","SUCCESS");
@@ -369,5 +391,10 @@ public class Profile extends AppCompatActivity {
                 .beginTransaction()
                 .replace(R.id.frame_layout,fragment)
                 .commit();
+    }
+
+    private void premiumPrivileges(){
+        Intent intent = new Intent(getApplicationContext(), PremiumPrivileges.class);
+        startActivity(intent);
     }
 }

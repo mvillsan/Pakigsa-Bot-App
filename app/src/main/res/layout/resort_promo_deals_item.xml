@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="1dp"
+    app:cardCornerRadius="10dp"
+    android:elevation="6dp"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/promodealsName"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Name"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/startDatelbl"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/promodealsDesc"
+            android:layout_marginLeft="10dp"
+            android:text="Start Date:"
+            android:textColor="@color/black"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/startDatePD"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/promodealsDesc"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/startDatelbl"
+            android:text="date"
+            android:textColor="@color/black"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/promodealsDesc"
+            android:layout_width="350dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/promodealsName"
+            android:layout_marginLeft="10dp"
+            android:text="Description"
+            android:textColor="@color/black"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/endDatelbl"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/startDatePD"
+            android:layout_marginLeft="10dp"
+            android:text="End Date: "
+            android:textColor="@color/black"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/endDatePD"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/startDatePD"
+            android:layout_marginLeft="2dp"
+            android:layout_toRightOf="@id/endDatelbl"
+            android:text="date"
+            android:textColor="@color/black"
+            android:textSize="10sp" />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

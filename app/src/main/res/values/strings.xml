@@ -41,7 +41,7 @@
     <string name="spaSalon">Beauty and Relaxation</string>
     <string name="upcomingR">Upcoming Reservations</string>
     <string name="donthaversrv">You don\'t have any reservation</string>
-    <string name="selectRsrv">Select and Reserve a Slot to any establishment you want first.</string>
+    <string name="selectRsrv">Select and Reserve a Slot to any establishment you want.</string>
     <string name="prof">Profile</string>
     <string name="changePass">Change Password</string>
     <string name="share">Share App With Friends</string>
@@ -82,4 +82,27 @@
     <string name="silverlvl"><u>Silver</u></string>
     <string name="goldlvl"><u>Gold</u></string>
     <string name="platinumlvl"><u>Platinum</u></string>
+    <string name="selectTime">Select Time</string>
+    <string-array name="timeSlotStringArray">
+        <item>9AM-10AM</item>
+        <item>10AM-11AM</item>
+        <item>11AM-12NN</item>
+        <item>1PM-2PM</item>
+        <item>2PM-3PM</item>
+        <item>3PM-4PM</item>
+        <item>4PM-5PM</item>
+    </string-array>
+
+    <string-array name="restotimeSlotStringArray">
+        <item>10AM-11AM</item>
+        <item>11AM-12NN</item>
+        <item>12NN-1PM</item>
+        <item>1PM-2PM</item>
+        <item>2PM-3PM</item>
+        <item>3PM-4PM</item>
+        <item>4PM-5PM</item>
+        <item>5PM-6PM</item>
+        <item>6PM-7PM</item>
+        <item>7PM-8PM</item>
+    </string-array>
 </resources>

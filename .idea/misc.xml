@@ -125,51 +125,174 @@
         <entry key="..\:/pakigsabotCustomer/app/src/main/res/drawable/ic_add_photo.xml" value="0.2942708333333333" />
         <entry key="..\:/pakigsabotCustomer/app/src/main/res/drawable/ic_help.xml" value="0.2942708333333333" />
         <entry key="..\:/pakigsabotCustomer/app/src/main/res/drawable/ic_launcher-logo_background.xml" value="0.2942708333333333" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2942708333333333" />
         <entry key="..\:/pakigsabotCustomer/app/src/main/res/drawable/ic_profile.xml" value="0.2942708333333333" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/drawable/ic_time.xml" value="0.2942708333333333" />
         <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_agreement_screen.xml" value="0.278125" />
         <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_bottom_navigation.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_cafe_details.xml" value="0.33" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_cafe_details_rcalendar.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_cafe_est_list.xml" value="0.2640625" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_cafe_reservation_success.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_cafe_reserve_details.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_cancel_reservation1.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_cancel_reservation2.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_cancel_reservation3.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_cancel_reservation_successful.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_category_resto.xml" value="0.26992753623188404" />
         <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_change_pass.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_check_in_time_reserve2.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_check_in_time_reserve_dc.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_choose_est_type.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_choose_est_type2.xml" value="0.2640625" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_confirm_and_pay_resto.xml" value="0.278125" />
         <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_confirmand_pay.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_confirmand_pay_dc.xml" value="0.278125" />
         <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_current_location.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_dental_and_eye_clinic_reservation.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_dental_cconfirmation_details.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_dental_clinic_reservation.xml" value="0.33" />
         <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_dental_clinic_reservation_success.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_dental_clinic_selected_procedures.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_email_est.xml" value="0.278125" />
         <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_email_message_layout.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_email_resort_est.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_est_cancellation_policy.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_est_cancelled.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_est_confirmed.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_est_feedback.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_est_rules.xml" value="0.2640625" />
         <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_facial_recog_enable.xml" value="0.1" />
         <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_facial_recog_sign_in.xml" value="0.25" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_feedback.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_filter.xml" value="0.278125" />
         <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_go_premium_ca.xml" value="0.278125" />
         <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_help_center.xml" value="0.2640625" />
         <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_help_center2.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_help_center_default.xml" value="0.14583333333333334" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_icest_list.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_icreserve_service.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_internet_cafe_details.xml" value="0.278125" />
         <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_internet_cafe_reservation_success.xml" value="0.278125" />
         <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_ltinfo.xml" value="0.33" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_ltinfo_gold.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_ltinfo_platinum.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_ltinfo_silver.xml" value="0.33" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_ltinfo_silver2.xml" value="0.2640625" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_ltinfo_silver_xml.xml" value="0.278125" />
         <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_main.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_most_reserved_resto.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_nearby_resto.xml" value="0.278125" />
         <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_pay_premium.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_payment_details.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_paypal_web_view.xml" value="0.2640625" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_premium_privileges.xml" value="0.278125" />
         <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_profile.xml" value="0.33" />
         <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_rate.xml" value="0.278125" />
-        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_resort_details_rcalendar.xml" value="0.278125" />
-        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_resort_reservation.xml" value="0.278125" />
-        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_resort_reservation_details.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_reservations_history.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_resort_confirmation_details.xml" value="0.5" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_resort_details.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_resort_details_rcalendar.xml" value="0.29453943739658023" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_resort_reservation.xml" value="0.33" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_resort_reservation_details.xml" value="0.33" />
         <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_resort_reservation_success.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_resort_room_reserv_details.xml" value="0.33" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_resort_specific_details.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_restaurant_and_cafe_estlist.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_restaurant_and_cafe_reservation.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_restaurant_details_rcalendar.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_restaurant_estlist.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_restaurant_reservation.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_restaurant_reserve.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_resto_cafe_details.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_resto_check_in.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_resto_confirmation_details.xml" value="0.33" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_resto_details.xml" value="0.278125" />
         <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_resto_details_rcalendar.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_resto_menu.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_resto_price_range.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_resto_reservation_details.xml" value="0.278125" />
         <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_resto_reservation_success.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_restocafe_details.xml" value="0.25" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_salon_details.xml" value="0.1644021739130435" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_salon_est_list.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_salon_reservation.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_salon_reservation_success.xml" value="0.2640625" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_salon_reserve_service.xml" value="0.2640625" />
         <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_see_all_tiers.xml" value="0.278125" />
         <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_see_all_tiers2.xml" value="0.278125" />
         <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_see_all_tiers3.xml" value="0.33" />
         <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_see_all_tiers4.xml" value="0.33" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_services_favorites.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_share.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_share_app_to_twitter.xml" value="0.278125" />
         <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_signin.xml" value="0.22" />
         <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_signup.xml" value="0.25" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_spa_est_list.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_spa_reservation.xml" value="0.2640625" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_spa_salon_est_list.xml" value="0.278125" />
         <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_spa_salon_reservation_success.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_spa_salon_select_time.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_splash_screen.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_stripe.xml" value="0.278125" />
         <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_subscription_terms.xml" value="0.4767857142857143" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_top_rated_resto.xml" value="0.278125" />
         <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_translate_filipino.xml" value="0.278125" />
         <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_upgrade_screen.xml" value="0.33" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/activity_view_reservations.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/cafe_est_item.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/cafe_menu_items.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/cafe_promo_deals_item.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/cancelled_reservations_details.xml" value="0.5" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/cancelled_reservations_item.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/complete_reservations_details.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/completed_reservations_details.xml" value="0.5" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/completed_reserve_feedback.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/dent_and_eye_procedures_items.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/dental_and_eye_est_item.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/est_feedback_item.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/favorite_est_items.xml" value="0.278125" />
         <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/fragment_estfavorites.xml" value="0.278125" />
         <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/fragment_helpcenter.xml" value="0.278125" />
-        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/fragment_home.xml" value="0.67" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/fragment_home.xml" value="0.33" />
         <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/fragment_nearby.xml" value="0.278125" />
-        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/fragment_reservations.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/fragment_reservations.xml" value="0.33" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/ic_est_items.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/ic_services_items.xml" value="0.278125" />
         <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/list_group_help.xml" value="0.278125" />
         <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/list_item_help.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/paypal_details.xml" value="1.2877906976744187" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/promo_and_deals_items.xml" value="0.1644021739130435" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/reservation_details_item.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/reservation_details_popup.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/reservations_cancelledhist_item.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/reservations_completedhist_item.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/reservations_hist_item.xml" value="0.67" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/reservations_item.xml" value="0.38088445078459343" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/resort_canpol_items.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/resort_est_item.xml" value="0.33" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/resort_facility_item.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/resort_promo_deals_item.xml" value="0.5" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/resort_room_item.xml" value="0.33" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/resort_rules_item.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/resto_est_capacity_item.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/resto_est_distance_item.xml" value="0.5" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/resto_est_item.xml" value="0.33" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/resto_menu_items.xml" value="0.6076433121019108" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/resto_promo_deals_item.xml" value="0.5" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/restocafe_est_item.xml" value="0.5" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/salon_est_items.xml" value="0.22" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/salon_pd_items.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/salon_service_items.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/sample.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/single_items.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/spa_salon_est_item.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/spa_service_items.xml" value="0.278125" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/layout/test.xml" value="0.278125" />
         <entry key="..\:/pakigsabotCustomer/app/src/main/res/mipmap-anydpi-v26/ic_launcher-logo.xml" value="0.21354166666666666" />
         <entry key="..\:/pakigsabotCustomer/app/src/main/res/mipmap-anydpi-v26/ic_launcher-logo_round.xml" value="0.2942708333333333" />
         <entry key="..\:/pakigsabotCustomer/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2942708333333333" />
+        <entry key="..\:/pakigsabotCustomer/app/src/main/res/mipmap-anydpi-v26/icnew_launchercircle.xml" value="0.2942708333333333" />
       </map>
     </option>
   </component>

@@ -18,7 +18,6 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.pakigsabot.NavBar.BottomNavigation;
 import com.example.pakigsabot.SignUpRequirements.AgreementScreen;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -48,6 +47,7 @@ public class Signup extends AppCompatActivity {
     FirebaseFirestore fStore;
     String cust_id;
     String genderLabel;
+    int numReservations = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -263,6 +263,7 @@ public class Signup extends AppCompatActivity {
                         customer.put("cust_password", pass);
                         customer.put("cust_status", "Free");
                         customer.put("cust_image", "No profile picture");
+                        customer.put("cust_numOfReservations", numReservations);
                         docRef.set(customer).addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void unused) {
@@ -274,23 +275,21 @@ public class Signup extends AppCompatActivity {
                                 Log.d("SignUp", "onSignUpFailure: " + e.toString());
                             }
                         });
-                        startActivity(new Intent(getApplicationContext(), BottomNavigation.class));
+                        startActivity(new Intent(getApplicationContext(), Signin.class));
                         Toast.makeText(Signup.this, R.string.signUp_success, Toast.LENGTH_SHORT).show();
+                        //Clear fields in case the user go back to previous page
+                        firstNameEditTxt.setText(null);
+                        lastNameEditTxt.setText(null);
+                        phoneNumEditTxt.setText(null);
+                        birthdateEditTxt.setText(null);
+                        editTxtEmailAdd.setText(null);
+                        editTxtPass.setText(null);
                     }else{
                         Toast.makeText(Signup.this, "Error! " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                         progressBarSU.setVisibility(View.GONE);
                     }
                 }
             });
-            //Clear fields in case the user go back to previous page
-            firstNameEditTxt.setText(null);
-            lastNameEditTxt.setText(null);
-            phoneNumEditTxt.setText(null);
-            birthdateEditTxt.setText(null);
-            editTxtEmailAdd.setText(null);
-            editTxtPass.setText(null);
-        }else if(fAuth.getCurrentUser() != null){//User is Log-in already::
-            startActivity(new Intent(getApplicationContext(), Signin.class));
         }else{
             Toast.makeText(Signup.this, "Please Input All Fields" , Toast.LENGTH_SHORT).show();
             progressBarSU.setVisibility(View.GONE);

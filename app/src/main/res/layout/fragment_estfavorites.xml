@@ -5,7 +5,7 @@
     android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/homebg_customer"
+    android:background="@drawable/topbar_bg"
     tools:context=".NavigationFragments.EstFavoritesFragment">
 
     <!-- TODO: Update blank fragment layout -->
@@ -21,10 +21,10 @@
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.546"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/estFavImageView"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
 
     <ImageView
         android:id="@+id/imageView9"
@@ -32,28 +32,31 @@
         android:layout_height="29dp"
         android:background="@color/peach"
         android:src="@drawable/ic_favorites"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@+id/textView4"
-        app:layout_constraintEnd_toEndOf="@+id/textView4"
-        app:layout_constraintHorizontal_bias="0.825"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.75"
         app:layout_constraintStart_toStartOf="@+id/textView4"
-        app:layout_constraintTop_toTopOf="@+id/textView4"
-        app:layout_constraintVertical_bias="0.772" />
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        app:layout_constraintVertical_bias="0.75" />
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="328dp"
-        android:layout_height="73dp"
+        android:layout_width="356dp"
+        android:layout_height="58dp"
+        android:drawableLeft="@drawable/idea_icon"
+        android:drawablePadding="10dp"
         android:fontFamily="@font/poppins_light"
-        android:text="Collect places you loved by tapping the heart icon..."
+        android:text="Save the establishments you love by tapping the heart icon (🖤) beside its name during reservation."
         android:textAlignment="textStart"
         android:textColor="@color/black"
-        android:textSize="20sp"
+        android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.638"
+        app:layout_constraintHorizontal_bias="0.513"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView8"
-        app:layout_constraintVertical_bias="0.125" />
+        app:layout_constraintVertical_bias="0.086" />
 
     <ImageView
         android:id="@+id/estFavImageView"
@@ -62,21 +65,37 @@
         android:src="@drawable/ic_est"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.142"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.075" />
+        app:layout_constraintVertical_bias="0.033" />
 
     <ImageView
-        android:id="@+id/imageView10"
+        android:id="@+id/noFavoritesYetImg"
         android:layout_width="304dp"
         android:layout_height="342dp"
         android:src="@drawable/est_fav"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.588"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintVertical_bias="0.066" />
+
+    <Button
+        android:id="@+id/viewFavBtn"
+        android:layout_width="148dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="25dp"
+        android:backgroundTint="@color/darkgreen"
+        android:text="VIEW FAVORITES"
+        android:textColor="@color/lemongreen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/noFavoritesYetImg"
         app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

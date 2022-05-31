@@ -3,17 +3,20 @@ package com.example.pakigsabot.ShareApp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.pakigsabot.R;
-import com.example.pakigsabot.Resorts.ResortDetailsRCalendar;
 
 public class Share extends AppCompatActivity {
 
-    ImageView prevBtn, shareToFBBtn, shareToInstaBtn,shareToTwitterBtn;
+    ImageView prevBtn;
+    TextView shareApp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,51 +40,35 @@ public class Share extends AppCompatActivity {
             }
         });
 
-        shareToFBBtn.setOnClickListener(new View.OnClickListener() {
+
+
+        shareApp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                sharetoFB();
+                shareApp();
             }
         });
 
-        shareToInstaBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                sharetoInsta();
-            }
-        });
-
-        shareToTwitterBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                sharetoTwitter();
-            }
-        });
-    }
+           }
 
     public void refs(){
         prevBtn = findViewById(R.id.backBtnShare);
-        shareToFBBtn = findViewById(R.id.shareToFBBtn);
-        shareToInstaBtn = findViewById(R.id.shareToInstaBtn);
-        shareToTwitterBtn = findViewById(R.id.shareToTwitterBtn);
+        shareApp = findViewById(R.id.shareApp);
+
     }
 
     public void onBackPressed(){
         super.onBackPressed();
     }
 
-    private void sharetoFB(){
-        Intent intent = new Intent(getApplicationContext(), ShareAppToFB.class);
-        startActivity(intent);
+    private void shareApp(){
+        Intent in = new Intent(Intent.ACTION_SEND);
+        in.setType("text/plain");
+        in.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        in.putExtra(Intent.EXTRA_TEXT, "Pakigsa-Bot App" + "https://drive.google.com/drive/folders/1hSs4OOvaINJV3iilXePdP-tPa4QOWDrw?usp=sharing");
+        in.putExtra(Intent.EXTRA_SUBJECT, "New App");
+        startActivity(Intent.createChooser(in, "Share Pakigsa-Bot"));
     }
 
-    private void sharetoInsta(){
-        Intent intent = new Intent(getApplicationContext(), ShareAppToInsta.class);
-        startActivity(intent);
-    }
 
-    private void sharetoTwitter(){
-        Intent intent = new Intent(getApplicationContext(), ShareAppToTwitter.class);
-        startActivity(intent);
-    }
 }

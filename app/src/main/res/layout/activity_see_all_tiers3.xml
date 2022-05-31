@@ -13,7 +13,7 @@
         android:layout_height="39dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintHorizontal_bias="0.127"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.023"
@@ -82,7 +82,7 @@
 
     <ImageView
         android:id="@+id/imageView41"
-        android:layout_width="360dp"
+        android:layout_width="310dp"
         android:layout_height="258dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -174,10 +174,10 @@
 
     <TextView
         android:id="@+id/classicDesc"
-        android:layout_width="279dp"
+        android:layout_width="230dp"
         android:layout_height="30dp"
         android:fontFamily="@font/poppins_medium"
-        android:text="Reserve up to 10 establishments"
+        android:text="50% off transaction fees"
         android:textAlignment="center"
         android:textColor="@color/darkbluegreen"
         android:textSize="16sp"
@@ -198,62 +198,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/classicTxt"
         app:layout_constraintVertical_bias="0.089"
-        app:srcCompat="@drawable/ic_done" />
-
-    <TextView
-        android:id="@+id/silverDesc"
-        android:layout_width="227dp"
-        android:layout_height="30dp"
-        android:fontFamily="@font/poppins_medium"
-        android:text="Discount birthday voucher"
-        android:textAlignment="center"
-        android:textColor="@color/darkbluegreen"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/imageView43"
-        app:layout_constraintTop_toBottomOf="@+id/classicDesc"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <ImageView
-        android:id="@+id/silverImgView"
-        android:layout_width="35dp"
-        android:layout_height="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.099"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView43"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/ic_done" />
-
-    <TextView
-        android:id="@+id/goldDesc"
-        android:layout_width="236dp"
-        android:layout_height="28dp"
-        android:fontFamily="@font/poppins_medium"
-        android:text="100% off of transaction fees"
-        android:textAlignment="center"
-        android:textColor="@color/darkbluegreen"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/imageView43"
-        app:layout_constraintTop_toBottomOf="@+id/silverDesc"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <ImageView
-        android:id="@+id/goldImgView"
-        android:layout_width="35dp"
-        android:layout_height="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.098"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/silverImgView"
-        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/ic_done" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
