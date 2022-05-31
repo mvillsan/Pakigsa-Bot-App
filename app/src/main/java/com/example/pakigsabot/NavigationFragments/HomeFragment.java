@@ -14,17 +14,14 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.pakigsabot.DentalClinics.DentalClinicReservation;
-import com.example.pakigsabot.InternetCafe.InternetCafeReservation;
+import com.example.pakigsabot.DentalAndEyeClinics.DentalAndEyeClinicEstList;
+import com.example.pakigsabot.InternetCafe.ICEstList;
 import com.example.pakigsabot.MainActivity;
-import com.example.pakigsabot.NotificationAlerts.EstCancelled;
-import com.example.pakigsabot.NotificationAlerts.EstConfirmed;
 import com.example.pakigsabot.Profile.Profile;
 import com.example.pakigsabot.R;
 import com.example.pakigsabot.Resorts.ResortReservation;
-import com.example.pakigsabot.Resto.RestaurantReservation;
+import com.example.pakigsabot.RestaurantAndCafe.ChooseEstType;
 import com.example.pakigsabot.ShareApp.Share;
-import com.example.pakigsabot.SpaSalon.SpaSalonReservation;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.storage.FirebaseStorage;
@@ -92,8 +89,18 @@ public class HomeFragment extends Fragment{
         ImageButton spaSalonBtn = (ImageButton) view.findViewById(R.id.spaSalonBtn);
         ImageButton internetCafeBtn = (ImageButton) view.findViewById(R.id.internetCafeBtn);
         ImageButton restoBtn = (ImageButton) view.findViewById(R.id.restoBtn);
-        TextView estConfirmed = (TextView) view.findViewById(R.id.upcomingReservesTxt);
-        ImageButton estCancelled = (ImageButton) view.findViewById(R.id.noUpcomingRsrvBtn);
+        TextView spaSalonTxt = (TextView) view.findViewById(R.id.spaSalonTxt);
+        TextView resortTxt = (TextView) view.findViewById(R.id.resortTxt);
+        TextView dentalClinicTxt = (TextView) view.findViewById(R.id.dentalClinicTxt);
+        TextView icTxt = (TextView) view.findViewById(R.id.icTxt);
+        resortBtn.setVisibility(View.GONE);
+        dentalClinicBtn.setVisibility(View.GONE);
+        spaSalonBtn.setVisibility(View.GONE);
+        internetCafeBtn.setVisibility(View.GONE);
+        icTxt.setVisibility(View.GONE);
+        dentalClinicTxt.setVisibility(View.GONE);
+        resortTxt.setVisibility(View.GONE);
+        spaSalonTxt.setVisibility(View.GONE);
 
         //Fetching Data from FireStore DB
         FirebaseAuth fAuth = FirebaseAuth.getInstance();
@@ -108,6 +115,7 @@ public class HomeFragment extends Fragment{
                 Picasso.get().load(uri).into(profileBtn);
             }
         });
+
 
         profileBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -140,7 +148,7 @@ public class HomeFragment extends Fragment{
         dentalClinicBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                dentalClinicsReservation();
+                clinicsReservation();
             }
         });
 
@@ -165,24 +173,11 @@ public class HomeFragment extends Fragment{
             }
         });
 
-        estConfirmed.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                confirmedEst();
-            }
-        });
-
-        estCancelled.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                cancelledEst();
-            }
-        });
-
         return view;
     }
 
     public void profileScreen(){
+
         Intent in = new Intent(getActivity(), Profile.class);
         in.putExtra("profile", "profile");
         startActivity(in);
@@ -209,39 +204,24 @@ public class HomeFragment extends Fragment{
         startActivity(in);
     }
 
-    public void dentalClinicsReservation(){
-        Intent in = new Intent(getActivity(), DentalClinicReservation.class);
-        in.putExtra("dentalClinicReserve", "dentalClinicReserve");
+    public void clinicsReservation(){
+        Intent in = new Intent(getActivity(), DentalAndEyeClinicEstList.class);
+        in.putExtra("clinicsReserve", "clinicsReserve");
         startActivity(in);
     }
 
     public void spaSalonReservation(){
-        Intent in = new Intent(getActivity(), SpaSalonReservation.class);
-        in.putExtra("spaSalonReserve", "spaSalonReserve");
+        Intent in = new Intent(getActivity(), com.example.pakigsabot.SpaSalon.ChooseEstType.class);
         startActivity(in);
     }
 
     public void internetCafeReservation(){
-        Intent in = new Intent(getActivity(), InternetCafeReservation.class);
-        in.putExtra("internetCafeReserve", "internetCafeReserve");
+        Intent in = new Intent(getActivity(), ICEstList.class);
         startActivity(in);
     }
 
     public void restoReservation(){
-        Intent in = new Intent(getActivity(), RestaurantReservation.class);
-        in.putExtra("restaurantsReserve", "restaurantsReserve");
-        startActivity(in);
-    }
-
-    public void confirmedEst(){
-        Intent in = new Intent(getActivity(), EstConfirmed.class);
-        in.putExtra("estConfirmedd", "estConfirmedd");
-        startActivity(in);
-    }
-
-    public void cancelledEst(){
-        Intent in = new Intent(getActivity(), EstCancelled.class);
-        in.putExtra("estCancelled", "estCancelled");
+        Intent in = new Intent(getActivity(), ChooseEstType.class);
         startActivity(in);
     }
 }

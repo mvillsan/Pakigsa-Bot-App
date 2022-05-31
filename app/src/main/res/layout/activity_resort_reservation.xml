@@ -7,84 +7,10 @@
     android:background="@drawable/topbar_bg"
     tools:context=".Resorts.ResortReservation">
 
-    <Button
-        android:id="@+id/selectCebuWetland"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#325863"
-        android:text="@string/select"
-        android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.291"
-        app:layout_constraintStart_toEndOf="@+id/reviewsAsmara3"
-        app:layout_constraintTop_toBottomOf="@+id/selectSerenityBtn"
-        app:layout_constraintVertical_bias="0.262" />
-
-    <TextView
-        android:id="@+id/reviewsAsmara3"
-        android:layout_width="64dp"
-        android:layout_height="13dp"
-        android:fontFamily="@font/poppins_light"
-        android:text="5 Reviews"
-        android:textColor="#000000"
-        android:textSize="10sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.058"
-        app:layout_constraintStart_toEndOf="@+id/serenityStars"
-        app:layout_constraintTop_toBottomOf="@+id/lblSerenityAddress"
-        app:layout_constraintVertical_bias="0.411" />
-
-    <TextView
-        android:id="@+id/reviewsAsmara4"
-        android:layout_width="64dp"
-        android:layout_height="13dp"
-        android:fontFamily="@font/poppins_light"
-        android:text="5 Reviews"
-        android:textColor="#000000"
-        android:textSize="10sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.058"
-        app:layout_constraintStart_toEndOf="@+id/serenityStars2"
-        app:layout_constraintTop_toTopOf="@+id/serenityAdd2"
-        app:layout_constraintVertical_bias="0.098" />
-
-    <ImageView
-        android:id="@+id/serenityStars3"
-        android:layout_width="95dp"
-        android:layout_height="17dp"
-        android:src="@drawable/stars_icon"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.42"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/serenityLabel"
-        app:layout_constraintVertical_bias="0.1" />
-
-    <TextView
-        android:id="@+id/reviewsAsmara2"
-        android:layout_width="64dp"
-        android:layout_height="13dp"
-        android:fontFamily="@font/poppins_light"
-        android:text="5 Reviews"
-        android:textColor="#000000"
-        android:textSize="10sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.058"
-        app:layout_constraintStart_toEndOf="@+id/westTownStars"
-        app:layout_constraintTop_toBottomOf="@+id/lblSerenityAddress"
-        app:layout_constraintVertical_bias="0.194" />
-
     <ImageView
         android:id="@+id/resortIcon"
-        android:layout_width="53dp"
-        android:layout_height="40dp"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
         android:src="@drawable/resort_icon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -97,332 +23,76 @@
         android:id="@+id/imgBackBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
         android:contentDescription="TODO"
         android:src="@drawable/ic_arrow_back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.124"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
 
     <TextView
         android:id="@+id/lblResort"
         android:layout_width="100dp"
         android:layout_height="47dp"
-        android:layout_marginTop="18dp"
         android:fontFamily="@font/poppins_light"
         android:text="@string/resort"
         android:textColor="#FFFFFF"
         android:textSize="26sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.067"
+        app:layout_constraintHorizontal_bias="0.042"
         app:layout_constraintStart_toEndOf="@+id/resortIcon"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/searchByResortsBar"
-        android:layout_width="354dp"
-        android:layout_height="55dp"
-        app:endIconMode="clear_text"
-        app:errorEnabled="true"
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="88dp"
+        tools:layout_editor_absoluteX="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="90dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lblResort"
-        app:layout_constraintVertical_bias="0.024"
-        app:startIconDrawable="@drawable/ic_search">
+        app:layout_constraintTop_toTopOf="parent">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/estEditTxtFBS"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchByResortSV"
+            android:layout_width="300dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:drawableLeft="@drawable/ic_search"
             android:fontFamily="@font/poppins_light"
-            android:hint="Search by Resort's Name"
-            android:textColor="@color/black"
-            android:textSize="14sp" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:textSize="12sp"
+            app:iconifiedByDefault="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblResort"
+            app:layout_constraintVertical_bias="0.043"
+            app:queryHint="Search Here ..." />
 
-    <TextView
-        android:id="@+id/txtHukad"
-        android:layout_width="147dp"
-        android:layout_height="32dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="132dp"
-        android:fontFamily="@font/poppins_medium"
-        android:text="@string/asmaraResort"
-        android:textColor="#000000"
-        android:textSize="10sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/asmaraImage"
-        app:layout_constraintTop_toBottomOf="@+id/searchByResortsBar"
-        app:layout_constraintVertical_bias="0.018" />
-
-    <ImageView
-        android:id="@+id/asmaraStars"
-        android:layout_width="95dp"
-        android:layout_height="20dp"
-        android:src="@drawable/stars_icon"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.42"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lblSerenityAddress"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/reviewsAsmara"
-        android:layout_width="58dp"
-        android:layout_height="19dp"
-        android:fontFamily="@font/poppins_light"
-        android:text="5 Reviews"
-        android:textColor="#000000"
-        android:textSize="10sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.056"
-        app:layout_constraintStart_toEndOf="@+id/asmaraStars"
-        app:layout_constraintTop_toBottomOf="@+id/lblSerenityAddress"
-        app:layout_constraintVertical_bias="0.01" />
-
-    <TextView
-        android:id="@+id/lblSerenityAddress"
-        android:layout_width="173dp"
-        android:layout_height="15dp"
-        android:fontFamily="@font/poppins_light"
-        android:text="1 Paseo Saturnino, Cebu City"
-        android:textColor="#000000"
-        android:textSize="9sp"
-        android:textStyle="italic"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.558"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtHukad"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Button
-        android:id="@+id/selectAsmaraBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:backgroundTint="#325863"
-        android:text="@string/select"
-        android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.636"
-        app:layout_constraintStart_toEndOf="@+id/txtHukad"
-        app:layout_constraintTop_toBottomOf="@+id/searchByResortsBar"
-        app:layout_constraintVertical_bias="0.013" />
-
-    <TextView
-        android:id="@+id/westTownLabel"
-        android:layout_width="190dp"
-        android:layout_height="38dp"
-        android:fontFamily="@font/poppins_medium"
-        android:text="Cebu Westown Lagoon"
-        android:textColor="#000000"
-        android:textSize="10sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.601"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/asmaraStars"
-        app:layout_constraintVertical_bias="0.095" />
-
-    <ImageView
-        android:id="@+id/westTownStars"
-        android:layout_width="95dp"
-        android:layout_height="19dp"
-        android:src="@drawable/stars_icon"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.42"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/westTownAdd"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/westTownAdd"
-        android:layout_width="173dp"
-        android:layout_height="15dp"
-        android:fontFamily="@font/poppins_light"
-        android:text="MO2 Entertainment Complex"
-        android:textColor="#000000"
-        android:textSize="9sp"
-        android:textStyle="italic"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.558"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/westTownLabel"
-        app:layout_constraintVertical_bias="0.034" />
-
-    <ImageView
-        android:id="@+id/asmaraImage"
-        android:layout_width="82dp"
-        android:layout_height="85dp"
-        android:layout_marginBottom="364dp"
-        android:src="@drawable/asmara_image"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.112"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/searchByResortsBar"
-        app:layout_constraintVertical_bias="0.177" />
-
-    <ImageView
-        android:id="@+id/westTownImage"
-        android:layout_width="82dp"
-        android:layout_height="85dp"
-        android:src="@drawable/westown_image"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.112"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/asmaraImage"
-        app:layout_constraintVertical_bias="0.059" />
-
-    <Button
-        android:id="@+id/selectWestTownBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#325863"
-        android:text="@string/select"
-        android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.831"
-        app:layout_constraintStart_toEndOf="@+id/westTownStars"
-        app:layout_constraintTop_toBottomOf="@+id/selectAsmaraBtn"
-        app:layout_constraintVertical_bias="0.134" />
-
-    <TextView
-        android:id="@+id/serenityLabel"
-        android:layout_width="190dp"
-        android:layout_height="38dp"
-        android:fontFamily="@font/poppins_medium"
-        android:text="Serenity Farm and Resort Busay"
-        android:textColor="#000000"
-        android:textSize="10sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.597"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/westTownStars"
-        app:layout_constraintVertical_bias="0.155" />
-
-    <TextView
-        android:id="@+id/serenityLabel3"
-        android:layout_width="190dp"
-        android:layout_height="38dp"
-        android:fontFamily="@font/poppins_medium"
-        android:text="Cebu Wetland Resort"
-        android:textColor="#000000"
-        android:textSize="10sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.601"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/serenityStars"
-        app:layout_constraintVertical_bias="0.239" />
-
-    <ImageView
-        android:id="@+id/serenityStars"
-        android:layout_width="95dp"
-        android:layout_height="17dp"
-        android:src="@drawable/stars_icon"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.42"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/serenityLabel"
-        app:layout_constraintVertical_bias="0.1" />
-
-    <ImageView
-        android:id="@+id/serenityStars2"
-        android:layout_width="95dp"
-        android:layout_height="17dp"
-        android:src="@drawable/stars_icon"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.42"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/serenityAdd2"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/serenityAdd"
-        android:layout_width="173dp"
-        android:layout_height="15dp"
-        android:fontFamily="@font/poppins_light"
-        android:text="Sitio Tiguib, Brgy., Cebu City"
-        android:textColor="#000000"
-        android:textSize="9sp"
-        android:textStyle="italic"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.554"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/serenityLabel"
-        app:layout_constraintVertical_bias="0.054" />
-
-    <TextView
-        android:id="@+id/serenityAdd2"
-        android:layout_width="173dp"
-        android:layout_height="15dp"
-        android:fontFamily="@font/poppins_light"
-        android:text="186 Natalio B. Bacalso Ave, Cebu City"
-        android:textColor="#000000"
-        android:textSize="9sp"
-        android:textStyle="italic"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.554"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/serenityLabel3"
-        app:layout_constraintVertical_bias="0.077" />
-
-    <Button
-        android:id="@+id/selectSerenityBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#325863"
-        android:text="@string/select"
-        android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.333"
-        app:layout_constraintStart_toEndOf="@+id/reviewsAsmara3"
-        app:layout_constraintTop_toBottomOf="@+id/selectWestTownBtn"
-        app:layout_constraintVertical_bias="0.162" />
-
-    <ImageView
-        android:id="@+id/serenityImage"
-        android:layout_width="82dp"
-        android:layout_height="85dp"
-        android:src="@drawable/serenity_image"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.112"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/westTownImage"
-        app:layout_constraintVertical_bias="0.085" />
-
-    <ImageView
-        android:id="@+id/serenityImage2"
-        android:layout_width="82dp"
-        android:layout_height="85dp"
-        android:src="@drawable/cebu_wetland_image"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.112"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/serenityImage"
-        app:layout_constraintVertical_bias="0.125" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/resortRecyclerView"
+            android:layout_width="372dp"
+            android:layout_height="554dp"
+            android:layout_gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.487"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/searchByResortSV"
+            app:layout_constraintVertical_bias="0.395" />
+    </LinearLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

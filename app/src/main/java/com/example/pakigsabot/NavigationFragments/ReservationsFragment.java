@@ -1,17 +1,39 @@
 package com.example.pakigsabot.NavigationFragments;
 
+import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.icu.util.Calendar;
+import android.os.Build;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
 
-import com.example.pakigsabot.CancelReservation.CancelReservation1;
 import com.example.pakigsabot.R;
+import com.example.pakigsabot.Reservations.ReservationsHistory;
+import com.example.pakigsabot.Reservations.ViewReservations;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
+
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -19,6 +41,13 @@ import com.example.pakigsabot.R;
  * create an instance of this fragment.
  */
 public class ReservationsFragment extends Fragment {
+    //Initialization of variables::
+    List<String> listDates;
+    FirebaseFirestore fStore = FirebaseFirestore.getInstance();
+    FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+    ProgressDialog progressDialog;
+    String userID = user.getUid();
+    String dateToday;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -67,21 +96,35 @@ public class ReservationsFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_reservations, container, false);
 
         //References:
-        ImageView info1 = (ImageView) view.findViewById(R.id.infoJan11);
+        TextView reservationScreen = (TextView) view.findViewById(R.id.reservationsTxt);
+        TextView rHistoryScreen = (TextView) view.findViewById(R.id.reservationsHistoryTxt);
 
-        info1.setOnClickListener(new View.OnClickListener() {
+        reservationScreen.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.N)
             @Override
             public void onClick(View view) {
-                infoReservation1Details();
+                viewReservations();
+            }
+        });
+
+        rHistoryScreen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                viewHistory();
             }
         });
 
         return view;
     }
 
-    private void infoReservation1Details(){
-        Intent intent = new Intent(getActivity(), CancelReservation1.class);
-        intent.putExtra("resDetails1", "resDetails1");
+    private void viewReservations(){
+        Intent intent = new Intent(getActivity(), ViewReservations.class);
+        startActivity(intent);
+    }
+
+
+    private void viewHistory(){
+        Intent intent = new Intent(getActivity(), ReservationsHistory.class);
         startActivity(intent);
     }
 }

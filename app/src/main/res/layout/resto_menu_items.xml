@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="1dp"
+    app:cardCornerRadius="10dp"
+    android:elevation="2dp"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:padding="10dp">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/menuImg"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:minWidth="70dp"
+            android:minHeight="70dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_imageicon"
+            app:riv_border_color="@color/white"
+            app:riv_border_width="2dip"
+            app:riv_corner_radius="10dip"
+            app:riv_mutate_background="true" />
+
+        <TextView
+            android:id="@+id/menuName"
+            android:layout_width="132dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="1dp"
+            android:layout_toRightOf="@id/menuImg"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Name"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/menuCategory"
+            android:layout_width="131dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/menuName"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="0dp"
+            android:layout_toRightOf="@id/menuImg"
+            android:fontFamily="@font/poppins_light"
+            android:text="Category: "
+            android:textAlignment="viewStart"
+            android:textColor="@color/black"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/rateLbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/menuCategory"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@id/menuImg"
+            android:fontFamily="@font/poppins_light"
+            android:text="Php "
+            android:textColor="@color/black"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/menuItemPrice"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/menuCategory"
+            android:layout_marginLeft="2dp"
+            android:layout_toRightOf="@id/rateLbl"
+            android:fontFamily="@font/poppins_light"
+            android:text="Rate"
+            android:textColor="@color/black"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/menuQuan"
+            android:layout_width="20dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/addBtn"
+            android:layout_toRightOf="@id/addBtn"
+            android:fontFamily="@font/poppins_light"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/addBtn"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_toEndOf="@+id/menuCategory"
+            android:layout_toRightOf="@id/menuCategory"
+            android:background="@color/lightgray"
+            android:text="+"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

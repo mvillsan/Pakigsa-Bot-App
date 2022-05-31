@@ -44,6 +44,25 @@
         app:layout_constraintTop_toBottomOf="@+id/genderProfileET"
         app:layout_constraintVertical_bias="0.197" />
 
+    <Button
+        android:id="@+id/premiumAccount"
+        android:layout_width="140dp"
+        android:layout_height="42dp"
+        android:background="@color/darkbluegreen"
+        android:drawableLeft="@drawable/ic_diamond"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Premium Account"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.304"
+        app:layout_constraintStart_toEndOf="@+id/changePassBtn"
+        app:layout_constraintTop_toBottomOf="@+id/genderProfileET"
+        app:layout_constraintVertical_bias="0.197" />
+
     <TextView
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
@@ -153,10 +172,10 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.072"
+        app:layout_constraintHorizontal_bias="0.096"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023"
+        app:layout_constraintVertical_bias="0.031"
         app:srcCompat="@drawable/ic_arrow_back" />
 
     <TextView
@@ -229,7 +248,7 @@
         android:layout_width="84dp"
         android:layout_height="30dp"
         android:fontFamily="@font/poppins_medium"
-        android:text="Classic Tier >"
+        android:text="Loyalty Tier >"
         android:textColor="@color/darkgreen"
         android:textSize="11sp"
         app:layout_constraintBottom_toBottomOf="parent"

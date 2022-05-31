@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintHorizontal_bias="0.077"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.034"
@@ -28,115 +28,42 @@
         app:layout_constraintHorizontal_bias="0.59"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/shareTxt"
-        app:layout_constraintVertical_bias="0.065"
+        app:layout_constraintVertical_bias="0.166"
         app:srcCompat="@drawable/share_socialmedia" />
+
 
     <TextView
         android:id="@+id/shareTxt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="221dp"
+        android:layout_height="42dp"
         android:fontFamily="@font/comforta"
         android:text="@string/share"
         android:textColor="@color/white"
-        android:textSize="22sp"
+        android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.36"
-        app:layout_constraintStart_toEndOf="@+id/imageView28"
+        app:layout_constraintHorizontal_bias="0.715"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.034" />
-
-    <ImageView
-        android:id="@+id/shareToFBBtn"
-        android:layout_width="254dp"
-        android:layout_height="86dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.56"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/lemon_rect" />
+        app:layout_constraintVertical_bias="0.031" />
 
     <TextView
-        android:id="@+id/textView12"
-        android:layout_width="wrap_content"
+        android:id="@+id/shareApp"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:background="@color/darkgreen"
         android:fontFamily="@font/poppins_medium"
-        android:text="Facebook"
-        android:textStyle="bold"
+        android:padding="10dp"
+        android:text="SHARE APP"
+        android:textAlignment="center"
         android:textColor="@color/lemongreen"
-        android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="@+id/shareToFBBtn"
-        app:layout_constraintEnd_toEndOf="@+id/shareToFBBtn"
-        app:layout_constraintStart_toStartOf="@+id/shareToFBBtn"
-        app:layout_constraintTop_toTopOf="@+id/shareToFBBtn" />
-
-
-    <ImageView
-        android:id="@+id/shareToInstaBtn"
-        android:layout_width="254dp"
-        android:layout_height="86dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.56"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/shareToFBBtn"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/lemon_rect" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
-    <TextView
-        android:id="@+id/textView13"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/poppins_medium"
-        android:text="Instagram"
-        android:textStyle="bold"
-        android:textColor="@color/lemongreen"
-        android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="@+id/shareToInstaBtn"
-        app:layout_constraintEnd_toEndOf="@+id/shareToInstaBtn"
-        app:layout_constraintStart_toStartOf="@+id/shareToInstaBtn"
-        app:layout_constraintTop_toTopOf="@+id/shareToInstaBtn" />
-
-
-    <ImageView
-        android:id="@+id/shareToTwitterBtn"
-        android:layout_width="254dp"
-        android:layout_height="86dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.56"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/shareToInstaBtn"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/lemon_rect" />
-
-    <TextView
-        android:id="@+id/textView14"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/poppins_medium"
-        android:text="Twitter"
-        android:textStyle="bold"
-        android:textColor="@color/lemongreen"
-        android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="@+id/shareToTwitterBtn"
-        app:layout_constraintEnd_toEndOf="@+id/shareToTwitterBtn"
-        app:layout_constraintStart_toStartOf="@+id/shareToTwitterBtn"
-        app:layout_constraintTop_toTopOf="@+id/shareToTwitterBtn" />
-
-    <ImageView
-        android:id="@+id/imageView28"
-        android:layout_width="37dp"
-        android:layout_height="39dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/backBtnShare"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.035"
-        app:srcCompat="@drawable/ic_share" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
