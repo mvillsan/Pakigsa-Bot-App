@@ -56,7 +56,7 @@ public class RHistCompletedAdapter extends RecyclerView.Adapter<RHistCompletedAd
 
     //Initializing variables
     ProgressDialog progressDialog;
-    String overallRating, numberOfRatings, newRating, numRatingStr;
+    String overallRating, numberOfRatings, newRating, numRatingStr, sumRatingStr;
     Double overallR;
     int numberR;
 
@@ -153,6 +153,7 @@ public class RHistCompletedAdapter extends RecyclerView.Adapter<RHistCompletedAd
                     public void onEvent(@androidx.annotation.Nullable DocumentSnapshot value, @androidx.annotation.Nullable FirebaseFirestoreException error) {
                         overallRating = value.getString("est_overallrating");
                         numberOfRatings = value.getString("est_totalratingcount");
+                        numberOfRatings = value.getString("est_sumRating");
                         overallR = Double.parseDouble(overallRating);
                         numberR = Integer.parseInt(numberOfRatings);
                     }

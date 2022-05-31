@@ -571,7 +571,7 @@ public class Signin extends AppCompatActivity {
             NotificationManagerCompat managerCompat = NotificationManagerCompat.from(Signin.this);
             managerCompat.notify(1, builder.build());
         }else if(listConfirmDates.contains(dateToday)){
-            NotificationCompat.Builder builder = new NotificationCompat.Builder(Signin.this, "Confirmed");
+            NotificationCompat.Builder builder = new NotificationCompat.Builder(Signin.this, "Alert");
             builder.setContentTitle("Confirmed Reservation Alert!");
             builder.setContentText("A Reservation has been CONFIRMED!");
             builder.setSmallIcon(R.mipmap.icnew_launchercircle);
@@ -580,7 +580,7 @@ public class Signin extends AppCompatActivity {
             NotificationManagerCompat managerCompat = NotificationManagerCompat.from(Signin.this);
             managerCompat.notify(1, builder.build());
         }else if(listCancellationDates.contains(dateToday)) {
-            NotificationCompat.Builder builder = new NotificationCompat.Builder(Signin.this, "Cancelled");
+            NotificationCompat.Builder builder = new NotificationCompat.Builder(Signin.this, "Alert");
             builder.setContentTitle("Cancelled Reservation Alert!");
             builder.setContentText("A Reservation has been CANCELLED!");
             builder.setSmallIcon(R.mipmap.icnew_launchercircle);

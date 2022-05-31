@@ -48,103 +48,35 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.023" />
 
-
-    <TextView
-        android:id="@+id/filipinoLbl"
-        android:layout_width="wrap_content"
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="254dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:fontFamily="@font/poppins_light"
-        android:text=">Filipino"
-        android:textColor="@color/darkgreen"
-        android:textSize="18sp"
+        android:background="@android:drawable/btn_dropdown"
+        android:spinnerMode="dropdown"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.119"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lbl"
-        app:layout_constraintVertical_bias="0.046" />
+        app:layout_constraintVertical_bias="0.057" />
 
     <TextView
-        android:id="@+id/americanLbl"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/poppins_light"
-        android:text=">American"
-        android:textColor="@color/darkgreen"
-        android:textSize="18sp"
+        android:id="@+id/selectedTxt"
+        android:layout_width="37dp"
+        android:layout_height="41dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.088"
-        app:layout_constraintStart_toEndOf="@+id/filipinoLbl"
+        app:layout_constraintHorizontal_bias="0.157"
+        app:layout_constraintStart_toEndOf="@+id/spinner"
         app:layout_constraintTop_toBottomOf="@+id/lbl"
-        app:layout_constraintVertical_bias="0.046" />
-
-    <TextView
-        android:id="@+id/koreanLbl"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/poppins_light"
-        android:text=">Korean"
-        android:textColor="@color/darkgreen"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.182"
-        app:layout_constraintStart_toEndOf="@+id/americanLbl"
-        app:layout_constraintTop_toBottomOf="@+id/lbl"
-        app:layout_constraintVertical_bias="0.046" />
-
-    <TextView
-        android:id="@+id/chineseLbl"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/poppins_light"
-        android:text=">Chinese"
-        android:textColor="@color/darkgreen"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.328"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/filipinoLbl"
-        app:layout_constraintVertical_bias="0.023" />
-
-    <TextView
-        android:id="@+id/mexicanLbl"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/poppins_light"
-        android:text=">Mexican"
-        android:textColor="@color/darkgreen"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.158"
-        app:layout_constraintStart_toEndOf="@+id/chineseLbl"
-        app:layout_constraintTop_toBottomOf="@+id/filipinoLbl"
-        app:layout_constraintVertical_bias="0.023" />
-
-    <TextView
-        android:id="@+id/thaiLbl"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/poppins_light"
-        android:text=">Thai"
-        android:textColor="@color/darkgreen"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.272"
-        app:layout_constraintStart_toEndOf="@+id/mexicanLbl"
-        app:layout_constraintTop_toBottomOf="@+id/filipinoLbl"
-        app:layout_constraintVertical_bias="0.023" />
+        app:layout_constraintVertical_bias="0.057" />
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/swipeRefresh"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="180dp"
+        android:layout_marginTop="160dp"
         tools:layout_editor_absoluteX="16dp">
 
         <LinearLayout

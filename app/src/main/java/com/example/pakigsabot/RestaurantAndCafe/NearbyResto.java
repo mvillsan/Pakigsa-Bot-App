@@ -27,8 +27,12 @@ import android.text.style.ForegroundColorSpan;
 import android.text.style.StyleSpan;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.pakigsabot.R;
@@ -88,9 +92,10 @@ public class NearbyResto extends AppCompatActivity {
     RestoFilterAdapter filterAdapter;
     FirebaseFirestore fStore;
     FirebaseUser user;
-    String userID;
+    String userID, selectedTxtStr;
     ProgressDialog progressDialog;
-    Button lessthan1kmBtn, lessthan2kmBtn, lessthan3kmBtn, lessthan4kmBtn, lessthan5kmBtn, lessthan6kmBtn;
+    Spinner spinner;
+    TextView selectedTxt;
 
     SwipeRefreshLayout swipeRefreshLayout;
 
@@ -121,51 +126,40 @@ public class NearbyResto extends AppCompatActivity {
         //initializing the arraylist where all data is stored
         filterDistanceArrayList = new ArrayList<EstModelFilter>();
 
-        lessthan1kmBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // below line is use to get the data from Firebase Firestore.
-                getRestoCafeListless1km();
-            }
-        });
+        //create a list of items for the spinner.
+        String[] items = new String[]{"Less than 100M", "100M-199M", "200M-299M", "300M-399M", "400M-499M", "500M-999M", "1KM-2KM"};
+        //create an adapter to describe how the items are displayed, adapters are used in several places in android.
+        //this is the basic variant.
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
+        //set the spinners adapter to the previously created one.
+        spinner.setAdapter(adapter);
 
-        lessthan2kmBtn.setOnClickListener(new View.OnClickListener() {
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onClick(View view) {
-                // below line is use to get the data from Firebase Firestore.
-                getRestoCafeListless2km();
+            public void onItemSelected(AdapterView<?> parent, View view,
+                                       int position, long id) {
+                selectedTxt = (TextView) spinner.getSelectedView();
+                selectedTxtStr = selectedTxt.getText().toString();
+                //Filipino Resto Categories:
+                if(selectedTxtStr.equalsIgnoreCase("Less than 100M")){
+                    getRestoCafeListless100();
+                }else if(selectedTxtStr.equalsIgnoreCase("100M-199M")){
+                    getRestoCafeList100199();
+                }else if(selectedTxtStr.equalsIgnoreCase("200M-299M")){
+                    getRestoCafeList200299();
+                }else if(selectedTxtStr.equalsIgnoreCase("300M-399M")){
+                    getRestoCafeList300399();
+                }else if(selectedTxtStr.equalsIgnoreCase("400M-499M")){
+                    getRestoCafeList400499();
+                }else if(selectedTxtStr.equalsIgnoreCase("500M-999M")) {
+                    getRestoCafeList500999();
+                }else if(selectedTxtStr.equalsIgnoreCase("1KM-2KM")) {
+                    getRestoCafeList1KM2KM();
+                }
             }
-        });
-
-        lessthan3kmBtn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                // below line is use to get the data from Firebase Firestore.
-                getRestoCafeListless3km();
-            }
-        });
-
-        lessthan4kmBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // below line is use to get the data from Firebase Firestore.
-                getRestoCafeListless4km();
-            }
-        });
-
-        lessthan5kmBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // below line is use to get the data from Firebase Firestore.
-                getRestoCafeListless5km();
-            }
-        });
-
-        lessthan6kmBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // below line is use to get the data from Firebase Firestore.
-                getRestoCafeListless6km();
+            public void onNothingSelected(AdapterView<?> parent) {
+                // TODO Auto-generated method stub
             }
         });
 
@@ -184,8 +178,6 @@ public class NearbyResto extends AppCompatActivity {
                 chooseEst();
             }
         });
-
-
 
     }
 
@@ -345,12 +337,8 @@ public class NearbyResto extends AppCompatActivity {
     private void refs(){
         imgBackBtn = findViewById(R.id.imgBackBtn);
         swipeRefreshLayout = findViewById(R.id.swipeRefresh);
-        lessthan1kmBtn = findViewById(R.id.lessthan1kmBtn);
-        lessthan2kmBtn = findViewById(R.id.lessthan2kmBtn);
-        lessthan3kmBtn = findViewById(R.id.lessthan3kmBtn);
-        lessthan4kmBtn = findViewById(R.id.lessthan4kmBtn);
-        lessthan5kmBtn = findViewById(R.id.lessthan5kmBtn);
-        lessthan6kmBtn = findViewById(R.id.lessthan6kmBtn);
+        spinner = findViewById(R.id.spinner);
+        selectedTxt = findViewById(R.id.selectedTxt);
     }
 
     private void chooseEst(){
@@ -410,7 +398,7 @@ public class NearbyResto extends AppCompatActivity {
     }
 
     //Display Restaurant and Cafe List
-    private void getRestoCafeListless1km(){
+    private void getRestoCafeListless100(){
         //Progress::
         progressDialog = new ProgressDialog(this);
         progressDialog.setCancelable(false);
@@ -439,7 +427,7 @@ public class NearbyResto extends AppCompatActivity {
                             start = new LatLng(user1,user2);
                             end = new LatLng(Double.parseDouble(list.getEstLatitude()), Double.parseDouble(list.getEstLongitude()));
                             String distance = showResult(start, end).toString();
-                            if(Double.parseDouble(distance) < 1.0){
+                            if(Double.parseDouble(distance) < 0.100){
                                 filterDistanceArrayList.add(new EstModelFilter(list.getEst_id(),list.getEst_Name(),
                                         list.getEst_address(), list.getEst_image(), list.getEst_phoneNum(),
                                         list.getEstLatitude(), list.getEstLongitude(), list.getOverallRating(), list.getRatingCounter(),
@@ -462,7 +450,7 @@ public class NearbyResto extends AppCompatActivity {
     }
 
     //Display Restaurant and Cafe List
-    private void getRestoCafeListless2km(){
+    private void getRestoCafeList100199(){
         //Progress::
         progressDialog = new ProgressDialog(this);
         progressDialog.setCancelable(false);
@@ -491,7 +479,7 @@ public class NearbyResto extends AppCompatActivity {
                             start = new LatLng(user1,user2);
                             end = new LatLng(Double.parseDouble(list.getEstLatitude()), Double.parseDouble(list.getEstLongitude()));
                             String distance = showResult(start, end).toString();
-                            if(Double.parseDouble(distance) > 1.0 && Double.parseDouble(distance) < 2.0){
+                            if(Double.parseDouble(distance) >= 0.100 && Double.parseDouble(distance) < 0.200){
                                 filterDistanceArrayList.add(new EstModelFilter(list.getEst_id(),list.getEst_Name(),
                                         list.getEst_address(), list.getEst_image(), list.getEst_phoneNum(),
                                         list.getEstLatitude(), list.getEstLongitude(), list.getOverallRating(), list.getRatingCounter(),
@@ -514,7 +502,7 @@ public class NearbyResto extends AppCompatActivity {
     }
 
     //Display Restaurant and Cafe List
-    private void getRestoCafeListless3km(){
+    private void getRestoCafeList200299(){
         //Progress::
         progressDialog = new ProgressDialog(this);
         progressDialog.setCancelable(false);
@@ -543,7 +531,7 @@ public class NearbyResto extends AppCompatActivity {
                             start = new LatLng(user1,user2);
                             end = new LatLng(Double.parseDouble(list.getEstLatitude()), Double.parseDouble(list.getEstLongitude()));
                             String distance = showResult(start, end).toString();
-                            if(Double.parseDouble(distance) > 2.0 && Double.parseDouble(distance) < 3.0){
+                            if(Double.parseDouble(distance) >= 0.200 && Double.parseDouble(distance) < 0.300){
                                 filterDistanceArrayList.add(new EstModelFilter(list.getEst_id(),list.getEst_Name(),
                                         list.getEst_address(), list.getEst_image(), list.getEst_phoneNum(),
                                         list.getEstLatitude(), list.getEstLongitude(), list.getOverallRating(), list.getRatingCounter(),
@@ -566,7 +554,7 @@ public class NearbyResto extends AppCompatActivity {
     }
 
     //Display Restaurant and Cafe List
-    private void getRestoCafeListless4km(){
+    private void getRestoCafeList300399(){
         //Progress::
         progressDialog = new ProgressDialog(this);
         progressDialog.setCancelable(false);
@@ -595,7 +583,7 @@ public class NearbyResto extends AppCompatActivity {
                             start = new LatLng(user1,user2);
                             end = new LatLng(Double.parseDouble(list.getEstLatitude()), Double.parseDouble(list.getEstLongitude()));
                             String distance = showResult(start, end).toString();
-                            if(Double.parseDouble(distance) > 3.0 && Double.parseDouble(distance) < 4.0){
+                            if(Double.parseDouble(distance) >= 0.300 && Double.parseDouble(distance) < 0.400){
                                 filterDistanceArrayList.add(new EstModelFilter(list.getEst_id(),list.getEst_Name(),
                                         list.getEst_address(), list.getEst_image(), list.getEst_phoneNum(),
                                         list.getEstLatitude(), list.getEstLongitude(), list.getOverallRating(), list.getRatingCounter(),
@@ -618,7 +606,7 @@ public class NearbyResto extends AppCompatActivity {
     }
 
     //Display Restaurant and Cafe List
-    private void getRestoCafeListless5km(){
+    private void getRestoCafeList400499(){
         //Progress::
         progressDialog = new ProgressDialog(this);
         progressDialog.setCancelable(false);
@@ -647,7 +635,7 @@ public class NearbyResto extends AppCompatActivity {
                             start = new LatLng(user1,user2);
                             end = new LatLng(Double.parseDouble(list.getEstLatitude()), Double.parseDouble(list.getEstLongitude()));
                             String distance = showResult(start, end).toString();
-                            if(Double.parseDouble(distance) > 4.0 && Double.parseDouble(distance) < 5.0){
+                            if(Double.parseDouble(distance) >= 0.400 && Double.parseDouble(distance) < 0.500){
                                 filterDistanceArrayList.add(new EstModelFilter(list.getEst_id(),list.getEst_Name(),
                                         list.getEst_address(), list.getEst_image(), list.getEst_phoneNum(),
                                         list.getEstLatitude(), list.getEstLongitude(), list.getOverallRating(), list.getRatingCounter(),
@@ -670,7 +658,7 @@ public class NearbyResto extends AppCompatActivity {
     }
 
     //Display Restaurant and Cafe List
-    private void getRestoCafeListless6km(){
+    private void getRestoCafeList500999(){
         //Progress::
         progressDialog = new ProgressDialog(this);
         progressDialog.setCancelable(false);
@@ -699,7 +687,59 @@ public class NearbyResto extends AppCompatActivity {
                             start = new LatLng(user1,user2);
                             end = new LatLng(Double.parseDouble(list.getEstLatitude()), Double.parseDouble(list.getEstLongitude()));
                             String distance = showResult(start, end).toString();
-                            if(Double.parseDouble(distance) > 5.0 && Double.parseDouble(distance) < 6.0){
+                            if(Double.parseDouble(distance) >= 0.500 && Double.parseDouble(distance) < 1.0){
+                                filterDistanceArrayList.add(new EstModelFilter(list.getEst_id(),list.getEst_Name(),
+                                        list.getEst_address(), list.getEst_image(), list.getEst_phoneNum(),
+                                        list.getEstLatitude(), list.getEstLongitude(), list.getOverallRating(), list.getRatingCounter(),
+                                        distance));
+                            }
+                        }
+                        sortByDistance(filterDistanceArrayList);
+                        filterAdapter = new RestoFilterAdapter(NearbyResto.this, filterDistanceArrayList);
+                        // setting adapter to our recycler view.
+                        restoCafeRecyclerView.setAdapter(filterAdapter);
+                        filterAdapter.notifyDataSetChanged();
+                        progressDialog.dismiss();
+                    }
+                }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Toast.makeText(NearbyResto.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+    //Display Restaurant and Cafe List
+    private void getRestoCafeList1KM2KM(){
+        //Progress::
+        progressDialog = new ProgressDialog(this);
+        progressDialog.setCancelable(false);
+        progressDialog.setMessage("Fetching Data...");
+        progressDialog.show();
+
+        fStore.collection("establishments")
+                .whereEqualTo("est_Type", "Restaurant")
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        filterDistanceArrayList.clear();
+
+                        for(DocumentSnapshot doc : task.getResult()){
+                            RestoEstModel list = new RestoEstModel(doc.getString("est_id"),
+                                    doc.getString("est_Name"),
+                                    doc.getString("est_address"),
+                                    doc.getString("est_image"),
+                                    doc.getString("est_phoneNum"),
+                                    doc.getString("est_latitude"),
+                                    doc.getString("est_longitude"),
+                                    doc.getString("est_overallrating"),
+                                    doc.getString("est_totalratingcount")
+                            );
+                            start = new LatLng(user1,user2);
+                            end = new LatLng(Double.parseDouble(list.getEstLatitude()), Double.parseDouble(list.getEstLongitude()));
+                            String distance = showResult(start, end).toString();
+                            if(Double.parseDouble(distance) >= 1.0 && Double.parseDouble(distance) <= 2.0){
                                 filterDistanceArrayList.add(new EstModelFilter(list.getEst_id(),list.getEst_Name(),
                                         list.getEst_address(), list.getEst_image(), list.getEst_phoneNum(),
                                         list.getEstLatitude(), list.getEstLongitude(), list.getOverallRating(), list.getRatingCounter(),
