@@ -48,83 +48,29 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.023" />
 
-    <Button
-        android:id="@+id/lessthan1kmBtn"
-        android:layout_width="60dp"
-        android:layout_height="43dp"
-        android:text=">1km"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toTopOf="@+id/swipeRefresh"
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="254dp"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/btn_dropdown"
+        android:spinnerMode="dropdown"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.037"
+        app:layout_constraintHorizontal_bias="0.42"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lbl"
-        app:layout_constraintVertical_bias="0.458" />
+        app:layout_constraintVertical_bias="0.048" />
 
-    <Button
-        android:id="@+id/lessthan2kmBtn"
-        android:layout_width="60dp"
-        android:layout_height="43dp"
-        android:text="1km"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toTopOf="@+id/swipeRefresh"
+    <TextView
+        android:id="@+id/selectedTxt"
+        android:layout_width="37dp"
+        android:layout_height="41dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/lessthan1kmBtn"
+        app:layout_constraintHorizontal_bias="0.157"
+        app:layout_constraintStart_toEndOf="@+id/spinner"
         app:layout_constraintTop_toBottomOf="@+id/lbl"
-        app:layout_constraintVertical_bias="0.458" />
-
-    <Button
-        android:id="@+id/lessthan3kmBtn"
-        android:layout_width="60dp"
-        android:layout_height="43dp"
-        android:text="2km"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toTopOf="@+id/swipeRefresh"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/lessthan2kmBtn"
-        app:layout_constraintTop_toBottomOf="@+id/lbl"
-        app:layout_constraintVertical_bias="0.458" />
-
-    <Button
-        android:id="@+id/lessthan4kmBtn"
-        android:layout_width="60dp"
-        android:layout_height="43dp"
-        android:text="3km"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toTopOf="@+id/swipeRefresh"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/lessthan3kmBtn"
-        app:layout_constraintTop_toBottomOf="@+id/lbl"
-        app:layout_constraintVertical_bias="0.458" />
-
-    <Button
-        android:id="@+id/lessthan5kmBtn"
-        android:layout_width="60dp"
-        android:layout_height="43dp"
-        android:text="4km"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toTopOf="@+id/swipeRefresh"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/lessthan4kmBtn"
-        app:layout_constraintTop_toBottomOf="@+id/lbl"
-        app:layout_constraintVertical_bias="0.458" />
-
-    <Button
-        android:id="@+id/lessthan6kmBtn"
-        android:layout_width="60dp"
-        android:layout_height="43dp"
-        android:text="5km"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toTopOf="@+id/swipeRefresh"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/lessthan5kmBtn"
-        app:layout_constraintTop_toBottomOf="@+id/lbl"
-        app:layout_constraintVertical_bias="0.458" />
+        app:layout_constraintVertical_bias="0.057" />
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/swipeRefresh"

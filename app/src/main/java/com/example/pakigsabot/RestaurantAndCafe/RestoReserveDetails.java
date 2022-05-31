@@ -494,7 +494,7 @@ public class RestoReserveDetails extends AppCompatActivity {
         reservation.put("reserv_notes", notes);
         reservation.put("reserv_timeCheckIn", reserveTimeStr);
         reservation.put("reserv_dateIn", reserveDateStr);
-        reservation.put("reserv_dateCheckOut", dateToday);
+        reservation.put("reserv_dateCheckOut", reserveDateStr);
         reservation.put("reserv_cust_ID", cust_Id);
         reservation.put("reserv_cust_FName", cust_FName);
         reservation.put("reserv_cust_LName", cust_LName);

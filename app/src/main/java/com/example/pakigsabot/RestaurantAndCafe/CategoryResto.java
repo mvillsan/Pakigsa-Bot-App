@@ -10,8 +10,12 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -43,10 +47,11 @@ public class CategoryResto extends AppCompatActivity {
     RestoEstAdapter restoCafeAdapter;
     FirebaseFirestore fStore;
     FirebaseUser user;
-    String userID;
+    String userID, selectedTxtStr;
     ProgressDialog progressDialog;
     SearchView searchView;
-    TextView filipinoLbl, americanLbl, koreanLbl, chineseLbl, mexicanLbl, thaiLbl;
+    TextView selectedTxt;
+    Spinner spinner;
 
     SwipeRefreshLayout swipeRefreshLayout;
 
@@ -58,51 +63,40 @@ public class CategoryResto extends AppCompatActivity {
         //References::
         refs();
 
-        //Filipino Resto Categories:
-        filipinoLbl.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                recommendFilipino();
-            }
-        });
+        //create a list of items for the spinner.
+        String[] items = new String[]{"All", "Filipino", "Thai", "Mexican", "Chinese", "Korean", "American"};
+        //create an adapter to describe how the items are displayed, adapters are used in several places in android.
+        //this is the basic variant.
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
+        //set the spinners adapter to the previously created one.
+        spinner.setAdapter(adapter);
 
-        //American Resto Categories:
-        americanLbl.setOnClickListener(new View.OnClickListener() {
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onClick(View view) {
-                recommendAmerican();
+            public void onItemSelected(AdapterView<?> parent, View view,
+                                       int position, long id) {
+                selectedTxt = (TextView) spinner.getSelectedView();
+                selectedTxtStr = selectedTxt.getText().toString();
+                //Filipino Resto Categories:
+                if(selectedTxtStr.equalsIgnoreCase("All")){
+                    getRestoCafeList();
+                }else if(selectedTxtStr.equalsIgnoreCase("Filipino")){
+                    recommendFilipino();
+                }else if(selectedTxtStr.equalsIgnoreCase("Thai")){
+                    recommendThai();
+                }else if(selectedTxtStr.equalsIgnoreCase("Mexican")){
+                    recommendMexican();
+                }else if(selectedTxtStr.equalsIgnoreCase("Chinese")){
+                    recommendChinese();
+                }else if(selectedTxtStr.equalsIgnoreCase("Korean")){
+                    recommendKorean();
+                }else if(selectedTxtStr.equalsIgnoreCase("American")){
+                    recommendAmerican();
+                }
             }
-        });
-
-        //Korean Resto Categories:
-        koreanLbl.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                recommendKorean();
-            }
-        });
-
-        //Chinese Resto Categories:
-        chineseLbl.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                recommendChinese();
-            }
-        });
-
-        //Mexican Resto Categories:
-        mexicanLbl.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                recommendMexican();
-            }
-        });
-
-        //Thai Resto Categories:
-        thaiLbl.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                recommendThai();
+            public void onNothingSelected(AdapterView<?> parent) {
+                // TODO Auto-generated method stub
             }
         });
 
@@ -126,7 +120,7 @@ public class CategoryResto extends AppCompatActivity {
         restoCafeRecyclerView.setAdapter(restoCafeAdapter);
 
         // below line is use to get the data from Firebase Firestore.
-        //getRestoCafeList();
+        getRestoCafeList();
 
         //SearchView initialization
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
@@ -146,7 +140,7 @@ public class CategoryResto extends AppCompatActivity {
         swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
-                recommendFilipino();
+                getRestoCafeList();
                 swipeRefreshLayout.setRefreshing(false);
             }
         });
@@ -163,12 +157,9 @@ public class CategoryResto extends AppCompatActivity {
         imgBackBtn = findViewById(R.id.imgBackBtn);
         searchView = findViewById(R.id.searchByNameSV);
         swipeRefreshLayout = findViewById(R.id.swipeRefresh);
-        filipinoLbl = findViewById(R.id.filipinoLbl);
-        americanLbl = findViewById(R.id.americanLbl);
-        koreanLbl = findViewById(R.id.koreanLbl);
-        chineseLbl = findViewById(R.id.chineseLbl);
-        mexicanLbl = findViewById(R.id.mexicanLbl);
-        thaiLbl = findViewById(R.id.thaiLbl);
+        spinner = findViewById(R.id.spinner);
+        selectedTxt = findViewById(R.id.selectedTxt);
+        selectedTxt.setVisibility(View.GONE);
     }
 
     private void chooseEst(){
@@ -184,6 +175,40 @@ public class CategoryResto extends AppCompatActivity {
             }
         }
         restoCafeAdapter.filterList(filteredList);
+    }
+
+    private void getRestoCafeList(){
+        fStore.collection("establishments")
+                .whereEqualTo("est_Type", "Restaurant")
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        restoCafeEstArrayList.clear();
+
+                        for(DocumentSnapshot doc : task.getResult()){
+                            RestoEstModel list = new RestoEstModel(doc.getString("est_id"),
+                                    doc.getString("est_Name"),
+                                    doc.getString("est_address"),
+                                    doc.getString("est_image"),
+                                    doc.getString("est_phoneNum"),
+                                    doc.getString("est_latitude"),
+                                    doc.getString("est_longitude"),
+                                    doc.getString("est_overallrating"),
+                                    doc.getString("est_totalratingcount"));
+                            restoCafeEstArrayList.add(list);
+                        }
+                        restoCafeAdapter = new RestoEstAdapter(CategoryResto.this, restoCafeEstArrayList);
+                        // setting adapter to our recycler view.
+                        restoCafeRecyclerView.setAdapter(restoCafeAdapter);
+                        restoCafeAdapter.notifyDataSetChanged();
+                    }
+                }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Toast.makeText(CategoryResto.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     private void recommendFilipino(){
