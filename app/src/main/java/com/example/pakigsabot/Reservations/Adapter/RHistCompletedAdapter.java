@@ -57,7 +57,7 @@ public class RHistCompletedAdapter extends RecyclerView.Adapter<RHistCompletedAd
     //Initializing variables
     ProgressDialog progressDialog;
     String overallRating, numberOfRatings, newRating, numRatingStr, sumRatingStr;
-    Double overallR;
+    Double overallR, sumRating;
     int numberR;
 
     //Firebase
@@ -151,10 +151,9 @@ public class RHistCompletedAdapter extends RecyclerView.Adapter<RHistCompletedAd
                 documentReference.addSnapshotListener(new EventListener<DocumentSnapshot>() {
                     @Override
                     public void onEvent(@androidx.annotation.Nullable DocumentSnapshot value, @androidx.annotation.Nullable FirebaseFirestoreException error) {
-                        overallRating = value.getString("est_overallrating");
                         numberOfRatings = value.getString("est_totalratingcount");
-                        numberOfRatings = value.getString("est_sumRating");
-                        overallR = Double.parseDouble(overallRating);
+                        sumRatingStr = value.getString("est_sumRating");
+                        sumRating = Double.parseDouble(sumRatingStr);
                         numberR = Integer.parseInt(numberOfRatings);
                     }
                 });
@@ -200,15 +199,17 @@ public class RHistCompletedAdapter extends RecyclerView.Adapter<RHistCompletedAd
 
                                                     Log.d("tag", overallRating + numberOfRatings + overallR + numberR);
 
-                                                    overallR = overallR + ratingBar.getRating();
+                                                    sumRating = sumRating + ratingBar.getRating();
                                                     numberR = numberR + 1;
-                                                    newRating = ""+overallR/numberR;
+                                                    newRating = ""+sumRating/numberR;
+                                                    sumRatingStr = ""+sumRating;
                                                     numRatingStr = ""+numberR;
 
                                                     DocumentReference docuRef = fStore.collection("establishments").document(list.getEstID());
                                                     //Save Count of Ratings and Ratings equivalent::
                                                     Map<String, Object> ratings = new HashMap<>();
                                                     ratings.put("est_overallrating", newRating);
+                                                    ratings.put("est_sumRating", sumRatingStr);
                                                     ratings.put("est_totalratingcount", numRatingStr);
                                                     docuRef.update(ratings).addOnSuccessListener(new OnSuccessListener<Void>() {
                                                         @Override
