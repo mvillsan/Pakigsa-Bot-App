@@ -81,8 +81,8 @@ public class RestoReserveDetails extends AppCompatActivity {
     TextView reservationDatePicker, timeSlotTxt,  amounttoPayTxt, messageTxt;
     String reserveAutoId, cust_Id, cust_FName, cust_LName, custSubStatus,
             notes, rStatus_default, reserveDateStr, reserveTimeStr, amount, dateToday, estEmailAdd,
-            preOrderItems, totalPrice, adultStr, childStr, infantsStr, cust_MobileNum, cust_EmailAdd;
-    int totalPax;
+            preOrderItems, totalPrice, adultStr, childStr, infantsStr, cust_MobileNum, cust_EmailAdd, estCapacity;
+    int totalPax, capacity;
 
     // initializing our variable for firebase
     // firestore and getting its instance.
@@ -174,13 +174,19 @@ public class RestoReserveDetails extends AppCompatActivity {
                 adultStr = adultPax.getText().toString();
                 childStr = childPax.getText().toString();
                 infantsStr = infantsPax.getText().toString();
+                capacity = Integer.parseInt(estCapacity);
 
                 //Check Missing Fields::
                 if (notes.isEmpty() || reserveDateStr.isEmpty() || reserveTimeStr.isEmpty() || adultStr.isEmpty()
                         || childStr.isEmpty() || infantsStr.isEmpty()) {
                     Toast.makeText(RestoReserveDetails.this, "You MUST input ALL Fields", Toast.LENGTH_SHORT).show();
                 }else{
-                    checkAccountStats();
+                    totalPax = Integer.parseInt(adultStr) + Integer.parseInt(childStr) + Integer.parseInt(infantsStr);
+                    if(totalPax > capacity){
+                        Toast.makeText(RestoReserveDetails.this, "The restaurant allowed only " + capacity + " seating capacity.", Toast.LENGTH_SHORT).show();
+                    }else{
+                        checkAccountStats();
+                    }
                 }
             }
         });
@@ -334,6 +340,7 @@ public class RestoReserveDetails extends AppCompatActivity {
                 est_numReservations = value.getLong("est_numOfReservation").intValue();
                 estName = value.getString("est_Name");
                 estEmailAdd = value.getString("est_email");
+                estCapacity = value.getString("est_capacity");
             }
         });
     }

@@ -46,7 +46,7 @@ public class RestoDetails extends AppCompatActivity {
     ImageButton favBtn;
     TextView totalTxt,orderEdit, diningTxt;
     String total, item, listItem="", price;
-    TextView label, lblPolicy, lblAddress, lblContactNum, preOrderLbl, totalLbl;
+    TextView label, lblPolicy, lblAddress, lblContactNum, preOrderLbl, totalLbl, cancelTxt;
     String estID, autoId, estName, estAdd, estImageUrl, estPhoneNum, estType;
 
     // creating variables for our recycler view,
@@ -136,6 +136,7 @@ public class RestoDetails extends AppCompatActivity {
             }
         });
 
+
         //Get directions of the resort::
         gmapBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -196,13 +197,46 @@ public class RestoDetails extends AppCompatActivity {
             }
         });
 
+        //Cancellation Policy::
         lblPolicy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // setup the alert builder
                 AlertDialog.Builder builder = new AlertDialog.Builder(RestoDetails.this);
-                builder.setTitle("My title");
-                builder.setMessage("This is my message.");
+                builder.setTitle("General Rules/Policies");
+                builder.setMessage("1. Face Masks shall be worn properly at all times except when eating and drinking." +
+                        "\n\n2. Body Temperature Check upon entry." +
+                        "\n\n3. Those with fever and flu-like symptoms shall be refused entry." +
+                        "\n\n4. Notices on practice hand washing with soap and water for 20 seconds or" +
+                        "disinfects hands with 70% solution alcohol/alcohol-based sanitizers must be installed" +
+                        "in visible areas of the establishment" +
+                        "\n\n5. Observe 1-meter physical distancing from one another in communal areas such as dining areas," +
+                        "queuing areas and restrooms." +
+                        "\n\n6. Customers shall sanitize their footwear using sanitizing mats before entering the restaurant." +
+                        "\n\n7. Provide name and contact details in the contact-tracing log sheet of the restaurant" +
+                        "\n\n8. Fill in a Health Declaration form upon entry.");
+
+                // add a button
+                builder.setPositiveButton("OK", null);
+
+                // create and show the alert dialog
+                AlertDialog dialog = builder.create();
+                dialog.show();
+            }
+        });
+
+        //Cancellation Policy::
+        cancelTxt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // setup the alert builder
+                AlertDialog.Builder builder = new AlertDialog.Builder(RestoDetails.this);
+                builder.setTitle("Cancellation Policies");
+                builder.setMessage("1. Reservation cancellation should be done a day or 3 days before the reservation date. " +
+                        "\n\n2. To cancel the reservation, the customer must go the reservations list, and click the CANCEL button. " +
+                        "The customer must input his/her reasons for cancellations. "+
+                        "\n\n3. No show , 15 minutes after the reserved time, is an automatic cancellation of the reservation. " +
+                        "No refund of the transaction fee made during the reservation process.");
 
                 // add a button
                 builder.setPositiveButton("OK", null);
@@ -230,6 +264,7 @@ public class RestoDetails extends AppCompatActivity {
         preOrderLbl = findViewById(R.id.preOrderLbl);
         menuRecyclerView = findViewById(R.id.menuRecyclerView);
         diningTxt = findViewById(R.id.diningTxt);
+        cancelTxt = findViewById(R.id.cancelTxt);
         clearOrderBtn = findViewById(R.id.clearOrder);
         menuRecyclerView.setVisibility(View.GONE);
         totalLbl.setVisibility(View.GONE);

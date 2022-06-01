@@ -67,6 +67,7 @@ public class RestoCapacityAdapter extends RecyclerView.Adapter<RestoCapacityAdap
         holder.address.setText(list.getEst_address());
         holder.ratingBar.setRating(Float.parseFloat(list.getOverallRating()));
         holder.resortCapacity.setText(list.getRestoCapacity());
+        holder.ratingLbl.setText(list.getOverallRating());
         Glide.with(context).load(list.getEst_image()).into(holder.img);
 
         //Select an item to the List of establishments
@@ -110,7 +111,7 @@ public class RestoCapacityAdapter extends RecyclerView.Adapter<RestoCapacityAdap
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         // creating variables for our textviews, imageview, and button
-        TextView name, address, reviews, resortCapacity;
+        TextView name, address, reviews, resortCapacity,ratingLbl;
         ImageView img;
         Button selectBtn;
         RatingBar ratingBar;
@@ -126,6 +127,7 @@ public class RestoCapacityAdapter extends RecyclerView.Adapter<RestoCapacityAdap
             reviews = itemView.findViewById(R.id.resortEstFeedback);
             ratingBar = itemView.findViewById(R.id.ratingBar);
             resortCapacity = itemView.findViewById(R.id.resortCapacity);
+            ratingLbl = itemView.findViewById(R.id.ratingLbl);
         }
     }
 

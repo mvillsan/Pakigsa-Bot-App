@@ -67,6 +67,7 @@ public class RestoEstAdapter2 extends RecyclerView.Adapter<RestoEstAdapter2.MyVi
         holder.name.setText(list.getEst_Name());
         holder.address.setText(list.getEst_address());
         holder.ratingBar.setRating(Float.parseFloat(list.getOverallRating()));
+        holder.ratingLbl.setText(list.getOverallRating());
         Glide.with(context).load(list.getEst_image()).into(holder.img);
 
         //Select an item to the List of establishments
@@ -110,7 +111,7 @@ public class RestoEstAdapter2 extends RecyclerView.Adapter<RestoEstAdapter2.MyVi
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         // creating variables for our textviews, imageview, and button
-        TextView name, address, reviews;
+        TextView name, address, reviews, ratingLbl;
         ImageView img;
         Button selectBtn;
         RatingBar ratingBar;
@@ -125,6 +126,7 @@ public class RestoEstAdapter2 extends RecyclerView.Adapter<RestoEstAdapter2.MyVi
             selectBtn = itemView.findViewById(R.id.selectBtnResto);
             reviews = itemView.findViewById(R.id.resortEstFeedback);
             ratingBar = itemView.findViewById(R.id.ratingBar);
+            ratingLbl = itemView.findViewById(R.id.ratingLbl);
         }
     }
 

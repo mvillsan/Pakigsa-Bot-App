@@ -41,6 +41,7 @@ import com.orhanobut.dialogplus.ViewHolder;
 
 import org.w3c.dom.Text;
 
+import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -202,7 +203,7 @@ public class RHistCompletedAdapter extends RecyclerView.Adapter<RHistCompletedAd
                                                     sumRating = sumRating + ratingBar.getRating();
                                                     numberR = numberR + 1;
                                                     newRating = ""+sumRating/numberR;
-                                                    sumRatingStr = ""+sumRating;
+                                                    sumRatingStr = ""+ sumRating;
                                                     numRatingStr = ""+numberR;
 
                                                     DocumentReference docuRef = fStore.collection("establishments").document(list.getEstID());
