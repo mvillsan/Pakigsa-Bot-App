@@ -140,7 +140,6 @@ public class NearbyResto extends AppCompatActivity {
                                        int position, long id) {
                 selectedTxt = (TextView) spinner.getSelectedView();
                 selectedTxtStr = selectedTxt.getText().toString();
-                //Filipino Resto Categories:
                 if(selectedTxtStr.equalsIgnoreCase("Less than 100M")){
                     getRestoCafeListless100();
                 }else if(selectedTxtStr.equalsIgnoreCase("100M-199M")){
