@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="1dp"
+    android:elevation="6dp"
+    app:cardCornerRadius="10dp"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/imgCoworking"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_imageicon_bo"
+            app:civ_border_color="@color/purple"
+            app:civ_border_width="2dp" />
+
+        <TextView
+            android:id="@+id/coworkingRVName"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/imgCoworking"
+            android:fontFamily="@font/poppins_light"
+            android:text="Name"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/coworkingCapLbl"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/coworkingRVDesc"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/imgCoworking"
+            android:text="Capacity:"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/coworkingRVCap"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/coworkingRVDesc"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/coworkingCapLbl"
+            android:text="15"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/coworkingRVDesc"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/coworkingRVName"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/imgCoworking"
+            android:text="Description"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/coworkingRateLbl"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/coworkingRVCap"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/imgCoworking"
+            android:text="Rate: Php "
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/coworkingRVRate"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/coworkingRVCap"
+            android:layout_marginLeft="2dp"
+            android:layout_toRightOf="@id/coworkingRateLbl"
+            android:text="Rate"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/coworkingUpdateBtn"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="27dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/coworkingRVName"
+            app:srcCompat="@drawable/ic_edit" />
+
+        <ImageView
+            android:id="@+id/coworkingDeleteBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_below="@id/coworkingUpdateBtn"
+            android:layout_marginLeft="23dp"
+            android:layout_marginTop="18dp"
+            android:layout_toRightOf="@id/coworkingRVName"
+            app:srcCompat="@drawable/ic_delete_bo" />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

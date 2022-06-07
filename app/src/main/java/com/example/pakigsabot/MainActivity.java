@@ -7,11 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.pakigsabot.SignUpRequirements.AgreementScreen;
-
 public class MainActivity extends AppCompatActivity {
 
-    Button signin, signup;
+    Button customer, businessOwner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,35 +18,34 @@ public class MainActivity extends AppCompatActivity {
 
         refs();
 
-        signin.setOnClickListener(new View.OnClickListener() {
+        customer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                signinScreen();
+                customerMain();
             }
         });
 
-        signup.setOnClickListener(new View.OnClickListener() {
+        businessOwner.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                agreementScreen();
+                businessOwnerMain();
             }
         });
 
     }
 
     public void refs(){
-        signin = findViewById(R.id.signInBtn);
-        signup = findViewById(R.id.signUpBtn);
+        customer = findViewById(R.id.customerBtn);
+        businessOwner = findViewById(R.id.businessOwnerBtn);
     }
 
-    public void signinScreen(){
-        Intent intent = new Intent(getApplicationContext(), Signin.class);
+    public void customerMain(){
+        Intent intent = new Intent(getApplicationContext(), MainActivityCustomer.class);
         startActivity(intent);
     }
 
-    public void agreementScreen(){
-        Intent intent = new Intent(getApplicationContext(), AgreementScreen.class);
+    public void businessOwnerMain(){
+        Intent intent = new Intent(getApplicationContext(), MainActivityBO.class);
         startActivity(intent);
     }
-
 }

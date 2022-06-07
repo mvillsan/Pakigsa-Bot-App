@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/topbar_bg_bo"
+    tools:context=".InternetCafeBO.AddServiceIC">
+
+    <ImageView
+        android:id="@+id/addICServPic"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:adjustViewBounds="true"
+        android:maxWidth="200dp"
+        android:maxHeight="200dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addServTxt"
+        app:layout_constraintVertical_bias="0.075"
+        app:srcCompat="@drawable/ic_imageicon_bo" />
+
+    <ImageView
+        android:id="@+id/uploadICServBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/addICServPic"
+        app:layout_constraintEnd_toEndOf="@+id/addICServPic"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/addICServPic"
+        app:layout_constraintTop_toTopOf="@+id/addICServPic"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/ic_add_photo_bo"
+        app:tint="@color/gray" />
+
+    <ImageView
+        android:id="@+id/backBtnAddICServ"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.066"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023"
+        app:srcCompat="@drawable/ic_arrow_back_bo" />
+
+    <TextView
+        android:id="@+id/addServTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_light"
+        android:text="Add a Facility"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.305"
+        app:layout_constraintStart_toEndOf="@+id/backBtnAddICServ"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.031" />
+
+    <ImageView
+        android:id="@+id/saveICServDetailsBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toEndOf="@+id/addServTxt"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023"
+        app:srcCompat="@drawable/ic_save_purple" />
+
+    <EditText
+        android:id="@+id/nameTxt"
+        android:layout_width="337dp"
+        android:layout_height="80dp"
+        android:drawableStart="@drawable/ic_add_room"
+        android:drawablePadding="10dp"
+        android:fontFamily="@font/poppins_light"
+        android:hint="Name of Facility"
+        android:inputType="text"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addICServPic"
+        app:layout_constraintVertical_bias="0.036" />
+
+    <EditText
+        android:id="@+id/descTxt"
+        android:layout_width="337dp"
+        android:layout_height="80dp"
+        android:drawableStart="@drawable/ic_services_bo"
+        android:drawablePadding="10dp"
+        android:fontFamily="@font/poppins_light"
+        android:hint="Description"
+        android:inputType="text"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameTxt"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/rateTxt"
+        android:layout_width="337dp"
+        android:layout_height="80dp"
+        android:drawableStart="@drawable/ic_rate_bo"
+        android:drawablePadding="10dp"
+        android:fontFamily="@font/poppins_light"
+        android:hint="Rate"
+        android:inputType="numberDecimal"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descTxt"
+        app:layout_constraintVertical_bias="0.0" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -81,14 +81,14 @@ public class SalonReservationSuccess extends AppCompatActivity {
         setContentView(R.layout.activity_bottom_navigation);
         //Bottom Nav
         //Assign variable
-        bottomNavigation = findViewById(R.id.bottom_nav);
+        bottomNavigation = findViewById(R.id.bottom_nav_bo);
 
         //Add menu item
         bottomNavigation.add(new MeowBottomNavigation.Model(1,R.drawable.ic_nearby));
         bottomNavigation.add(new MeowBottomNavigation.Model(2,R.drawable.ic_reserve));
         bottomNavigation.add(new MeowBottomNavigation.Model(3,R.drawable.ic_baseline_home_24));
         bottomNavigation.add(new MeowBottomNavigation.Model(4, R.drawable.ic_favorites));
-        bottomNavigation.add(new MeowBottomNavigation.Model(5,R.drawable.ic_help));
+        bottomNavigation.add(new MeowBottomNavigation.Model(5,R.drawable.ic_help_cust));
 
         bottomNavigation.setOnShowListener(new MeowBottomNavigation.ShowListener() {
             @Override
@@ -145,14 +145,14 @@ public class SalonReservationSuccess extends AppCompatActivity {
         setContentView(R.layout.activity_bottom_navigation);
         //Bottom Nav
         //Assign variable
-        bottomNavigation = findViewById(R.id.bottom_nav);
+        bottomNavigation = findViewById(R.id.bottom_nav_bo);
 
         //Add menu item
         bottomNavigation.add(new MeowBottomNavigation.Model(1,R.drawable.ic_nearby));
         bottomNavigation.add(new MeowBottomNavigation.Model(2,R.drawable.ic_reserve));
         bottomNavigation.add(new MeowBottomNavigation.Model(3,R.drawable.ic_baseline_home_24));
         bottomNavigation.add(new MeowBottomNavigation.Model(4, R.drawable.ic_favorites));
-        bottomNavigation.add(new MeowBottomNavigation.Model(5,R.drawable.ic_help));
+        bottomNavigation.add(new MeowBottomNavigation.Model(5,R.drawable.ic_help_cust));
 
         bottomNavigation.setOnShowListener(new MeowBottomNavigation.ShowListener() {
             @Override

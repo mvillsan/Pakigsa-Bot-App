@@ -75,4 +75,15 @@ dependencies {
     //To Refresh recyclerview::
     implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
 
+    implementation 'com.google.firebase:firebase-storage:20.0.0'
+    implementation platform('com.google.firebase:firebase-bom:29.3.1')
+    implementation 'com.google.firebase:firebase-bom:29.0.4'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+
+//for cropping image
+    api 'com.theartofdev.edmodo:android-image-cropper:2.8.+'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'com.github.bumptech.glide:glide:4.13.0'
+    implementation 'com.orhanobut:dialogplus:1.11@aar'
+
 }

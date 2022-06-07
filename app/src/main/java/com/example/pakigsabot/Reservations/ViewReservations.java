@@ -26,7 +26,6 @@ import com.example.pakigsabot.NavigationFragments.ReservationsFragment;
 import com.example.pakigsabot.R;
 import com.example.pakigsabot.Reservations.Adapter.ReservationsAdapter;
 import com.example.pakigsabot.Reservations.Model.ReservationsModel;
-import com.example.pakigsabot.Resorts.Models.ResortModel;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
@@ -40,11 +39,8 @@ import com.google.firebase.firestore.QuerySnapshot;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.Date;
 import java.util.List;
-import java.util.Random;
 
 public class ViewReservations extends AppCompatActivity {
 
@@ -149,14 +145,14 @@ public class ViewReservations extends AppCompatActivity {
         setContentView(R.layout.activity_bottom_navigation);
         //Bottom Nav
         //Assign variable
-        bottomNavigation = findViewById(R.id.bottom_nav);
+        bottomNavigation = findViewById(R.id.bottom_nav_bo);
 
         //Add menu item
         bottomNavigation.add(new MeowBottomNavigation.Model(1,R.drawable.ic_nearby));
         bottomNavigation.add(new MeowBottomNavigation.Model(2,R.drawable.ic_reserve));
         bottomNavigation.add(new MeowBottomNavigation.Model(3,R.drawable.ic_baseline_home_24));
         bottomNavigation.add(new MeowBottomNavigation.Model(4, R.drawable.ic_favorites));
-        bottomNavigation.add(new MeowBottomNavigation.Model(5,R.drawable.ic_help));
+        bottomNavigation.add(new MeowBottomNavigation.Model(5,R.drawable.ic_help_cust));
 
         bottomNavigation.setOnShowListener(new MeowBottomNavigation.ShowListener() {
             @Override

@@ -105,4 +105,55 @@
         <item>6PM-7PM</item>
         <item>7PM-8PM</item>
     </string-array>
+
+    <string name="staff_uname_req">Staff Username is REQUIRED.</string>
+    <string name="staff_job_req">Staff Job Title is REQUIRED.</string>
+    <string name="est_name_req">Establishment Name is REQUIRED.</string>
+    <string name="est_type_req">Establishment Type is REQUIRED.</string>
+    <string name="address_req">Address is REQUIRED.</string>
+    <string name="estType">Establishment Type</string>
+
+    <string-array name="esttype">
+        <item>Restaurant</item>
+        <item>Resort</item>
+        <item>Dental Clinic</item>
+        <item>Internet Cafe</item>
+        <item>Spa and Salon</item>
+    </string-array>
+
+    <string name="estName">Establishment Name</string>
+    <string name="currentDate">December 25, 2021</string>
+    <string name="address">Address</string>
+    <string name="reservations">Reservations</string>
+    <string name="reservationsHist">Reservation History</string>
+
+
+    <string name="subscriptionTermsBO">The Classic membership will automatically be set and will remain for as long as you pay the monthly subscription fee. Pakigsa-Bot reserves the right to add, modify, reduce, or discontinue the membership or benefits associated with Premium membership if you have failed to Pay the Monthly Subscription fee, violated the Pakigsa-Bot Community Guidelines or at any time.
+                                    You agree and acknowledge that Pakigsa-Bot has the right to immediately terminate such membership if it discovers that you have been in violation of the above paragraph at any time during your membership, and, at Pakigsa-Bot’s discretion, Pakigsa-Bot may take action against you, including, but not limited to, suspending or removing your account from the Application indefinitely.
+    </string>
+    <string name="removalBO">Your Classic Membership, and privileges may be revoked at any time if you violate these terms, the Pakigsa-Bot Terms of Service or any other Pakigsa-Bot terms and conditions applicable to you.
+                            Continued participation in the membership is at Pakigsa-Bot’s sole and final discretion. The subscription fee is not refundable and will not be refunded if for anytime you wish to discontinue acquiring the Classic Subscription.
+    </string>
+    <string name="disclaimerBO">
+        If you choose to use the Pakigsa-Bot Application, you do so voluntarily and at your sole risk. The Pakigsa-Bot Application, and Classic membership and any other materials or benefits, are provided “as is”, without warranty of any kind, either express or implied.
+        You agree that you have had whatever opportunity you deem necessary to investigate the Pakigsa-Bot Services, laws, rules, or regulations.
+        The foregoing disclaimers apply to the maximum extent permitted by law. You may have other statutory rights. However, the duration of statutorily required warranties, if any, shall be limited to the maximum extent permitted by law.
+    </string>
+
+    <string-array name="menuItemCategories">
+        <item>Appetizer</item>
+        <item>Soup</item>
+        <item>Noodles/Rice</item>
+        <item>Dish</item>
+        <item>Dessert</item>
+        <item>Drink</item>
+        <item>Meal</item>
+        <item>Rice Meal</item>
+        <item>Beverage</item>
+        <item>Pastry</item>
+    </string-array>
+    <string-array name="menuItemAvailability">
+        <item>Available</item>
+        <item>Not Available</item>
+    </string-array>
 </resources>
