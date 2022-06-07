@@ -16,8 +16,6 @@ import com.example.pakigsabot.NavigationFragments.HomeFragment;
 import com.example.pakigsabot.NavigationFragments.NearbyFragment;
 import com.example.pakigsabot.NavigationFragments.ReservationsFragment;
 import com.example.pakigsabot.R;
-import com.example.pakigsabot.RestaurantAndCafe.CafeEstList;
-import com.example.pakigsabot.RestaurantAndCafe.RestaurantEstList;
 
 public class ChooseEstType extends AppCompatActivity {
     //Initialization of variables::
@@ -70,14 +68,14 @@ public class ChooseEstType extends AppCompatActivity {
         setContentView(R.layout.activity_bottom_navigation);
 
         //Assign variable
-        bottomNavigation = findViewById(R.id.bottom_nav);
+        bottomNavigation = findViewById(R.id.bottom_nav_bo);
 
         //Add menu item
         bottomNavigation.add(new MeowBottomNavigation.Model(1,R.drawable.ic_nearby));
         bottomNavigation.add(new MeowBottomNavigation.Model(2,R.drawable.ic_reserve));
         bottomNavigation.add(new MeowBottomNavigation.Model(3,R.drawable.ic_baseline_home_24));
         bottomNavigation.add(new MeowBottomNavigation.Model(4, R.drawable.ic_favorites));
-        bottomNavigation.add(new MeowBottomNavigation.Model(5,R.drawable.ic_help));
+        bottomNavigation.add(new MeowBottomNavigation.Model(5,R.drawable.ic_help_cust));
 
         bottomNavigation.setOnShowListener(new MeowBottomNavigation.ShowListener() {
             @Override
